@@ -109,56 +109,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Conference Tracks Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-wide" style={{color: '#C2185B'}}>Conference Tracks</h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  title: 'AI, ML & Computational Techniques',
-                  color: 'yellow-500',
-                  description: 'Advanced research and innovative solutions in this domain'
-                },
-                {
-                  title: 'Signal & Image Processing',
-                  color: 'blue-500',
-                  description: 'Advanced research and innovative solutions in this domain'
-                },
-                {
-                  title: 'Cyber-Physical Systems',
-                  color: 'purple-500',
-                  description: 'Advanced research and innovative solutions in this domain'
-                },
-                {
-                  title: 'Communication, Networks & Cyber Security',
-                  color: 'red-500',
-                  description: 'Advanced research and innovative solutions in this domain'
-                },
-                {
-                  title: 'Computer Vision and Augmented Reality & Virtual Reality',
-                  color: 'orange-500',
-                  description: 'Advanced research and innovative solutions in this domain'
-                },
-                {
-                  title: 'Multidisciplinary Applications based on AI/ML and Soft Computing',
-                  color: 'teal-500',
-                  description: 'Healthcare & Life Sciences, Manufacturing & Industry 4.0, Transportation & Logistics, Agriculture, Energy & Environment'
-                }
-              ].map((track, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg p-6 border-l-4 hover:shadow-xl transition-shadow" style={{borderLeftColor: `var(--tw-${track.color})`}}>
-                  <h3 className={`text-xl font-bold mb-4 text-${track.color}`}>{track.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{track.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Publication Partner Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -213,62 +163,51 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Key Topics */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+      {/* Conference Tracks Section - Moved from below */}
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Conference Topics</h2>
-              <div className="h-1 w-24 bg-blue-600 mx-auto mb-6"></div>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Explore cutting-edge research areas in Machine Vision and AI
-              </p>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-wide" style={{color: '#C2185B'}}>Conference Tracks</h2>
             </div>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { icon: '🖼️', title: 'Computer Vision & Image Processing', color: 'from-blue-500 to-blue-600' },
-                { icon: '👁️', title: 'Machine Vision Systems', color: 'from-purple-500 to-purple-600' },
-                { icon: '🧠', title: 'Deep Learning & Neural Networks', color: 'from-indigo-500 to-indigo-600' },
-                { icon: '🥽', title: 'Augmented Intelligence & AR/VR', color: 'from-cyan-500 to-cyan-600' },
-                { icon: '🔍', title: 'Pattern Recognition', color: 'from-green-500 to-green-600' },
-                { icon: '🎯', title: 'Object Detection & Tracking', color: 'from-orange-500 to-orange-600' },
-                { icon: '⚕️', title: 'Medical Image Analysis', color: 'from-red-500 to-red-600' },
-                { icon: '📐', title: '3D Vision & Reconstruction', color: 'from-pink-500 to-pink-600' },
-                { icon: '📹', title: 'Video Analytics', color: 'from-teal-500 to-teal-600' },
-                { icon: '🤖', title: 'Autonomous Systems', color: 'from-violet-500 to-violet-600' },
-                { icon: '🏭', title: 'Industrial Vision Applications', color: 'from-amber-500 to-amber-600' },
-                { icon: '🦾', title: 'Robotics & Machine Vision', color: 'from-lime-500 to-lime-600' },
-                { icon: '🔐', title: 'Biometric Systems', color: 'from-emerald-500 to-emerald-600' },
-                { icon: '🛰️', title: 'Remote Sensing', color: 'from-sky-500 to-sky-600' },
-                { icon: '💬', title: 'Natural Language Processing', color: 'from-rose-500 to-rose-600' },
-                { icon: '📱', title: 'Edge AI & IoT Vision', color: 'from-fuchsia-500 to-fuchsia-600' },
-                { icon: '💡', title: 'Explainable AI', color: 'from-yellow-500 to-yellow-600' },
-                { icon: '🔄', title: 'Transfer Learning', color: 'from-slate-500 to-slate-600' }
-              ].map((topic, index) => (
-                <div 
-                  key={index} 
-                  className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
-                >
-                  <div className={`h-2 bg-gradient-to-r ${topic.color}`}></div>
-                  <div className="p-6">
-                    <div className="text-4xl mb-4">{topic.icon}</div>
-                    <h3 className="text-lg font-bold text-gray-800 group-hover:text-blue-600 transition">
-                      {topic.title}
-                    </h3>
-                  </div>
+                {
+                  title: 'AI, ML & Computational Techniques',
+                  color: 'yellow-500',
+                  description: 'Advanced research and innovative solutions in this domain'
+                },
+                {
+                  title: 'Signal & Image Processing',
+                  color: 'blue-500',
+                  description: 'Advanced research and innovative solutions in this domain'
+                },
+                {
+                  title: 'Cyber-Physical Systems',
+                  color: 'purple-500',
+                  description: 'Advanced research and innovative solutions in this domain'
+                },
+                {
+                  title: 'Communication, Networks & Cyber Security',
+                  color: 'red-500',
+                  description: 'Advanced research and innovative solutions in this domain'
+                },
+                {
+                  title: 'Computer Vision and Augmented Reality & Virtual Reality',
+                  color: 'orange-500',
+                  description: 'Advanced research and innovative solutions in this domain'
+                },
+                {
+                  title: 'Multidisciplinary Applications based on AI/ML and Soft Computing',
+                  color: 'teal-500',
+                  description: 'Healthcare & Life Sciences, Manufacturing & Industry 4.0, Transportation & Logistics, Agriculture, Energy & Environment'
+                }
+              ].map((track, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-lg p-6 border-l-4 hover:shadow-xl transition-shadow" style={{borderLeftColor: `var(--tw-${track.color})`}}>
+                  <h3 className={`text-xl font-bold mb-4 text-${track.color}`}>{track.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{track.description}</p>
                 </div>
               ))}
-            </div>
-            
-            <div className="text-center mt-12">
-              <p className="text-gray-600 mb-6 text-lg">And many more related topics...</p>
-              <Link href="/authors/call-for-papers" className="inline-flex items-center text-blue-600 hover:text-blue-800 font-bold text-lg group">
-                View Full Topics List 
-                <svg className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
-                </svg>
-              </Link>
             </div>
           </div>
         </div>
