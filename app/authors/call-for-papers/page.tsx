@@ -10,9 +10,9 @@ export default function CallForPapers() {
           <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
             <h2 className="text-2xl font-bold text-blue-900 mb-6">About</h2>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              The International Conference on Machine Vision and Augmented Intelligence (MAI-2026) 
+              The 9th International Conference on Computing and Technology (ICCET-2026) 
               invites original research papers, review papers, and case studies in all areas of 
-              machine vision, computer vision, artificial intelligence, and related fields.
+              computing, technology, artificial intelligence, and related fields.
             </p>
             <p className="text-gray-700 leading-relaxed">
               We welcome contributions that present novel ideas, methodologies, and applications 
@@ -24,7 +24,7 @@ export default function CallForPapers() {
             <h2 className="text-2xl font-bold text-blue-900 mb-6">Topics of Interest</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <h3 className="font-semibold text-lg text-gray-800 mb-3">Machine Vision</h3>
+                <h3 className="font-semibold text-lg text-gray-800 mb-3">Computer Vision & Image Processing</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
                     <span className="text-blue-600 mr-2">•</span>

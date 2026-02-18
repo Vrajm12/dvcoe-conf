@@ -6,9 +6,9 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-white text-lg font-bold mb-4">MAI 2026</h3>
+            <h3 className="text-white text-lg font-bold mb-4">ICCET 2026</h3>
             <p className="text-sm">
-              International Conference on Machine Vision &amp; Augmented Intelligence
+              9th International Conference on Computing and Technology
             </p>
             <p className="text-sm mt-2 text-yellow-400">Hybrid mode</p>
             <p className="text-sm mt-4">

@@ -11,8 +11,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "MAI 2026 - International Conference on Machine Vision & Augmented Intelligence",
-  description: "International Conference on Machine Vision and Augmented Intelligence (MAI-2026) - Hybrid mode conference hosted by SVNIT Surat",
+  title: "ICCET 2026 - 9th International Conference on Computing and Technology",
+  description: "9th International Conference on Computing and Technology (ICCET-2026) - Hybrid mode conference hosted by SVNIT Surat",
 };
 
 export default function RootLayout({

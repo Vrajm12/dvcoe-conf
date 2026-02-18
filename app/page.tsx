@@ -18,17 +18,17 @@ export default function Home() {
         <div className="relative container mx-auto px-4 py-24 md:py-32">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-6">
-              <h1 className="text-6xl md:text-7xl font-bold mb-4 tracking-tight">MAI-2026</h1>
+              <h1 className="text-6xl md:text-7xl font-bold mb-4 tracking-tight">ICCET-2026</h1>
               <div className="h-1 w-32 bg-yellow-400 mx-auto mb-6"></div>
             </div>
             <h2 className="text-3xl md:text-4xl font-semibold mb-6 leading-tight">
-              Machine Vision &amp; Augmented Intelligence
+              9th International Conference on Computing and Technology
             </h2>
             <p className="text-2xl md:text-3xl mb-3 font-light">
               International Conference
             </p>
             <p className="text-xl mb-8 text-blue-100">
-              (MAI-2026)
+              (ICCET-2026)
             </p>
             <div className="inline-flex items-center bg-yellow-400 text-gray-900 px-8 py-3 rounded-full font-bold text-lg shadow-lg mb-10">
               <span className="mr-2">●</span> Hybrid mode
@@ -57,7 +57,7 @@ export default function Home() {
               <div className="bg-white rounded-lg shadow-lg p-8 border-l-4 border-yellow-500">
                 <h3 className="text-2xl font-bold text-yellow-600 mb-6">About Conference</h3>
                 <p className="text-gray-700 leading-relaxed text-justify">
-                  The Machine Vision & Augmented Intelligence(MAI) conference series began in 2021 with its first editionat IIITDM Jabalpur. Since then,MAI has been hosted by NIT Jamshedpur(2022), NITPatna(2023), MANITBhopal(2024), and iMiMUT Gorakhpur(2025). The 6th edition, MAI-2026, will be organized by the Department of Electronics and Communication Engineering, SVNIT Surat.
+                  The International Conference on Computing and Technology (ICCET) conference series began in 2018 with its first edition. Since then, ICCET has been successfully organized across various leading institutions. The 9th edition, ICCET-2026, will be organized by the Department of Electronics and Communication Engineering, SVNIT Surat.
                 </p>
               </div>
               
@@ -65,7 +65,7 @@ export default function Home() {
               <div className="bg-white rounded-lg shadow-lg p-8 border-l-4 border-teal-500">
                 <h3 className="text-2xl font-bold text-teal-600 mb-6">Objectives</h3>
                 <p className="text-gray-700 leading-relaxed text-justify">
-                  MAI-2026 provides a collaborative platform to discuss emerging research trends in Machine Learning, Artificial Intelligence, AR/VR, Digital Signal Processing, Cybersecurity, IoT, and Cyber-Physical Systems. It fosters knowledge exchange among academicians, industry professionals, and students, while promoting &ldquo;Aatma Nirbhar Bharat&rdquo; through technological self-reliance.
+                  ICCET-2026 provides a collaborative platform to discuss emerging research trends in Computing, Technology, Artificial Intelligence, Machine Learning, Digital Signal Processing, Cybersecurity, IoT, and Cyber-Physical Systems. It fosters knowledge exchange among academicians, industry professionals, and students, while promoting &ldquo;Aatma Nirbhar Bharat&rdquo; through technological self-reliance.
                 </p>
               </div>
             </div>
@@ -304,11 +304,11 @@ export default function Home() {
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Join Us at MAI-2026
+              Join Us at ICCET-2026
             </h2>
             <div className="h-1 w-24 bg-yellow-400 mx-auto mb-8"></div>
             <p className="text-xl md:text-2xl mb-12 text-blue-100 leading-relaxed">
-              Submit your research, connect with leading experts, and be part of shaping the future of Machine Vision and Augmented Intelligence
+              Submit your research, connect with leading experts, and be part of shaping the future of Computing and Technology
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-6">
@@ -362,7 +362,7 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-lg p-8 border-l-4 border-yellow-500">
               <h3 className="text-2xl font-bold text-yellow-600 mb-6">Advancing Technology for Sustainable Development!</h3>
               <p className="text-gray-700 leading-relaxed text-justify text-lg">
-                Leveraging AI, Machine Vision, and Augmented Intelligence to achieve SDG 7 (Affordable and Clean Energy) and SDG 9 (Industry, Innovation and Infrastructure)
+                Leveraging AI, Computing Technologies, and Data Science to achieve SDG 7 (Affordable and Clean Energy) and SDG 9 (Industry, Innovation and Infrastructure)
               </p>
             </div>
           </div>
@@ -416,7 +416,7 @@ export default function Home() {
                 { year: '2023', edition: 'MAI-2023', venue: 'NIT Patna' },
                 { year: '2024', edition: 'MAI-2024', venue: 'MANIT Bhopal' },
                 { year: '2025', edition: 'MAI-2025', venue: 'MMMUT Gorakhpur' },
-                { year: '2026', edition: 'MAI-2026', venue: 'SVNIT Surat' }
+                { year: '2026', edition: 'ICCET-2026', venue: 'SVNIT Surat' }
               ].map((event, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-2xl transition-all">
                   <div className="text-4xl font-bold text-gray-700 mb-3">{event.year}</div>
@@ -491,7 +491,7 @@ export default function Home() {
                 <div className="bg-gray-50 rounded-lg p-6 border-l-4 border-blue-600">
                   <h4 className="text-xl font-bold text-gray-900 mb-3">Department of Electronics Engineering</h4>
                   <p className="text-gray-700">
-                    The organizing department for MAI-2026, fostering innovation and excellence in electronics and communication engineering education and research.
+                    The organizing department for ICCET-2026, fostering innovation and excellence in electronics and communication engineering education and research.
                   </p>
                 </div>
               </div>

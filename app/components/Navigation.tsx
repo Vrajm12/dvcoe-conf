@@ -18,8 +18,8 @@ export default function Navigation() {
               </svg>
             </div>
             <div>
-              <div className="text-2xl font-bold text-gray-900">MAI 2026</div>
-              <div className="text-xs text-gray-600 -mt-1">Machine Vision &amp; AI</div>
+              <div className="text-2xl font-bold text-gray-900">ICCET 2026</div>
+              <div className="text-xs text-gray-600 -mt-1">Computing & Technology</div>
             </div>
           </Link>
           

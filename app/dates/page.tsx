@@ -9,7 +9,7 @@ export default function Dates() {
         <div className="max-w-3xl mx-auto">
           <div className="bg-white rounded-lg shadow-xl overflow-hidden">
             <div className="bg-gradient-to-r from-blue-900 to-blue-700 text-white p-8 text-center">
-              <h2 className="text-3xl font-bold mb-2">MAI-2026</h2>
+              <h2 className="text-3xl font-bold mb-2">ICCET-2026</h2>
               <p className="text-blue-200">Mark your calendars for these important deadlines</p>
             </div>
             
