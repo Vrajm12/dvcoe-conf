@@ -18,16 +18,16 @@ export default function Home() {
         <div className="relative container mx-auto px-4 py-24 md:py-32">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-6">
-              <h1 className="text-6xl md:text-7xl font-bold mb-4 tracking-tight">ICCET-2026</h1>
+              <h1 className="text-6xl md:text-7xl font-bold mb-4 tracking-tight text-white drop-shadow-lg">ICCET-2026</h1>
               <div className="h-1 w-32 bg-yellow-400 mx-auto mb-6"></div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-semibold mb-6 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-6 leading-tight text-white drop-shadow-lg">
               9th International Conference on Computing and Technology
             </h2>
-            <p className="text-2xl md:text-3xl mb-3 font-light">
+            <p className="text-2xl md:text-3xl mb-3 font-light text-white drop-shadow-md">
               International Conference
             </p>
-            <p className="text-xl mb-8 text-blue-100">
+            <p className="text-xl mb-8 text-blue-100 drop-shadow-md">
               (ICCET-2026)
             </p>
             <div className="inline-flex items-center bg-yellow-400 text-gray-900 px-8 py-3 rounded-full font-bold text-lg shadow-lg mb-10">
