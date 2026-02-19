@@ -1,4 +1,44 @@
 export default function Dates() {
+  const dates = {
+    page_title: "Important Dates",
+    important_dates: [
+      { event: "Paper Submission Opens", date: "February 5, 2026" },
+      { event: "Paper Submission Deadline", date: "May 30, 2026" },
+      { event: "Acceptance Notification", date: "June 30, 2026" },
+      { event: "Final Submission", date: "July 15, 2026" },
+      { event: "Registration of Accepted Papers", date: "July 25, 2026" },
+      { event: "Camera-Ready Submission", date: "August 10, 2026" },
+      { event: "Conference Dates", date: "September 11-13, 2026" }
+    ]
+  };
+
+  const borderClasses = [
+    'border-blue-600',
+    'border-red-600',
+    'border-purple-600',
+    'border-orange-600',
+    'border-yellow-600',
+    'border-green-600',
+    'border-indigo-600'
+  ];
+  const bgClasses = [
+    'bg-blue-50',
+    'bg-red-50',
+    'bg-purple-50',
+    'bg-orange-50',
+    'bg-yellow-50',
+    'bg-green-50',
+    'bg-indigo-50'
+  ];
+  const badgeClasses = [
+    'bg-blue-900 text-white',
+    'bg-red-600 text-white',
+    'bg-purple-600 text-white',
+    'bg-orange-600 text-white',
+    'bg-yellow-600 text-white',
+    'bg-green-600 text-white',
+    'bg-indigo-600 text-white'
+  ];
   return (
     <main className="py-16 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4">
@@ -15,77 +55,22 @@ export default function Dates() {
             
             <div className="p-8">
               <div className="space-y-6">
-                <div className="flex items-start border-l-4 border-blue-600 pl-6 py-4 bg-blue-50 rounded-r-lg">
-                  <div className="flex-grow">
-                    <h3 className="font-bold text-lg text-gray-800 mb-1">Paper Submission Opens</h3>
-                    <p className="text-gray-600 text-sm">Start submitting your research papers</p>
-                  </div>
-                  <div className="text-right">
-                    <div className="bg-blue-900 text-white px-4 py-2 rounded font-bold">
-                      TBA
+                {dates.important_dates.map((item, i) => (
+                  <div
+                    key={i}
+                    className={`flex items-start border-l-4 ${borderClasses[i % borderClasses.length]} pl-6 py-4 ${bgClasses[i % bgClasses.length]} rounded-r-lg`}
+                  >
+                    <div className="flex-grow">
+                      <h3 className="font-bold text-lg text-gray-800 mb-1">{item.event}</h3>
+                      <p className="text-gray-600 text-sm">{item.event === 'Conference Dates' ? 'Main conference event (Hybrid Mode)' : ''}</p>
+                    </div>
+                    <div className="text-right">
+                      <div className={`${badgeClasses[i % badgeClasses.length]} px-4 py-2 rounded font-bold`}>
+                        {item.date}
+                      </div>
                     </div>
                   </div>
-                </div>
-                
-                <div className="flex items-start border-l-4 border-red-600 pl-6 py-4 bg-red-50 rounded-r-lg">
-                  <div className="flex-grow">
-                    <h3 className="font-bold text-lg text-gray-800 mb-1">Paper Submission Deadline</h3>
-                    <p className="text-gray-600 text-sm">Final date for paper submission</p>
-                  </div>
-                  <div className="text-right">
-                    <div className="bg-red-600 text-white px-4 py-2 rounded font-bold">
-                      TBA
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex items-start border-l-4 border-purple-600 pl-6 py-4 bg-purple-50 rounded-r-lg">
-                  <div className="flex-grow">
-                    <h3 className="font-bold text-lg text-gray-800 mb-1">Notification of Acceptance</h3>
-                    <p className="text-gray-600 text-sm">Authors will be notified about paper status</p>
-                  </div>
-                  <div className="text-right">
-                    <div className="bg-purple-600 text-white px-4 py-2 rounded font-bold">
-                      TBA
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex items-start border-l-4 border-orange-600 pl-6 py-4 bg-orange-50 rounded-r-lg">
-                  <div className="flex-grow">
-                    <h3 className="font-bold text-lg text-gray-800 mb-1">Camera-Ready Submission</h3>
-                    <p className="text-gray-600 text-sm">Submit final version of accepted papers</p>
-                  </div>
-                  <div className="text-right">
-                    <div className="bg-orange-600 text-white px-4 py-2 rounded font-bold">
-                      TBA
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex items-start border-l-4 border-yellow-600 pl-6 py-4 bg-yellow-50 rounded-r-lg">
-                  <div className="flex-grow">
-                    <h3 className="font-bold text-lg text-gray-800 mb-1">Early Bird Registration Deadline</h3>
-                    <p className="text-gray-600 text-sm">Register at discounted rates</p>
-                  </div>
-                  <div className="text-right">
-                    <div className="bg-yellow-600 text-white px-4 py-2 rounded font-bold">
-                      TBA
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex items-start border-l-4 border-green-600 pl-6 py-4 bg-green-50 rounded-r-lg">
-                  <div className="flex-grow">
-                    <h3 className="font-bold text-lg text-gray-800 mb-1">Conference Dates</h3>
-                    <p className="text-gray-600 text-sm">Main conference event (Hybrid Mode)</p>
-                  </div>
-                  <div className="text-right">
-                    <div className="bg-green-600 text-white px-4 py-2 rounded font-bold">
-                      2026
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>

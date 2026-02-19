@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "start:watch": "nodemon --watch app --watch public --ext tsx,ts,js,json --exec \"npm run build && npm run start\" --delay 1000",
+    "start:pm2": "pm2 start npm --name dvcoe -- run start --watch"
   },
   "dependencies": {
     "next": "16.1.6",
@@ -22,6 +24,8 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "5.9.3",
+    "nodemon": "^2.0.22",
+    "pm2": "^5.2.0"
   }
 }

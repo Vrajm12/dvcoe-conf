@@ -1,9 +1,23 @@
 export default function Contact() {
+  const contactData = {
+    page_title: "Contact Us",
+    conference_dates: "September 11-13, 2026",
+    contact_details: [
+      "Dr. Rajeev Arya: +91-8140336451",
+      "Dr. Abhilash Mandloi: +91-7016786449",
+      "2026.mvai.in",
+    ],
+    venue_title: "Electronics Engineering Department",
+    venue_address:
+      "Sardar Vallabhbhai National Institute of Technology, Ichchhanath, Surat - 395007, Gujarat, India",
+    google_map_link:
+      "https://maps.google.com/maps?width=1140&height=400&hl=en&q=Electronics%20Engineering%20Department,%20SardarVallabhbhai%20National%20Institute%20of%20Technology,%20Surat%20Ichchhanath,%20Surat-395%20007%20Gujarat.%20India+(ET2ECN%202021)&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+  };
   return (
     <main className="py-16 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">
-          Contact Us
+          {contactData.page_title}
         </h1>
         
         <div className="max-w-5xl mx-auto">
@@ -23,14 +37,18 @@ export default function Contact() {
                   <div>
                     <h3 className="font-bold text-gray-800 mb-1">Address</h3>
                     <p className="text-gray-600">
-                      Electronics Engineering Department<br />
-                      Sardar Vallabhbhai National Institute of Technology<br />
-                      Ichchhanath, Surat - 395 007<br />
-                      Gujarat, India
+                      <strong>{contactData.venue_title}</strong>
+                      <br />
+                      {contactData.venue_address.split(',').map((line, idx) => (
+                        <span key={idx}>
+                          {line.trim()}
+                          <br />
+                        </span>
+                      ))}
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="bg-blue-100 p-3 rounded-lg mr-4">
                     <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -38,18 +56,38 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-800 mb-1">Email</h3>
-                    <p className="text-gray-600">
-                      <a href="mailto:info@mai2026.in" className="text-blue-600 hover:underline">
-                        info@mai2026.in
-                      </a><br />
-                      <a href="mailto:contact@mai2026.in" className="text-blue-600 hover:underline">
-                        contact@mai2026.in
-                      </a>
-                    </p>
+                    <h3 className="font-bold text-gray-800 mb-1">Contact Details</h3>
+                    <div className="text-gray-600">
+                      {contactData.contact_details.map((d, i) => {
+                        const cleaned = d.replace(/[\[\]]/g, '').trim();
+                        if (cleaned.includes('@')) {
+                          return (
+                            <div key={i}>
+                              <a href={`mailto:${cleaned}`} className="text-blue-600 hover:underline">
+                                {cleaned}
+                              </a>
+                            </div>
+                          );
+                        }
+                        if (cleaned.match(/\+?\d{2,}/)) {
+                          return <div key={i}>{cleaned}</div>;
+                        }
+                        if (cleaned.includes('.')) {
+                          const href = cleaned.startsWith('http') ? cleaned : `https://${cleaned}`;
+                          return (
+                            <div key={i}>
+                              <a href={href} target="_blank" rel="noreferrer" className="text-blue-600 hover:underline">
+                                {cleaned}
+                              </a>
+                            </div>
+                          );
+                        }
+                        return <div key={i}>{cleaned}</div>;
+                      })}
+                    </div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="bg-blue-100 p-3 rounded-lg mr-4">
                     <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -57,14 +95,11 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-800 mb-1">Phone</h3>
-                    <p className="text-gray-600">
-                      +91 [Phone Number]<br />
-                      +91 [Alternate Number]
-                    </p>
+                    <h3 className="font-bold text-gray-800 mb-1">Conference Dates</h3>
+                    <p className="text-gray-600">{contactData.conference_dates}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="bg-blue-100 p-3 rounded-lg mr-4">
                     <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -72,12 +107,17 @@ export default function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-800 mb-1">Website</h3>
-                    <p className="text-gray-600">
-                      <a href="https://2026.mvai.in" className="text-blue-600 hover:underline">
-                        2026.mvai.in
-                      </a>
-                    </p>
+                    <h3 className="font-bold text-gray-800 mb-1">Location Map</h3>
+                    <div className="mt-2">
+                      <iframe
+                        title="conference-location"
+                        src={contactData.google_map_link}
+                        width="100%"
+                        height={240}
+                        className="rounded"
+                        loading="lazy"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
