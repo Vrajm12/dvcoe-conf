@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,13 +11,15 @@ export default function Navigation() {
     <nav className="bg-white shadow-lg sticky top-0 z-50 border-b-4 border-blue-600">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <Link href="/" className="flex items-center space-x-3">
-            <div className="bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-lg p-2">
-              <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
-                <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd"></path>
-              </svg>
-            </div>
+          <Link href="/" className="flex items-center space-x-4">
+            <Image 
+              src="/mai-logo.png" 
+              alt="MAI 2026" 
+              width={120} 
+              height={40}
+              className="h-10 w-auto"
+            />
+            <div className="border-l-2 border-gray-300 h-12"></div>
             <div>
               <div className="text-2xl font-bold text-gray-900">ICCET 2026</div>
               <div className="text-xs text-gray-600 -mt-1">Computing & Technology</div>
