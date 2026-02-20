@@ -1,3 +1,21 @@
+const delegateFees = [
+  {
+    category: "Students (UG/PG/Ph.D Scholars)",
+    indian: "₹6,000",
+    foreign: "$150"
+  },
+  {
+    category: "Academicians",
+    indian: "₹9,000",
+    foreign: "$300"
+  },
+  {
+    category: "Industry Professionals",
+    indian: "₹10,000",
+    foreign: "$350"
+  }
+];
+
 export default function DelegateFee() {
   return (
     <main className="py-16 bg-gray-50 min-h-screen">
@@ -24,31 +42,18 @@ export default function DelegateFee() {
                 <thead>
                   <tr className="bg-blue-900 text-white">
                     <th className="border border-blue-800 px-6 py-3 text-left">Category</th>
-                    <th className="border border-blue-800 px-6 py-3 text-left">Early Bird</th>
-                    <th className="border border-blue-800 px-6 py-3 text-left">Regular</th>
+                    <th className="border border-blue-800 px-6 py-3 text-left">Indian (INR)</th>
+                    <th className="border border-blue-800 px-6 py-3 text-left">Foreign (USD)</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 px-6 py-4">Indian Delegates</td>
-                    <td className="border border-gray-300 px-6 py-4 font-semibold">₹ TBA</td>
-                    <td className="border border-gray-300 px-6 py-4 font-semibold">₹ TBA</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 px-6 py-4">Foreign Delegates</td>
-                    <td className="border border-gray-300 px-6 py-4 font-semibold">$ TBA</td>
-                    <td className="border border-gray-300 px-6 py-4 font-semibold">$ TBA</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="border border-gray-300 px-6 py-4">Student Delegates (Indian)</td>
-                    <td className="border border-gray-300 px-6 py-4 font-semibold">₹ TBA</td>
-                    <td className="border border-gray-300 px-6 py-4 font-semibold">₹ TBA</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-gray-300 px-6 py-4">Student Delegates (Foreign)</td>
-                    <td className="border border-gray-300 px-6 py-4 font-semibold">$ TBA</td>
-                    <td className="border border-gray-300 px-6 py-4 font-semibold">$ TBA</td>
-                  </tr>
+                  {delegateFees.map((fee, index) => (
+                    <tr key={index} className={index % 2 === 0 ? "bg-gray-50" : ""}>
+                      <td className="border border-gray-300 px-6 py-4">{fee.category}</td>
+                      <td className="border border-gray-300 px-6 py-4 font-semibold">{fee.indian}</td>
+                      <td className="border border-gray-300 px-6 py-4 font-semibold">{fee.foreign}</td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
