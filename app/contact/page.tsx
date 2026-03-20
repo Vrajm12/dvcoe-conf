@@ -1,17 +1,13 @@
 export default function Contact() {
   const contactData = {
     page_title: "Contact Us",
-    conference_dates: "September 11-13, 2026",
-    contact_details: [
-      "Dr. Rajeev Arya: +91-8140336451",
-      "Dr. Abhilash Mandloi: +91-7016786449",
-      "2026.mvai.in",
-    ],
-    venue_title: "Electronics Engineering Department",
+    conference_dates: "June 27-28, 2026",
+    contact_details: [],
+    venue_title: "Dnyanvilas College of Engineering",
     venue_address:
-      "Sardar Vallabhbhai National Institute of Technology, Ichchhanath, Surat - 395007, Gujarat, India",
+      "Gat No. 76, Dudulgaon, Pimpri-Chinchwad, Pune, Maharashtra 412105, India",
     google_map_link:
-      "https://maps.google.com/maps?width=1140&height=400&hl=en&q=Electronics%20Engineering%20Department,%20SardarVallabhbhai%20National%20Institute%20of%20Technology,%20Surat%20Ichchhanath,%20Surat-395%20007%20Gujarat.%20India+(ET2ECN%202021)&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.236842485476!2d73.88024342552494!3d18.67019877240876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c9e0e974a4f7%3A0x6fe8fd8f59c1dd83!2sDnyanvilas%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1710955200000"
   };
   return (
     <main className="py-16 bg-gray-50 min-h-screen">

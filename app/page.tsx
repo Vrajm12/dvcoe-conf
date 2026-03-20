@@ -21,10 +21,10 @@ export default function Home() {
         <div className="relative container mx-auto px-4 py-24 md:py-32">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-6">
-              <h1 className="text-6xl md:text-7xl font-bold mb-4 tracking-tight text-white drop-shadow-lg">ICCET-2026</h1>
+              <h1 className="text-6xl md:text-7xl font-bold mb-4 tracking-tight !text-white drop-shadow-lg">ICCET-2026</h1>
               <div className="h-1 w-32 bg-yellow-400 mx-auto mb-6"></div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-semibold mb-6 leading-tight text-white drop-shadow-lg">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-6 leading-tight !text-white drop-shadow-lg">
               9th International Conference on Computing and Technology
             </h2>
             <p className="text-2xl md:text-3xl mb-3 font-light text-white drop-shadow-md">
@@ -204,9 +204,14 @@ export default function Home() {
                   title: 'Multidisciplinary Applications based on AI/ML and Soft Computing',
                   color: 'teal-500',
                   description: 'Healthcare & Life Sciences, Manufacturing & Industry 4.0, Transportation & Logistics, Agriculture, Energy & Environment'
+                },
+                {
+                  title: 'Indian Knowledge Systems',
+                  color: 'indigo-500',
+                  description: 'Advanced research and innovative solutions in this domain'
                 }
               ].map((track, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg p-6 border-l-4 hover:shadow-xl transition-shadow" style={{borderLeftColor: `var(--tw-${track.color})`}}>
+                <div key={index} className={`bg-white rounded-lg shadow-lg p-6 border-l-4 hover:shadow-xl transition-shadow ${index === 6 ? 'lg:col-start-2' : ''}`} style={{borderLeftColor: `var(--tw-${track.color})`}}>
                   <h3 className={`text-xl font-bold mb-4 text-${track.color}`}>{track.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{track.description}</p>
                 </div>
@@ -271,10 +276,10 @@ export default function Home() {
                   <div className="flex-1">
                     <div className="text-green-600 text-sm font-bold uppercase tracking-wide mb-2">Conference</div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">Conference Dates</h3>
-                    <p className="text-gray-600 text-sm">Main conference event (Hybrid)</p>
+                    <p className="text-gray-600 text-sm">27-28th June 2026 (Hybrid)</p>
                   </div>
                   <div className="bg-green-600 text-white rounded-xl px-4 py-2 font-bold text-lg ml-4">
-                    2026
+                    27-28 JUNE
                   </div>
                 </div>
               </div>
@@ -283,7 +288,7 @@ export default function Home() {
             <div className="mt-10 text-center">
               <Link 
                 href="/dates" 
-                className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition shadow-xl transform hover:scale-105"
+                className="inline-flex items-center bg-yellow-400 text-gray-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-yellow-300 transition shadow-xl transform hover:scale-105"
               >
                 View All Dates
                 <svg className="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20">
@@ -306,7 +311,7 @@ export default function Home() {
         
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight !text-white">
               Join Us at ICCET-2026
             </h2>
             <div className="h-1 w-24 bg-yellow-400 mx-auto mb-8"></div>
@@ -440,13 +445,13 @@ export default function Home() {
             {/* Map header */}
             <div className="mb-12 rounded-lg overflow-hidden shadow-lg">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.9267984768147!2d72.78367831493889!3d21.16714098593555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04dec8b56fdf1%3A0x423b99085d26d1f9!2sSardar%20Vallabhbhai%20National%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1645678901234!5m2!1sen!2sin" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.236842485476!2d73.88024342552494!3d18.67019877240876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c9e0e974a4f7%3A0x6fe8fd8f59c1dd83!2sDnyanvilas%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1710955200000" 
                 width="100%" 
                 height="300" 
                 style={{border: 0}} 
                 allowFullScreen 
                 loading="lazy"
-                title="SVNIT Location Map"
+                title="Dnyanvilas College of Engineering Location Map"
               ></iframe>
             </div>
             
@@ -457,11 +462,14 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {/* Logo */}
               <div className="flex items-center justify-center lg:col-span-1">
-                <div className="w-64 h-64 relative">
-                  <img 
-                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='90' fill='%23F9A825' stroke='%23006400' stroke-width='4'/%3E%3Ctext x='100' y='105' text-anchor='middle' font-size='24' font-weight='bold' fill='%23000'%3ESVNIT%3C/text%3E%3C/svg%3E"
-                    alt="SVNIT Logo" 
+                <div className="w-96 h-96 relative">
+                  <Image 
+                    src="/DVCOE.png"
+                    alt="DVCOE Logo" 
+                    width={384}
+                    height={384}
                     className="w-full h-full object-contain"
+                    priority
                   />
                 </div>
               </div>
@@ -469,33 +477,31 @@ export default function Home() {
               {/* Content */}
               <div className="lg:col-span-2 space-y-6">
                 <h3 className="text-2xl font-bold text-gray-900">
-                  Sardar Vallabhbhai National Institute of Technology, Ichchhanath, Surat-395007, Gujarat, INDIA
+                  Shri Gajanan Maharaj Shikshan Prasarak Mandal's Dnyanvilas College of Engineering, Pune (DVCOE)
                 </h3>
                 <p className="text-gray-700 leading-relaxed text-justify">
-                  The Institute was established as Sardar Vallabhbhai Regional College of Engineering & Technology (SVRCET) Surat in 1961 as one of the Regional Engineering Colleges (RECs) to impart technical education. The Institute had begun with offering Bachelor Degree Programmes in Civil, Electrical and Mechanical Engineering. The Government of India declared the Sardar Vallabhbhai Regional College of Engineering & Technology (SVRCET) Surat to Sardar Vallabhbhai National Institute of Technology (SVNIT) Surat with status of 'Deemed University' with effect from 4th December, 2002. With the enactment of National Institutes of Technology Act-2007, the Institute has been granted the status of 'Institution of National Importance' w.e.f. August 15, 2007.
+                  Dnyanvilas College of Engineering (DVCOE), established under Shri Gajanan Maharaj Shikshan Prasarak Mandal (SGMSPM), is a forward-looking institution located in Dudulgaon, Alandi, Pune. It is committed to delivering value-based, innovation-driven technical education to students from diverse backgrounds.
+                </p>
+                <p className="text-gray-700 leading-relaxed text-justify">
+                  The college offers undergraduate programs in Artificial Intelligence & Machine Learning, Computer Engineering, Information Technology, and Electronics & Telecommunication Engineering. DVCOE is approved by AICTE and DTE, Government of Maharashtra, and is affiliated with Dr. Babasaheb Ambedkar Technological University (DBATU), ensuring academic credibility and a standardized curriculum.
+                </p>
+                <p className="text-gray-700 leading-relaxed text-justify">
+                  With modern infrastructure, advanced labs, digital learning resources, and a strong focus on research and entrepreneurship, DVCOE provides a dynamic, student-centric environment that nurtures skilled engineers and future-ready professionals.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
-                    href="https://www.svnit.ac.in" 
+                    href="https://dvcoe.com/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center bg-gray-800 text-white px-8 py-3 rounded-lg font-bold hover:bg-gray-900 transition shadow-lg"
                   >
                     Visit Official Website
                   </a>
-                  <a 
-                    href="https://www.svnit.ac.in/department/electronics-engineering/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center bg-gray-800 text-white px-8 py-3 rounded-lg font-bold hover:bg-gray-900 transition shadow-lg"
-                  >
-                    About the Department
-                  </a>
                 </div>
                 <div className="bg-gray-50 rounded-lg p-6 border-l-4 border-blue-600">
-                  <h4 className="text-xl font-bold text-gray-900 mb-3">Department of Electronics Engineering</h4>
+                  <h4 className="text-xl font-bold text-gray-900 mb-3">Engineering Excellence</h4>
                   <p className="text-gray-700">
-                    The organizing department for ICCET-2026, fostering innovation and excellence in electronics and communication engineering education and research.
+                    DVCOE is the proud host of ICCET-2026, fostering innovation and excellence in engineering education and research across all disciplines.
                   </p>
                 </div>
               </div>
