@@ -1,11 +1,8 @@
 [build]
   command = "npm run build"
-  publish = ".next/static"
-
-[functions]
-  node_bundler = "esbuild"
+  publish = "out"
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 404
+  status = 200
