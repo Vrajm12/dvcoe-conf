@@ -2,7 +2,7 @@ export default function Contact() {
   const contactData = {
     page_title: "Contact Us",
     conference_dates: "June 27-28, 2026",
-    contact_details: [],
+    contact_details: [] as string[],
     venue_title: "Dnyanvilas College of Engineering",
     venue_address:
       "Gat No. 76, Dudulgaon, Pimpri-Chinchwad, Pune, Maharashtra 412105, India",

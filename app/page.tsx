@@ -477,7 +477,7 @@ export default function Home() {
               {/* Content */}
               <div className="lg:col-span-2 space-y-6">
                 <h3 className="text-2xl font-bold text-gray-900">
-                  Shri Gajanan Maharaj Shikshan Prasarak Mandal's Dnyanvilas College of Engineering, Pune (DVCOE)
+                  Shri Gajanan Maharaj Shikshan Prasarak Mandal&rsquo;s Dnyanvilas College of Engineering, Pune (DVCOE)
                 </h3>
                 <p className="text-gray-700 leading-relaxed text-justify">
                   Dnyanvilas College of Engineering (DVCOE), established under Shri Gajanan Maharaj Shikshan Prasarak Mandal (SGMSPM), is a forward-looking institution located in Dudulgaon, Alandi, Pune. It is committed to delivering value-based, innovation-driven technical education to students from diverse backgrounds.
