@@ -8,7 +8,7 @@ export default function Dates() {
       { event: "Final Submission", date: "July 15, 2026" },
       { event: "Registration of Accepted Papers", date: "July 25, 2026" },
       { event: "Camera-Ready Submission", date: "August 10, 2026" },
-      { event: "Conference Dates", date: "September 11-13, 2026" }
+      { event: "Conference Dates", date: "June 27-28, 2026" }
     ]
   };
 
