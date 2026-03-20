@@ -12,13 +12,15 @@ export default function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="flex items-center space-x-4">
-            <Image 
-              src="/mai-logo.png" 
-              alt="MAI 2026" 
-              width={120} 
-              height={40}
-              className="h-10 w-auto"
-            />
+            <div className="relative w-24 h-10">
+              <Image 
+                src="/mai-logo.jpg" 
+                alt="MAI 2026 Logo" 
+                fill
+                priority
+                className="object-contain"
+              />
+            </div>
             <div className="border-l-2 border-gray-300 h-12"></div>
             <div>
               <div className="text-2xl font-bold text-gray-900">ICCET 2026</div>

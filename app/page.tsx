@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -6,13 +7,15 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 text-white overflow-hidden">
         {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2000&auto=format&fit=crop)',
-            backgroundBlendMode: 'multiply'
-          }}
-        ></div>
+        <Image
+          src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2000&auto=format&fit=crop"
+          alt="Conference Background"
+          fill
+          priority
+          quality={75}
+          className="object-cover mix-blend-multiply"
+          sizes="100vw"
+        />
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/85 via-blue-800/85 to-indigo-900/85"></div>
         <div className="relative container mx-auto px-4 py-24 md:py-32">
@@ -443,6 +446,7 @@ export default function Home() {
                 style={{border: 0}} 
                 allowFullScreen 
                 loading="lazy"
+                title="SVNIT Location Map"
               ></iframe>
             </div>
             

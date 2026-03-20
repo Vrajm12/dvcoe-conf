@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Gallery2023() {
   const galleryData = {
     title: "Gallery 2023Home>Gallery>2023",
@@ -34,7 +36,7 @@ export default function Gallery2023() {
             {galleryData.event_images.map((src, idx) => (
               <div key={idx} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
                 <div className="aspect-video bg-gray-100 flex items-center justify-center overflow-hidden">
-                  <img src={src} alt={`Event ${idx + 1}`} className="w-full h-full object-cover" />
+                  <Image src={src} alt={`Event ${idx + 1}`} width={800} height={450} unoptimized className="w-full h-full object-cover" />
                 </div>
                 <div className="p-4">
                   <h3 className="font-semibold text-gray-800">Event Photo {idx + 1}</h3>

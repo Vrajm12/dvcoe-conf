@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const organizingData = {
   committees: [
     {
@@ -332,7 +334,7 @@ export default function OrganizingCommittee() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {committee.members.map((m, idx) => (
                   <div key={idx} className="flex items-start space-x-4">
-                    <img src={m.image} alt={m.name} className="w-20 h-20 rounded-full object-cover" />
+                    <Image src={m.image} alt={m.name} width={80} height={80} unoptimized className="w-20 h-20 rounded-full object-cover" />
                     <div>
                       <a href={m.profile_link || '#'} target="_blank" rel="noreferrer" className="font-bold text-lg text-gray-800 hover:text-blue-600">{m.name}</a>
                       <p className="text-gray-600">{m.designation}</p>
