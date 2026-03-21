@@ -60,7 +60,7 @@ export default function Home() {
               <div className="bg-white rounded-lg shadow-lg p-8 border-l-4 border-yellow-500">
                 <h3 className="text-2xl font-bold text-yellow-600 mb-6">About Conference</h3>
                 <p className="text-gray-700 leading-relaxed text-justify">
-                  The International Conference on Computing and Technology (ICCET) conference series began in 2018 with its first edition. Since then, ICCET has been successfully organized across various leading institutions. The 9th edition, ICCET-2026, will be organized by the Department of Electronics and Communication Engineering, SVNIT Surat.
+                  The International Conference on Computing and Technology (ICCET) conference series began in 2018 with its first edition. Since then, ICCET has been successfully organized across various leading institutions. The 9th edition, ICCET-2026, will be organized by Shri Gajanan Maharaj Shikshan Prasarak Mandal's Dnyanvilas College of Engineering, Pune (DVCOE).
                 </p>
               </div>
               
@@ -424,7 +424,7 @@ export default function Home() {
                 { year: '2023', edition: 'MAI-2023', venue: 'NIT Patna' },
                 { year: '2024', edition: 'MAI-2024', venue: 'MANIT Bhopal' },
                 { year: '2025', edition: 'MAI-2025', venue: 'MMMUT Gorakhpur' },
-                { year: '2026', edition: 'ICCET-2026', venue: 'SVNIT Surat' }
+                { year: '2026', edition: 'ICCET-2026', venue: 'DVCOE, PUNE' }
               ].map((event, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-2xl transition-all">
                   <div className="text-4xl font-bold text-gray-700 mb-3">{event.year}</div>
@@ -476,9 +476,14 @@ export default function Home() {
               
               {/* Content */}
               <div className="lg:col-span-2 space-y-6">
-                <h3 className="text-2xl font-bold text-gray-900">
-                  Shri Gajanan Maharaj Shikshan Prasarak Mandal&rsquo;s Dnyanvilas College of Engineering, Pune (DVCOE)
-                </h3>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-700 mb-2">
+                    Shri Gajanan Maharaj Shikshan Prasarak Mandal&rsquo;s
+                  </h3>
+                  <h2 className="text-4xl font-bold text-gray-900">
+                    Dnyanvilas College of Engineering, Pune (DVCOE)
+                  </h2>
+                </div>
                 <p className="text-gray-700 leading-relaxed text-justify">
                   Dnyanvilas College of Engineering (DVCOE), established under Shri Gajanan Maharaj Shikshan Prasarak Mandal (SGMSPM), is a forward-looking institution located in Dudulgaon, Alandi, Pune. It is committed to delivering value-based, innovation-driven technical education to students from diverse backgrounds.
                 </p>
