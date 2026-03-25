@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
@@ -40,10 +41,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
+      <head>
+        <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+      </head>
       <body className={inter.className}>
         <Navigation />
         {children}
         <Footer />
+        <Script id="netlify-identity-init" strategy="afterInteractive">{`
+          if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+              if (!user) {
+                window.netlifyIdentity.on("login", () => {
+                  document.location.href = "/admin/";
+                });
+              }
+            });
+          }
+        `}</Script>
       </body>
     </html>
   );
