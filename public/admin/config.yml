@@ -43,9 +43,8 @@ collections:
     label: "Pages"
     folder: "content/pages"
     create: false
-    slug: "{{slug}}"
     files:
-      - file: "content/pages/home.md"
+      - file: "home.md"
         label: "Home Page"
         name: "home"
         fields:
@@ -53,7 +52,7 @@ collections:
           - { name: "subtitle", label: "Subtitle", widget: "string" }
           - { name: "tagline", label: "Tagline", widget: "string" }
           - { name: "event_type", label: "Event Type (e.g., Hybrid mode)", widget: "string" }
-      - file: "content/pages/call-for-papers.md"
+      - file: "call-for-papers.md"
         label: "Call for Papers"
         name: "call-for-papers"
         fields:
