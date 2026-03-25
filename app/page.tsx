@@ -60,7 +60,7 @@ export default function Home() {
               <div className="bg-white rounded-lg shadow-lg p-8 border-l-4 border-yellow-500">
                 <h3 className="text-2xl font-bold text-yellow-600 mb-6">About Conference</h3>
                 <p className="text-gray-700 leading-relaxed text-justify">
-                  The International Conference on Computing and Technology (ICCET) conference series began in 2018 with its first edition. Since then, ICCET has been successfully organized across various leading institutions. The 9th edition, ICCET-2026, will be organized by Shri Gajanan Maharaj Shikshan Prasarak Mandal's Dnyanvilas College of Engineering, Pune (DVCOE).
+                  The International Conference on Computing and Technology (ICCET) conference series began in 2018 with its first edition. Since then, ICCET has been successfully organized across various leading institutions. The 9th edition, ICCET-2026, will be organized by Shri Gajanan Maharaj Shikshan Prasarak Mandal&rsquo;s Dnyanvilas College of Engineering, Pune (DVCOE).
                 </p>
               </div>
               

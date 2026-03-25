@@ -1,0 +1,62 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "events"
+    label: "Events"
+    folder: "content/events"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "description", label: "Description", widget: "text" }
+      - { name: "image", label: "Image", widget: "image" }
+
+  - name: "announcements"
+    label: "Announcements"
+    folder: "content/announcements"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "content", label: "Content", widget: "text" }
+      - { name: "date", label: "Date", widget: "datetime" }
+
+  - name: "keynotes"
+    label: "Keynotes"
+    folder: "content/keynotes"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "title", label: "Speaker Name", widget: "string" }
+      - { name: "topic", label: "Topic", widget: "string" }
+      - { name: "bio", label: "Biography", widget: "text" }
+      - { name: "image", label: "Speaker Image", widget: "image" }
+      - { name: "time", label: "Time", widget: "string" }
+
+  - name: "pages"
+    label: "Pages"
+    folder: "content/pages"
+    create: false
+    slug: "{{slug}}"
+    files:
+      - file: "content/pages/home.md"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - { name: "title", label: "Conference Title", widget: "string" }
+          - { name: "subtitle", label: "Subtitle", widget: "string" }
+          - { name: "tagline", label: "Tagline", widget: "string" }
+          - { name: "event_type", label: "Event Type (e.g., Hybrid mode)", widget: "string" }
+      - file: "content/pages/call-for-papers.md"
+        label: "Call for Papers"
+        name: "call-for-papers"
+        fields:
+          - { name: "deadline", label: "Submission Deadline", widget: "datetime" }
+          - { name: "guidelines", label: "Guidelines", widget: "text" }
+          - { name: "topics", label: "Topics (comma-separated)", widget: "string" }
