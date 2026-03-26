@@ -1,14 +1,21 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { getPageContent } from '@/lib/content';
 
-export default function Home() {
+export default async function Home() {
+  const pageData = await getPageContent('home');
+
+  if (!pageData) {
+    return <div>Error loading page content</div>;
+  }
+
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 text-white overflow-hidden">
         {/* Background Image */}
         <Image
-          src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2000&auto=format&fit=crop"
+          src={pageData.hero_background || "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2000&auto=format&fit=crop"}
           alt="Conference Background"
           fill
           priority
@@ -21,20 +28,20 @@ export default function Home() {
         <div className="relative container mx-auto px-4 py-24 md:py-32">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-6">
-              <h1 className="text-6xl md:text-7xl font-bold mb-4 tracking-tight !text-white drop-shadow-lg">ICCET-2026</h1>
+              <h1 className="text-6xl md:text-7xl font-bold mb-4 tracking-tight !text-white drop-shadow-lg">{pageData.hero_title}</h1>
               <div className="h-1 w-32 bg-yellow-400 mx-auto mb-6"></div>
             </div>
             <h2 className="text-3xl md:text-4xl font-semibold mb-6 leading-tight !text-white drop-shadow-lg">
-              9th International Conference on Computing and Technology
+              {pageData.hero_subtitle}
             </h2>
             <p className="text-2xl md:text-3xl mb-3 font-light text-white drop-shadow-md">
-              International Conference
+              {pageData.hero_tagline}
             </p>
             <p className="text-xl mb-8 text-blue-100 drop-shadow-md">
-              (ICCET-2026)
+              ({pageData.hero_title})
             </p>
             <div className="inline-flex items-center bg-yellow-400 text-gray-900 px-8 py-3 rounded-full font-bold text-lg shadow-lg mb-10">
-              <span className="mr-2">●</span> Hybrid mode
+              <span className="mr-2">●</span> {pageData.hero_event_type}
             </div>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
               <Link href="/authors/call-for-papers" className="inline-block bg-white text-blue-900 px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-xl transform hover:scale-105">
@@ -53,22 +60,22 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-wide" style={{color: '#C2185B'}}>About the Conference</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-wide" style={{color: '#C2185B'}}>{pageData.about_title}</h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* About Conference */}
               <div className="bg-white rounded-lg shadow-lg p-8 border-l-4 border-yellow-500">
-                <h3 className="text-2xl font-bold text-yellow-600 mb-6">About Conference</h3>
+                <h3 className="text-2xl font-bold text-yellow-600 mb-6">{pageData.about_conference_title}</h3>
                 <p className="text-gray-700 leading-relaxed text-justify">
-                  The International Conference on Computing and Technology (ICCET) conference series began in 2018 with its first edition. Since then, ICCET has been successfully organized across various leading institutions. The 9th edition, ICCET-2026, will be organized by Shri Gajanan Maharaj Shikshan Prasarak Mandal&rsquo;s Dnyanvilas College of Engineering, Pune (DVCOE).
+                  {pageData.about_conference_content}
                 </p>
               </div>
               
               {/* Objectives */}
               <div className="bg-white rounded-lg shadow-lg p-8 border-l-4 border-teal-500">
-                <h3 className="text-2xl font-bold text-teal-600 mb-6">Objectives</h3>
+                <h3 className="text-2xl font-bold text-teal-600 mb-6">{pageData.about_objectives_title}</h3>
                 <p className="text-gray-700 leading-relaxed text-justify">
-                  ICCET-2026 provides a collaborative platform to discuss emerging research trends in Computing, Technology, Artificial Intelligence, Machine Learning, Digital Signal Processing, Cybersecurity, IoT, and Cyber-Physical Systems. It fosters knowledge exchange among academicians, industry professionals, and students, while promoting &ldquo;Aatma Nirbhar Bharat&rdquo; through technological self-reliance.
+                  {pageData.about_objectives_content}
                 </p>
               </div>
             </div>
@@ -81,30 +88,30 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-wide" style={{color: '#C2185B'}}>Acknowledgement</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-wide" style={{color: '#C2185B'}}>{pageData.acknowledgement_title}</h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Microsoft Support */}
               <div className="bg-white rounded-lg shadow-lg p-8 border-l-4 border-yellow-500">
-                <h3 className="text-2xl font-bold text-yellow-600 mb-6">Microsoft Support</h3>
+                <h3 className="text-2xl font-bold text-yellow-600 mb-6">{pageData.acknowledgement_microsoft_title}</h3>
                 <div className="mb-6 bg-blue-500 inline-block px-6 py-3 rounded">
                   <span className="text-white font-bold text-3xl">CMT</span>
                 </div>
                 <p className="text-gray-700 leading-relaxed text-justify">
-                  The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+                  {pageData.acknowledgement_microsoft_content}
                 </p>
               </div>
               
               {/* Springer Publication */}
               <div className="bg-white rounded-lg shadow-lg p-8 border-l-4 border-teal-500">
-                <h3 className="text-2xl font-bold text-teal-600 mb-6">Springer Publication</h3>
+                <h3 className="text-2xl font-bold text-teal-600 mb-6">{pageData.acknowledgement_springer_title}</h3>
                 <div className="mb-6">
                   <svg className="h-12" viewBox="0 0 200 50" fill="none">
                     <text x="0" y="35" fontFamily="serif" fontSize="32" fontWeight="bold" fill="#000">Springer</text>
                   </svg>
                 </div>
                 <p className="text-gray-700 leading-relaxed text-justify">
-                  Publishing accepted papers in Lecture Notes in Lecture Notes in Electrical Engineering (LNEE) series without any publication fees.
+                  {pageData.acknowledgement_springer_content}
                 </p>
               </div>
             </div>
@@ -117,12 +124,12 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-wide" style={{color: '#C2185B'}}>Publication Partner</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-wide" style={{color: '#C2185B'}}>{pageData.publication_partner_title}</h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               {/* Official Publication Partner */}
               <div className="bg-white rounded-lg shadow-lg p-8 border-l-4 border-yellow-500">
-                <h3 className="text-3xl font-bold text-yellow-600 mb-8 underline">Official Publication Partner</h3>
+                <h3 className="text-3xl font-bold text-yellow-600 mb-8 underline">{pageData.publication_partner_subtitle}</h3>
                 <div className="text-center mb-6">
                   <svg className="h-16 mx-auto mb-4" viewBox="0 0 200 50" fill="none">
                     <text x="20" y="35" fontFamily="serif" fontSize="32" fontWeight="bold" fill="#000">Springer</text>
@@ -154,12 +161,12 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-wide" style={{color: '#C2185B'}}>Publication & Indexing</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-wide" style={{color: '#C2185B'}}>{pageData.publication_indexing_title}</h2>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-8 border-l-4 border-yellow-500">
-              <h3 className="text-2xl font-bold text-yellow-600 mb-6">Publication Benefits</h3>
+              <h3 className="text-2xl font-bold text-yellow-600 mb-6">{pageData.publication_indexing_subtitle}</h3>
               <p className="text-gray-700 leading-relaxed text-justify text-lg">
-                All presented papers will receive a presentation certificate. All papers will be published in the Springer Lecture Notes in Lecture Notes in Electrical Engineering (LNEE) series, which is Scopus Indexed.
+                {pageData.publication_indexing_content}
               </p>
             </div>
           </div>
@@ -226,21 +233,21 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Important Dates</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{pageData.dates_title}</h2>
               <div className="h-1 w-24 bg-blue-600 mx-auto mb-6"></div>
-              <p className="text-xl text-gray-600">Mark your calendars</p>
+              <p className="text-xl text-gray-600">{pageData.dates_subtitle}</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border-l-4 border-blue-600 shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
-                    <div className="text-blue-600 text-sm font-bold uppercase tracking-wide mb-2">Submission</div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Paper Submission Deadline</h3>
+                    <div className="text-blue-600 text-sm font-bold uppercase tracking-wide mb-2">{pageData.date_submission_label}</div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{pageData.date_submission_title}</h3>
                     <p className="text-gray-600 text-sm">Final date for paper submission</p>
                   </div>
                   <div className="bg-blue-600 text-white rounded-xl px-4 py-2 font-bold text-lg ml-4">
-                    TBA
+                    {pageData.date_submission_date}
                   </div>
                 </div>
               </div>
@@ -248,12 +255,12 @@ export default function Home() {
               <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 border-l-4 border-purple-600 shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
-                    <div className="text-purple-600 text-sm font-bold uppercase tracking-wide mb-2">Notification</div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Notification of Acceptance</h3>
+                    <div className="text-purple-600 text-sm font-bold uppercase tracking-wide mb-2">{pageData.date_notification_label}</div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{pageData.date_notification_title}</h3>
                     <p className="text-gray-600 text-sm">Authors will be notified</p>
                   </div>
                   <div className="bg-purple-600 text-white rounded-xl px-4 py-2 font-bold text-lg ml-4">
-                    TBA
+                    {pageData.date_notification_date}
                   </div>
                 </div>
               </div>
@@ -261,12 +268,12 @@ export default function Home() {
               <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 border-l-4 border-orange-600 shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
-                    <div className="text-orange-600 text-sm font-bold uppercase tracking-wide mb-2">Camera Ready</div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Camera-Ready Submission</h3>
+                    <div className="text-orange-600 text-sm font-bold uppercase tracking-wide mb-2">{pageData.date_camera_label}</div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{pageData.date_camera_title}</h3>
                     <p className="text-gray-600 text-sm">Submit final version</p>
                   </div>
                   <div className="bg-orange-600 text-white rounded-xl px-4 py-2 font-bold text-lg ml-4">
-                    TBA
+                    {pageData.date_camera_date}
                   </div>
                 </div>
               </div>
@@ -274,12 +281,12 @@ export default function Home() {
               <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 border-l-4 border-green-600 shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
-                    <div className="text-green-600 text-sm font-bold uppercase tracking-wide mb-2">Conference</div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Conference Dates</h3>
-                    <p className="text-gray-600 text-sm">27-28th June 2026 (Hybrid)</p>
+                    <div className="text-green-600 text-sm font-bold uppercase tracking-wide mb-2">{pageData.date_conference_label}</div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{pageData.date_conference_title}</h3>
+                    <p className="text-gray-600 text-sm">{pageData.date_conference_date} (Hybrid)</p>
                   </div>
                   <div className="bg-green-600 text-white rounded-xl px-4 py-2 font-bold text-lg ml-4">
-                    27-28 JUNE
+                    {pageData.date_conference_date}
                   </div>
                 </div>
               </div>
@@ -312,11 +319,11 @@ export default function Home() {
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight !text-white">
-              Join Us at ICCET-2026
+              {pageData.cta_title}
             </h2>
             <div className="h-1 w-24 bg-yellow-400 mx-auto mb-8"></div>
             <p className="text-xl md:text-2xl mb-12 text-blue-100 leading-relaxed">
-              Submit your research, connect with leading experts, and be part of shaping the future of Computing and Technology
+              {pageData.cta_subtitle}
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-6">
@@ -344,15 +351,15 @@ export default function Home() {
             
             <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-5xl font-bold text-yellow-400 mb-2">100+</div>
+                <div className="text-5xl font-bold text-yellow-400 mb-2">{pageData.cta_expected_papers}</div>
                 <div className="text-blue-200 uppercase tracking-wide text-sm">Expected Papers</div>
               </div>
               <div className="text-center">
-                <div className="text-5xl font-bold text-yellow-400 mb-2">30+</div>
+                <div className="text-5xl font-bold text-yellow-400 mb-2">{pageData.cta_countries}</div>
                 <div className="text-blue-200 uppercase tracking-wide text-sm">Countries</div>
               </div>
               <div className="text-center">
-                <div className="text-5xl font-bold text-yellow-400 mb-2">200+</div>
+                <div className="text-5xl font-bold text-yellow-400 mb-2">{pageData.cta_participants}</div>
                 <div className="text-blue-200 uppercase tracking-wide text-sm">Participants</div>
               </div>
             </div>
@@ -365,12 +372,12 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-wide" style={{color: '#C2185B'}}>Join Us</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-wide" style={{color: '#C2185B'}}>{pageData.join_title}</h2>
             </div>
             <div className="bg-white rounded-lg shadow-lg p-8 border-l-4 border-yellow-500">
-              <h3 className="text-2xl font-bold text-yellow-600 mb-6">Advancing Technology for Sustainable Development!</h3>
+              <h3 className="text-2xl font-bold text-yellow-600 mb-6">{pageData.join_subtitle}</h3>
               <p className="text-gray-700 leading-relaxed text-justify text-lg">
-                Leveraging AI, Computing Technologies, and Data Science to achieve SDG 7 (Affordable and Clean Energy) and SDG 9 (Industry, Innovation and Infrastructure)
+                {pageData.join_content}
               </p>
             </div>
           </div>
@@ -382,20 +389,20 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-wide" style={{color: '#C2185B'}}>MAI Series Legacy</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-wide" style={{color: '#C2185B'}}>{pageData.mai_title}</h2>
             </div>
             
             {/* Statistics */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               <div className="bg-white rounded-xl shadow-lg p-8 text-center transform hover:scale-105 transition-all">
-                <div className="text-5xl font-bold text-gray-800 mb-3">751+</div>
+                <div className="text-5xl font-bold text-gray-800 mb-3">{pageData.mai_papers_count}</div>
                 <div className="h-1 w-16 bg-pink-600 mx-auto mb-4"></div>
                 <h4 className="text-xl font-bold mb-2" style={{color: '#C2185B'}}>Research Paper</h4>
                 <p className="text-gray-600">Submissions</p>
               </div>
               
               <div className="bg-white rounded-xl shadow-lg p-8 text-center transform hover:scale-105 transition-all">
-                <div className="text-5xl font-bold text-gray-800 mb-3">372+</div>
+                <div className="text-5xl font-bold text-gray-800 mb-3">{pageData.mai_talks_count}</div>
                 <div className="h-1 w-16 bg-pink-600 mx-auto mb-4"></div>
                 <h4 className="text-xl font-bold mb-2" style={{color: '#C2185B'}}>Research Talks</h4>
                 <p className="text-gray-600">Presentations</p>

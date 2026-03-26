@@ -27,10 +27,71 @@ export interface Keynote {
 }
 
 export interface PageContent {
-  title?: string;
-  subtitle?: string;
-  tagline?: string;
-  event_type?: string;
+  // Hero Section
+  hero_title?: string;
+  hero_subtitle?: string;
+  hero_tagline?: string;
+  hero_event_type?: string;
+  hero_background?: string;
+  
+  // About Section
+  about_title?: string;
+  about_conference_title?: string;
+  about_conference_content?: string;
+  about_objectives_title?: string;
+  about_objectives_content?: string;
+  
+  // Acknowledgement Section
+  acknowledgement_title?: string;
+  acknowledgement_microsoft_title?: string;
+  acknowledgement_microsoft_content?: string;
+  acknowledgement_springer_title?: string;
+  acknowledgement_springer_content?: string;
+  
+  // Publication Partner Section
+  publication_partner_title?: string;
+  publication_partner_subtitle?: string;
+  publication_partner_description?: string;
+  
+  // Publication & Indexing Section
+  publication_indexing_title?: string;
+  publication_indexing_subtitle?: string;
+  publication_indexing_content?: string;
+  
+  // Important Dates
+  dates_title?: string;
+  dates_subtitle?: string;
+  date_submission_label?: string;
+  date_submission_title?: string;
+  date_submission_date?: string;
+  date_notification_label?: string;
+  date_notification_title?: string;
+  date_notification_date?: string;
+  date_camera_label?: string;
+  date_camera_title?: string;
+  date_camera_date?: string;
+  date_conference_label?: string;
+  date_conference_title?: string;
+  date_conference_date?: string;
+  
+  // Call to Action
+  cta_title?: string;
+  cta_subtitle?: string;
+  cta_expected_papers?: string;
+  cta_countries?: string;
+  cta_participants?: string;
+  
+  // Join Us Section
+  join_title?: string;
+  join_subtitle?: string;
+  join_content?: string;
+  
+  // MAI Series Legacy Section
+  mai_title?: string;
+  mai_papers_count?: string;
+  mai_talks_count?: string;
+  
+  // Call for Papers page
   deadline?: string;
   guidelines?: string;
   topics?: string;
