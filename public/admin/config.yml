@@ -48,38 +48,27 @@ collections:
         name: "home"
         format: "frontmatter"
         fields:
-          # Hero Section
           - { name: "hero_title", label: "Hero Title", widget: "string" }
           - { name: "hero_subtitle", label: "Hero Subtitle", widget: "string" }
           - { name: "hero_tagline", label: "Hero Tagline", widget: "string" }
           - { name: "hero_event_type", label: "Hero Event Type", widget: "string" }
           - { name: "hero_background", label: "Hero Background Image", widget: "image" }
-          
-          # About Section
           - { name: "about_title", label: "About Title", widget: "string" }
           - { name: "about_conference_title", label: "About - Conference Title", widget: "string" }
           - { name: "about_conference_content", label: "About - Conference Content", widget: "text" }
           - { name: "about_objectives_title", label: "About - Objectives Title", widget: "string" }
           - { name: "about_objectives_content", label: "About - Objectives Content", widget: "text" }
-          
-          # Acknowledgement Section
           - { name: "acknowledgement_title", label: "Acknowledgement Title", widget: "string" }
           - { name: "acknowledgement_microsoft_title", label: "Acknowledgement - Microsoft Title", widget: "string" }
           - { name: "acknowledgement_microsoft_content", label: "Acknowledgement - Microsoft Content", widget: "text" }
           - { name: "acknowledgement_springer_title", label: "Acknowledgement - Springer Title", widget: "string" }
           - { name: "acknowledgement_springer_content", label: "Acknowledgement - Springer Content", widget: "text" }
-          
-          # Publication Partner Section
           - { name: "publication_partner_title", label: "Publication Partner Title", widget: "string" }
           - { name: "publication_partner_subtitle", label: "Publication Partner Subtitle", widget: "string" }
           - { name: "publication_partner_description", label: "Publication Partner Description", widget: "string" }
-          
-          # Publication & Indexing Section
           - { name: "publication_indexing_title", label: "Publication & Indexing Title", widget: "string" }
           - { name: "publication_indexing_subtitle", label: "Publication Benefits Title", widget: "string" }
           - { name: "publication_indexing_content", label: "Publication Benefits Content", widget: "text" }
-          
-          # Important Dates
           - { name: "dates_title", label: "Important Dates Title", widget: "string" }
           - { name: "dates_subtitle", label: "Important Dates Subtitle", widget: "string" }
           - { name: "date_submission_label", label: "Date - Submission Label", widget: "string" }
@@ -94,20 +83,14 @@ collections:
           - { name: "date_conference_label", label: "Date - Conference Label", widget: "string" }
           - { name: "date_conference_title", label: "Date - Conference Title", widget: "string" }
           - { name: "date_conference_date", label: "Date - Conference Date", widget: "string" }
-          
-          # Call to Action Section
           - { name: "cta_title", label: "CTA Title", widget: "string" }
           - { name: "cta_subtitle", label: "CTA Subtitle", widget: "string" }
           - { name: "cta_expected_papers", label: "CTA - Expected Papers", widget: "string" }
           - { name: "cta_countries", label: "CTA - Countries", widget: "string" }
           - { name: "cta_participants", label: "CTA - Participants", widget: "string" }
-          
-          # Join Us Section
           - { name: "join_title", label: "Join Us Title", widget: "string" }
           - { name: "join_subtitle", label: "Join Us Subtitle", widget: "string" }
           - { name: "join_content", label: "Join Us Content", widget: "text" }
-          
-          # MAI Series Legacy Section
           - { name: "mai_title", label: "MAI Series Legacy Title", widget: "string" }
           - { name: "mai_papers_count", label: "MAI - Papers Count", widget: "string" }
           - { name: "mai_talks_count", label: "MAI - Talks Count", widget: "string" }
@@ -117,6 +100,93 @@ collections:
         name: "call-for-papers"
         format: "frontmatter"
         fields:
+          - { name: "page_title", label: "Page Title", widget: "string" }
+          - { name: "page_subtitle", label: "Page Subtitle", widget: "string" }
           - { name: "deadline", label: "Submission Deadline", widget: "datetime" }
           - { name: "guidelines", label: "Guidelines", widget: "text" }
           - { name: "topics", label: "Topics (comma-separated)", widget: "string" }
+
+      - file: "content/pages/contact.md"
+        label: "Contact Page"
+        name: "contact"
+        format: "frontmatter"
+        fields:
+          - { name: "page_title", label: "Page Title", widget: "string" }
+          - { name: "page_intro", label: "Page Intro Text", widget: "text" }
+          - { name: "contact_email", label: "Contact Email", widget: "string" }
+          - { name: "contact_phone", label: "Contact Phone", widget: "string" }
+          - { name: "contact_address", label: "Contact Address", widget: "text" }
+          - { name: "form_title", label: "Form Title", widget: "string" }
+
+      - file: "content/pages/dates.md"
+        label: "Important Dates Page"
+        name: "dates"
+        format: "frontmatter"
+        fields:
+          - { name: "page_title", label: "Page Title", widget: "string" }
+          - { name: "page_intro", label: "Page Intro Text", widget: "text" }
+          - { name: "submission_deadline", label: "Submission Deadline", widget: "datetime" }
+          - { name: "notification_date", label: "Notification Date", widget: "datetime" }
+          - { name: "camera_ready_date", label: "Camera Ready Date", widget: "datetime" }
+          - { name: "conference_date", label: "Conference Date", widget: "datetime" }
+
+      - file: "content/pages/events.md"
+        label: "Events Page"
+        name: "events"
+        format: "frontmatter"
+        fields:
+          - { name: "page_title", label: "Page Title", widget: "string" }
+          - { name: "page_intro", label: "Page Intro Text", widget: "text" }
+          - { name: "featured_event", label: "Featured Event Description", widget: "text" }
+
+      - file: "content/pages/program.md"
+        label: "Program Page"
+        name: "program"
+        format: "frontmatter"
+        fields:
+          - { name: "page_title", label: "Page Title", widget: "string" }
+          - { name: "page_intro", label: "Page Intro Text", widget: "text" }
+          - { name: "schedule_intro", label: "Schedule Intro", widget: "text" }
+          - { name: "keynotes_intro", label: "Keynotes Intro", widget: "text" }
+
+      - file: "content/pages/authors.md"
+        label: "Authors Page"
+        name: "authors"
+        format: "frontmatter"
+        fields:
+          - { name: "page_title", label: "Page Title", widget: "string" }
+          - { name: "page_intro", label: "Page Intro Text", widget: "text" }
+          - { name: "cfp_link_title", label: "Call for Papers Link Title", widget: "string" }
+          - { name: "submission_link_title", label: "Submission Link Title", widget: "string" }
+
+      - file: "content/pages/committee.md"
+        label: "Committee Page"
+        name: "committee"
+        format: "frontmatter"
+        fields:
+          - { name: "page_title", label: "Page Title", widget: "string" }
+          - { name: "page_intro", label: "Page Intro Text", widget: "text" }
+          - { name: "organizing_title", label: "Organizing Committee Title", widget: "string" }
+          - { name: "national_title", label: "National Committee Title", widget: "string" }
+          - { name: "international_title", label: "International Committee Title", widget: "string" }
+
+      - file: "content/pages/gallery.md"
+        label: "Gallery Page"
+        name: "gallery"
+        format: "frontmatter"
+        fields:
+          - { name: "page_title", label: "Page Title", widget: "string" }
+          - { name: "page_intro", label: "Page Intro Text", widget: "text" }
+          - { name: "year_2023_title", label: "2023 Gallery Title", widget: "string" }
+          - { name: "year_2022_title", label: "2022 Gallery Title", widget: "string" }
+          - { name: "year_2021_title", label: "2021 Gallery Title", widget: "string" }
+
+      - file: "content/pages/registration.md"
+        label: "Registration Page"
+        name: "registration"
+        format: "frontmatter"
+        fields:
+          - { name: "page_title", label: "Page Title", widget: "string" }
+          - { name: "page_intro", label: "Page Intro Text", widget: "text" }
+          - { name: "author_reg_title", label: "Author Registration Title", widget: "string" }
+          - { name: "delegate_reg_title", label: "Delegate Registration Title", widget: "string" }

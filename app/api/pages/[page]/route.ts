@@ -8,6 +8,14 @@ export async function generateStaticParams() {
   return [
     { page: 'home' },
     { page: 'call-for-papers' },
+    { page: 'contact' },
+    { page: 'dates' },
+    { page: 'events' },
+    { page: 'program' },
+    { page: 'authors' },
+    { page: 'committee' },
+    { page: 'gallery' },
+    { page: 'registration' },
   ];
 }
 

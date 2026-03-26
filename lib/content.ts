@@ -27,38 +27,28 @@ export interface Keynote {
 }
 
 export interface PageContent {
-  // Hero Section
+  // Home Page Fields
   hero_title?: string;
   hero_subtitle?: string;
   hero_tagline?: string;
   hero_event_type?: string;
   hero_background?: string;
-  
-  // About Section
   about_title?: string;
   about_conference_title?: string;
   about_conference_content?: string;
   about_objectives_title?: string;
   about_objectives_content?: string;
-  
-  // Acknowledgement Section
   acknowledgement_title?: string;
   acknowledgement_microsoft_title?: string;
   acknowledgement_microsoft_content?: string;
   acknowledgement_springer_title?: string;
   acknowledgement_springer_content?: string;
-  
-  // Publication Partner Section
   publication_partner_title?: string;
   publication_partner_subtitle?: string;
   publication_partner_description?: string;
-  
-  // Publication & Indexing Section
   publication_indexing_title?: string;
   publication_indexing_subtitle?: string;
   publication_indexing_content?: string;
-  
-  // Important Dates
   dates_title?: string;
   dates_subtitle?: string;
   date_submission_label?: string;
@@ -73,28 +63,64 @@ export interface PageContent {
   date_conference_label?: string;
   date_conference_title?: string;
   date_conference_date?: string;
-  
-  // Call to Action
   cta_title?: string;
   cta_subtitle?: string;
   cta_expected_papers?: string;
   cta_countries?: string;
   cta_participants?: string;
-  
-  // Join Us Section
   join_title?: string;
   join_subtitle?: string;
   join_content?: string;
-  
-  // MAI Series Legacy Section
   mai_title?: string;
   mai_papers_count?: string;
   mai_talks_count?: string;
-  
-  // Call for Papers page
+
+  // Call for Papers Page
   deadline?: string;
   guidelines?: string;
   topics?: string;
+
+  // Generic Page Fields
+  page_title?: string;
+  page_subtitle?: string;
+  page_intro?: string;
+
+  // Contact Page
+  contact_email?: string;
+  contact_phone?: string;
+  contact_address?: string;
+  form_title?: string;
+
+  // Dates Page
+  submission_deadline?: string;
+  notification_date?: string;
+  camera_ready_date?: string;
+  conference_date?: string;
+
+  // Events Page
+  featured_event?: string;
+
+  // Program Page
+  schedule_intro?: string;
+  keynotes_intro?: string;
+
+  // Authors Page
+  cfp_link_title?: string;
+  submission_link_title?: string;
+
+  // Committee Page
+  organizing_title?: string;
+  national_title?: string;
+  international_title?: string;
+
+  // Gallery Page
+  year_2023_title?: string;
+  year_2022_title?: string;
+  year_2021_title?: string;
+
+  // Registration Page
+  author_reg_title?: string;
+  delegate_reg_title?: string;
 }
 
 async function getContentFromFolder(folderName: string): Promise<any[]> {
