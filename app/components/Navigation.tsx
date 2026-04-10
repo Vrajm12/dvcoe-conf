@@ -10,9 +10,9 @@ export default function Navigation() {
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50 border-b-4 border-blue-600">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-          <Link href="/" className="flex items-center space-x-4">
-            <div className="relative w-24 h-10">
+        <div className="flex justify-between items-center py-3">
+          <Link href="/" className="flex items-center space-x-2 flex-shrink-0">
+            <div className="relative w-20 h-9">
               <Image 
                 src="/mai-logo.jpg" 
                 alt="MAI 2026 Logo" 
@@ -21,10 +21,10 @@ export default function Navigation() {
                 className="object-contain"
               />
             </div>
-            <div className="border-l-2 border-gray-300 h-12"></div>
-            <div>
-              <div className="text-2xl font-bold text-gray-900">ICCET 2026</div>
-              <div className="text-xs text-gray-600 -mt-1">Computing & Technology</div>
+            <div className="border-l-2 border-gray-300 h-10"></div>
+            <div className="flex-shrink-0">
+              <div className="text-xl font-bold text-gray-900">ICCET 2026</div>
+              <div className="text-xs text-gray-600 -mt-0.5">Computing & Technology</div>
             </div>
           </Link>
           
@@ -43,11 +43,11 @@ export default function Navigation() {
           </button>
 
           {/* Desktop menu */}
-          <div className="hidden md:flex space-x-1">
-            <Link href="/" className="px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition font-medium">Home</Link>
+          <div className="hidden md:flex space-x-0.5">
+            <Link href="/" className="px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition font-medium text-sm">Home</Link>
             
             <div className="relative group">
-              <button className="px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition font-medium inline-flex items-center">
+              <button className="px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition font-medium text-sm inline-flex items-center">
                 Committee
                 <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"></path>
@@ -61,20 +61,7 @@ export default function Navigation() {
             </div>
 
             <div className="relative group">
-              <button className="px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition font-medium inline-flex items-center">
-                Registration
-                <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"></path>
-                </svg>
-              </button>
-              <div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100">
-                <Link href="/registration/author" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition first:rounded-t-lg">Author Registration</Link>
-                <Link href="/registration/delegate" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition last:rounded-b-lg">Delegate Fee</Link>
-              </div>
-            </div>
-
-            <div className="relative group">
-              <button className="px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition font-medium inline-flex items-center">
+              <button className="px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition font-medium text-sm inline-flex items-center">
                 Authors
                 <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"></path>
@@ -87,7 +74,20 @@ export default function Navigation() {
             </div>
 
             <div className="relative group">
-              <button className="px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition font-medium inline-flex items-center">
+              <button className="px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition font-medium text-sm inline-flex items-center">
+                Registration
+                <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"></path>
+                </svg>
+              </button>
+              <div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100">
+                <Link href="/registration/author" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition first:rounded-t-lg">Author Registration</Link>
+                <Link href="/registration/delegate" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition last:rounded-b-lg">Delegate Fee</Link>
+              </div>
+            </div>
+
+            <div className="relative group">
+              <button className="px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition font-medium text-sm inline-flex items-center">
                 Program
                 <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"></path>
@@ -99,23 +99,23 @@ export default function Navigation() {
               </div>
             </div>
 
-            <Link href="/dates" className="px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition font-medium">Dates</Link>
+            <Link href="/dates" className="px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition font-medium text-sm">Dates</Link>
             
             <div className="relative group">
-              <button className="px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition font-medium inline-flex items-center">
-                Gallery
+              <button className="px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition font-medium text-sm inline-flex items-center">
+                Prev. Conf.
                 <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"></path>
                 </svg>
               </button>
               <div className="absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100">
-                <Link href="/gallery/2021" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition first:rounded-t-lg">Gallery 2021</Link>
-                <Link href="/gallery/2022" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Gallery 2022</Link>
-                <Link href="/gallery/2023" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition last:rounded-b-lg">Gallery 2023</Link>
+                <Link href="/gallery/2021" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition first:rounded-t-lg">2021</Link>
+                <Link href="/gallery/2022" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">2022</Link>
+                <Link href="/gallery/2023" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition last:rounded-b-lg">2023</Link>
               </div>
             </div>
 
-            <Link href="/contact" className="px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition font-medium">Contact</Link>
+            <Link href="/contact" className="px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition font-medium text-sm">Contact</Link>
           </div>
         </div>
 
@@ -130,14 +130,14 @@ export default function Navigation() {
               <Link href="/committee/organizing" className="block pl-4 py-1 text-sm text-gray-600 hover:text-blue-600">Organizing</Link>
             </div>
             <div className="py-2">
-              <p className="font-semibold text-gray-900">Registration</p>
-              <Link href="/registration/author" className="block pl-4 py-1 text-sm text-gray-600 hover:text-blue-600">Author Registration</Link>
-              <Link href="/registration/delegate" className="block pl-4 py-1 text-sm text-gray-600 hover:text-blue-600">Delegate Fee</Link>
-            </div>
-            <div className="py-2">
               <p className="font-semibold text-gray-900">Authors</p>
               <Link href="/authors/call-for-papers" className="block pl-4 py-1 text-sm text-gray-600 hover:text-blue-600">Call for Papers</Link>
               <Link href="/authors/submission" className="block pl-4 py-1 text-sm text-gray-600 hover:text-blue-600">Paper Submission</Link>
+            </div>
+            <div className="py-2">
+              <p className="font-semibold text-gray-900">Registration</p>
+              <Link href="/registration/author" className="block pl-4 py-1 text-sm text-gray-600 hover:text-blue-600">Author Registration</Link>
+              <Link href="/registration/delegate" className="block pl-4 py-1 text-sm text-gray-600 hover:text-blue-600">Delegate Fee</Link>
             </div>
             <div className="py-2">
               <p className="font-semibold text-gray-900">Program</p>
@@ -146,10 +146,10 @@ export default function Navigation() {
             </div>
             <Link href="/dates" className="block py-2 text-gray-700 hover:text-blue-600 font-medium">Dates</Link>
             <div className="py-2">
-              <p className="font-semibold text-gray-900">Gallery</p>
-              <Link href="/gallery/2021" className="block pl-4 py-1 text-sm text-gray-600 hover:text-blue-600">Gallery 2021</Link>
-              <Link href="/gallery/2022" className="block pl-4 py-1 text-sm text-gray-600 hover:text-blue-600">Gallery 2022</Link>
-              <Link href="/gallery/2023" className="block pl-4 py-1 text-sm text-gray-600 hover:text-blue-600">Gallery 2023</Link>
+              <p className="font-semibold text-gray-900">Previous Conferences</p>
+              <Link href="/gallery/2021" className="block pl-4 py-1 text-sm text-gray-600 hover:text-blue-600">2021</Link>
+              <Link href="/gallery/2022" className="block pl-4 py-1 text-sm text-gray-600 hover:text-blue-600">2022</Link>
+              <Link href="/gallery/2023" className="block pl-4 py-1 text-sm text-gray-600 hover:text-blue-600">2023</Link>
             </div>
             <Link href="/contact" className="block py-2 text-gray-700 hover:text-blue-600 font-medium">Contact</Link>
           </div>

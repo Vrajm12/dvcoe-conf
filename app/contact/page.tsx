@@ -3,6 +3,7 @@ import { getPageContent } from '@/lib/content';
 interface ContactPageContent {
   page_title?: string;
   page_intro?: string;
+  contact_person?: string;
   contact_email?: string;
   contact_phone?: string;
   contact_address?: string;
@@ -13,7 +14,7 @@ export default async function Contact() {
   const cmsContent = await getPageContent<ContactPageContent>('contact');
   const contactData = {
     page_title: "Contact Us",
-    conference_dates: "June 27-28, 2026",
+    conference_dates: "July 30-31, 2026",
     page_intro: "Get in touch with us for any queries or further information about ICCET-2026",
     contact_details: [] as string[],
     venue_title: "Dnyanvilas College of Engineering",
@@ -70,6 +71,9 @@ export default async function Contact() {
                   <div>
                     <h3 className="font-bold text-gray-800 mb-1">Contact Details</h3>
                     <div className="text-gray-600">
+                      {cmsContent?.contact_person && (
+                        <div className="font-semibold text-gray-800 mb-2">{cmsContent.contact_person}</div>
+                      )}
                       {[cmsContent?.contact_email, cmsContent?.contact_phone].filter(Boolean).length > 0
                         ? [cmsContent?.contact_email, cmsContent?.contact_phone].filter(Boolean).map((d, i) => {
                         const cleaned = String(d).replace(/[\[\]]/g, '').trim();

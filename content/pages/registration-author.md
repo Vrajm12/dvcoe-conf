@@ -15,10 +15,11 @@ fees:
     indian: "INR 10,000"
     foreign: "$350"
 bank:
-  - "Name of the Beneficiary (In favour of): Director, SVNIT-CCE"
-  - "Bank Account No: 37030749143"
-  - "Nature of Bank Account: Current Account"
-  - "Name of The Bank: STATE BANK OF INDIA (SBI)"
+  - "Account Holder Name: Dynavilas College of Engineering"
+  - "Branch Address: DUDUGAN MOSGH"
+  - "Bank Name: AXIS BANK"
+  - "IFSC Code: UTB0004751/UTB0061309"
+  - "Account No: 9250003767575"
 process_steps:
   - "Complete the online registration form"
   - "Pay the registration fee via bank transfer or the provided payment gateway"

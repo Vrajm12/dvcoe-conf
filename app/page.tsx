@@ -1,9 +1,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { getPageContent } from '@/lib/content';
+import EnhancedHero from '@/app/components/HeroSection';
 
 interface HomePageContent {
   [key: string]: string | undefined;
+  hero_title?: string;
+  hero_subtitle?: string;
+  hero_tagline?: string;
+  hero_event_type?: string;
   hero_background?: string;
 }
 
@@ -16,49 +21,14 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 text-white overflow-hidden">
-        {/* Background Image */}
-        <Image
-          src={pageData.hero_background || "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2000&auto=format&fit=crop"}
-          alt="Conference Background"
-          fill
-          priority
-          quality={75}
-          className="object-cover mix-blend-multiply"
-          sizes="100vw"
-        />
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/85 via-blue-800/85 to-indigo-900/85"></div>
-        <div className="relative container mx-auto px-4 py-24 md:py-32">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="mb-6">
-              <h1 className="text-6xl md:text-7xl font-bold mb-4 tracking-tight !text-white drop-shadow-lg">{pageData.hero_title}</h1>
-              <div className="h-1 w-32 bg-yellow-400 mx-auto mb-6"></div>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-semibold mb-6 leading-tight !text-white drop-shadow-lg">
-              {pageData.hero_subtitle}
-            </h2>
-            <p className="text-2xl md:text-3xl mb-3 font-light text-white drop-shadow-md">
-              {pageData.hero_tagline}
-            </p>
-            <p className="text-xl mb-8 text-blue-100 drop-shadow-md">
-              ({pageData.hero_title})
-            </p>
-            <div className="inline-flex items-center bg-yellow-400 text-gray-900 px-8 py-3 rounded-full font-bold text-lg shadow-lg mb-10">
-              <span className="mr-2">●</span> {pageData.hero_event_type}
-            </div>
-            <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
-              <Link href="/authors/call-for-papers" className="inline-block bg-white text-blue-900 px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-xl transform hover:scale-105">
-                Call for Papers
-              </Link>
-              <Link href="/registration/author" className="inline-block bg-yellow-400 text-gray-900 px-10 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition shadow-xl transform hover:scale-105">
-                Register Now
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Enhanced Hero Section */}
+      <EnhancedHero
+        heroTitle={pageData.hero_title}
+        heroSubtitle={pageData.hero_subtitle}
+        heroTagline={pageData.hero_tagline}
+        heroEventType={pageData.hero_event_type}
+        heroBackground={pageData.hero_background}
+      />
 
       {/* About the Conference Section */}
       <section className="py-20 bg-gray-50">
@@ -137,22 +107,22 @@ export default async function Home() {
                 <h3 className="text-3xl font-bold text-yellow-600 mb-8 underline">{pageData.publication_partner_subtitle}</h3>
                 <div className="text-center mb-6">
                   <svg className="h-16 mx-auto mb-4" viewBox="0 0 200 50" fill="none">
-                    <text x="20" y="35" fontFamily="serif" fontSize="32" fontWeight="bold" fill="#000">Springer</text>
+                    <text x="20" y="35" fontFamily="serif" fontSize="28" fontWeight="bold" fill="#000">IETE/IEEE</text>
                   </svg>
-                  <h4 className="text-2xl font-bold text-gray-800 mb-2">Springer LNEE Series</h4>
-                  <p className="text-gray-600">Scopus Indexed Proceedings</p>
+                  <h4 className="text-2xl font-bold text-gray-800 mb-2">IETE/IEEE Publication</h4>
+                  <p className="text-gray-600">Professional Engineering Community</p>
                 </div>
               </div>
               
               {/* Indexing Badges */}
               <div className="space-y-4">
-                <div className="bg-yellow-400 text-white rounded-lg px-8 py-6 text-center shadow-lg">
-                  <h4 className="text-2xl font-bold">Scopus Index</h4>
+                <div className="bg-blue-500 text-white rounded-lg px-8 py-6 text-center shadow-lg">
+                  <h4 className="text-2xl font-bold">Professional Indexed</h4>
                 </div>
-                <div className="bg-yellow-400 text-white rounded-lg px-8 py-6 text-center shadow-lg">
-                  <h4 className="text-2xl font-bold">Global Research</h4>
+                <div className="bg-blue-500 text-white rounded-lg px-8 py-6 text-center shadow-lg">
+                  <h4 className="text-2xl font-bold">Engineering Recognized</h4>
                 </div>
-                <div className="bg-yellow-400 text-white rounded-lg px-8 py-6 text-center shadow-lg">
+                <div className="bg-blue-500 text-white rounded-lg px-8 py-6 text-center shadow-lg">
                   <h4 className="text-2xl font-bold">Quality Assured</h4>
                 </div>
               </div>
@@ -221,9 +191,19 @@ export default async function Home() {
                   title: 'Indian Knowledge Systems',
                   color: 'indigo-500',
                   description: 'Advanced research and innovative solutions in this domain'
+                },
+                {
+                  title: 'RFID',
+                  color: 'cyan-500',
+                  description: ''
+                },
+                {
+                  title: '',
+                  color: 'gray-500',
+                  description: ''
                 }
               ].map((track, index) => (
-                <div key={index} className={`bg-white rounded-lg shadow-lg p-6 border-l-4 hover:shadow-xl transition-shadow ${index === 6 ? 'lg:col-start-2' : ''}`} style={{borderLeftColor: `var(--tw-${track.color})`}}>
+                <div key={index} className="bg-white rounded-lg shadow-lg p-6 border-l-4 hover:shadow-xl transition-shadow" style={{borderLeftColor: `var(--tw-${track.color})`}}>
                   <h3 className={`text-xl font-bold mb-4 text-${track.color}`}>{track.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{track.description}</p>
                 </div>

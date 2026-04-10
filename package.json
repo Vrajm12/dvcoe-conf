@@ -13,10 +13,13 @@
     "start:pm2": "pm2 start npm --name dvcoe -- run start --watch"
   },
   "dependencies": {
+    "aos": "^2.3.4",
+    "framer-motion": "^11.0.0",
     "gray-matter": "^4.0.3",
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "react-icons": "^5.0.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

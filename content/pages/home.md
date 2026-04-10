@@ -3,7 +3,7 @@ hero_title: ICCET-2026
 hero_subtitle: 9th International Conference on Computing and Technology
 hero_tagline: International Conference
 hero_event_type: Hybrid mode
-hero_background: https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2000&auto=format&fit=crop
+hero_background: /images/240_F_353280884_oyeOLzk0EyvfC4pvixbvcfA4s745SaX6.jpg
 about_title: About the Conference
 about_conference_title: About Conference
 about_conference_content: The International Conference on Computing and
@@ -25,33 +25,28 @@ acknowledgement_microsoft_content: The Microsoft CMT service was used for
   managing the peer-reviewing process for this conference. This service was
   provided for free by Microsoft and they bore all expenses, including costs for
   Azure cloud services as well as for software development and support.
-acknowledgement_springer_title: Springer Publication
-acknowledgement_springer_content: Publishing accepted papers in Lecture Notes in
-  Lecture Notes in Electrical Engineering (LNEE) series without any publication
-  fees.
+acknowledgement_springer_title: IETE/IEEE Publication
+acknowledgement_springer_content: Publishing accepted papers in IETE/IEEE proceedings with professional peer review and recognition in the engineering community.
 publication_partner_title: Publication Partner
 publication_partner_subtitle: Official Publication Partner
-publication_partner_description: Springer LNEE Series - Scopus Indexed Proceedings
+publication_partner_description: IETE/IEEE - Professional Engineering Publication Partners
 publication_indexing_title: Publication & Indexing
 publication_indexing_subtitle: Publication Benefits
-publication_indexing_content: All presented papers will receive a presentation
-  certificate. All papers will be published in the Springer Lecture Notes in
-  Lecture Notes in Electrical Engineering (LNEE) series, which is Scopus
-  Indexed.
+publication_indexing_content: All presented papers will receive a presentation certificate. Accepted papers will be published through IETE/IEEE, recognized by the professional engineering community and indexed in major databases.
 dates_title: Important Dates
 dates_subtitle: Mark your calendars
 date_submission_label: Submission
 date_submission_title: Paper Submission Deadline
-date_submission_date: TBA
+date_submission_date: 30 JUNE
 date_notification_label: Notification
 date_notification_title: Notification of Acceptance
-date_notification_date: TBA
+date_notification_date: 15 JULY
 date_camera_label: Camera Ready
 date_camera_title: Camera-Ready Submission
-date_camera_date: TBA
+date_camera_date: 22 JULY
 date_conference_label: Conference
 date_conference_title: Conference Dates
-date_conference_date: 27-28 JUNE
+date_conference_date: 30-31 JULY
 cta_title: Join Us at ICCET-2026
 cta_subtitle: Submit your research, connect with leading experts, and be part of
   shaping the future of Computing and Technology

@@ -7,6 +7,10 @@ conference_tracks:
   - "Multidisciplinary Applications based on AI/ML and Soft Computing"
   - "Communication, Networks & Cyber Security"
   - "Computer Vision and Augmented Reality & Virtual Reality"
+  - "RFID"
+  - ""
+  - ""
+  - ""
 topics_covered:
   - "Robotics & Artificial Intelligence"
   - "Human-Robot Interaction"
