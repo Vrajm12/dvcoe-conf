@@ -1,4 +1,22 @@
 import Image from 'next/image';
+import { getPageContent } from '@/lib/content';
+
+interface OrganizingMember {
+  name: string;
+  profile_link: string;
+  designation: string;
+  image: string;
+}
+
+interface OrganizingSection {
+  committee_title: string;
+  members: OrganizingMember[];
+}
+
+interface CommitteeOrganizingContent {
+  page_title: string;
+  committees: OrganizingSection[];
+}
 
 const organizingData = {
   committees: [
@@ -320,14 +338,19 @@ const organizingData = {
   ]
 };
 
-export default function OrganizingCommittee() {
+export default async function OrganizingCommittee() {
+  const cmsContent = await getPageContent<CommitteeOrganizingContent>('committee-organizing');
+  const pageTitle = cmsContent?.page_title ?? 'Organizing Committee';
+  const cmsCommittees = cmsContent?.committees as OrganizingSection[] | undefined;
+  const committees = cmsCommittees && cmsCommittees.length > 0 ? cmsCommittees : organizingData.committees;
+
   return (
     <main className="py-16 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">Organizing Committee</h1>
+        <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">{pageTitle}</h1>
 
         <div className="max-w-6xl mx-auto space-y-8">
-          {organizingData.committees.map((committee) => (
+          {committees.map((committee) => (
             <section key={committee.committee_title} className="bg-white rounded-lg shadow-lg p-8">
               <h2 className="text-2xl font-bold text-blue-900 mb-6 border-b-2 border-blue-600 pb-2">{committee.committee_title}</h2>
 

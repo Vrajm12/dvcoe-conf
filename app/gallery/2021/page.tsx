@@ -1,8 +1,19 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
+import { getPageContent } from '@/lib/content';
 
-export default function Gallery2021() {
+interface GalleryPageContent {
+  page_title?: string;
+  page_intro?: string;
+  event_images?: string[];
+  hosting_campus_images?: string[];
+}
+
+export default async function Gallery2021() {
+  const cmsContent = await getPageContent<GalleryPageContent>('gallery-2021');
+  const eventImages = cmsContent?.event_images?.length ? cmsContent.event_images : undefined;
+  const hostingCampusImages = cmsContent?.hosting_campus_images?.length ? cmsContent.hosting_campus_images : undefined;
   const galleryData = {
-    page_title: "Gallery 2021Home>Gallery>2021",
+    page_title: "Gallery 2021",
     event_images: [
       "https://mvai.in/2024/img/event/1.jpeg",
       "https://mvai.in/2024/img/event/2.jpeg",
@@ -75,10 +86,10 @@ export default function Gallery2021() {
     <main className="py-16 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-4 text-gray-800">
-          Gallery 2021
+          {cmsContent?.page_title || galleryData.page_title}
         </h1>
         <p className="text-center text-gray-600 mb-12">
-          Highlights from MAI-2021 Conference
+          {cmsContent?.page_intro || 'Highlights from MAI-2021 Conference'}
         </p>
         
         <div className="max-w-6xl mx-auto">
@@ -89,7 +100,7 @@ export default function Gallery2021() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {galleryData.event_images.map((src, idx) => (
+            {(eventImages || galleryData.event_images).map((src, idx) => (
               <div key={idx} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
                 <div className="aspect-video bg-gray-100 flex items-center justify-center overflow-hidden">
                   <Image src={src} alt={`Event ${idx + 1}`} width={800} height={450} unoptimized className="w-full h-full object-cover" />
@@ -102,11 +113,11 @@ export default function Gallery2021() {
             ))}
           </div>
 
-          {galleryData.hosting_campus_images && galleryData.hosting_campus_images.length > 0 && (
+          {(hostingCampusImages || galleryData.hosting_campus_images) && (hostingCampusImages || galleryData.hosting_campus_images).length > 0 && (
             <div className="mt-8">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Hosting Campus</h2>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                {galleryData.hosting_campus_images.map((src, i) => (
+                {(hostingCampusImages || galleryData.hosting_campus_images).map((src, i) => (
                   <div key={i} className="bg-white rounded overflow-hidden shadow-sm">
                     <div className="aspect-square">
                       <Image src={src} alt={`Campus ${i + 1}`} width={300} height={300} unoptimized className="w-full h-full object-cover" />
@@ -121,3 +132,4 @@ export default function Gallery2021() {
     </main>
   );
 }
+

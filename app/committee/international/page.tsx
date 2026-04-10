@@ -1,7 +1,19 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
+import { getPageContent } from '@/lib/content';
 
-export default function InternationalCommittee() {
-  const members = [
+interface CommitteeInternationalContent {
+  page_title?: string;
+  members?: {
+    name: string;
+    affiliation: string;
+    location: string;
+  }[];
+}
+
+export default async function InternationalCommittee() {
+  const cmsContent = await getPageContent<CommitteeInternationalContent>('committee-international');
+  const pageTitle = cmsContent?.page_title || 'International Advisory Committee';
+  const defaultMembers = [
     { name: "Prof. Gwanggil JEON", affiliation: "Incheon National University", location: "Korea" },
     { name: "Prof. Wei-Chang Hong", affiliation: "Ph.D, Jiaxian Engineering University, Nanton", location: "China" },
     { name: "Prof. Zdzislaw Polkowski", affiliation: "Kielce University", location: "Kyushu, Poland" },
@@ -35,6 +47,7 @@ export default function InternationalCommittee() {
     { name: "Dr. Mohammad Kamrul Hasan", affiliation: "Universiti Kebangsaan", location: "Malaysia (UKM)" },
     { name: "Dr. Pratik Goswami", affiliation: "Yeungnam University", location: "Gyeongsan-si, South Korea" }
   ];
+  const members = cmsContent?.members && cmsContent.members.length > 0 ? cmsContent.members : defaultMembers;
 
   return (
     <main className="min-h-screen">
@@ -42,12 +55,12 @@ export default function InternationalCommittee() {
       <section className="bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 text-white py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
-            International Advisory Committee
+            {pageTitle}
           </h1>
           <div className="flex items-center justify-center text-sm space-x-2">
             <Link href="/" className="hover:text-blue-300 transition">Home</Link>
             <span>|</span>
-            <span>International Advisory Committee</span>
+            <span>{pageTitle}</span>
           </div>
         </div>
       </section>
@@ -58,7 +71,7 @@ export default function InternationalCommittee() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-wide" style={{color: '#C2185B'}}>
-                International Advisory Committee
+                {pageTitle}
               </h2>
             </div>
             
@@ -83,3 +96,4 @@ export default function InternationalCommittee() {
     </main>
   );
 }
+

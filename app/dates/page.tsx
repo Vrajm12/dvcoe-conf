@@ -1,14 +1,35 @@
-export default function Dates() {
+import { getPageContent } from '@/lib/content';
+
+interface DatesPageContent {
+  page_title?: string;
+  page_intro?: string;
+  submission_deadline?: string;
+  notification_date?: string;
+  camera_ready_date?: string;
+  conference_date?: string;
+}
+
+function formatDate(dateValue: string): string {
+  const date = new Date(dateValue);
+  if (Number.isNaN(date.getTime())) {
+    return dateValue;
+  }
+  return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+}
+
+export default async function Dates() {
+  const cmsContent = await getPageContent<DatesPageContent>('dates');
   const dates = {
-    page_title: "Important Dates",
+    page_title: cmsContent?.page_title || "Important Dates",
+    page_intro: cmsContent?.page_intro || "Mark your calendars for these important deadlines",
     important_dates: [
       { event: "Paper Submission Opens", date: "February 5, 2026" },
-      { event: "Paper Submission Deadline", date: "May 30, 2026" },
-      { event: "Acceptance Notification", date: "June 30, 2026" },
-      { event: "Final Submission", date: "July 15, 2026" },
+      { event: "Paper Submission Deadline", date: cmsContent?.submission_deadline ? formatDate(cmsContent.submission_deadline) : "May 30, 2026" },
+      { event: "Acceptance Notification", date: cmsContent?.notification_date ? formatDate(cmsContent.notification_date) : "June 30, 2026" },
+      { event: "Final Submission", date: cmsContent?.camera_ready_date ? formatDate(cmsContent.camera_ready_date) : "July 15, 2026" },
       { event: "Registration of Accepted Papers", date: "July 25, 2026" },
-      { event: "Camera-Ready Submission", date: "August 10, 2026" },
-      { event: "Conference Dates", date: "June 27-28, 2026" }
+      { event: "Camera-Ready Submission", date: cmsContent?.camera_ready_date ? formatDate(cmsContent.camera_ready_date) : "August 10, 2026" },
+      { event: "Conference Dates", date: cmsContent?.conference_date ? formatDate(cmsContent.conference_date) : "June 27-28, 2026" }
     ]
   };
 
@@ -43,14 +64,14 @@ export default function Dates() {
     <main className="py-16 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">
-          Important Dates
+          {dates.page_title}
         </h1>
         
         <div className="max-w-3xl mx-auto">
           <div className="bg-white rounded-lg shadow-xl overflow-hidden">
             <div className="bg-gradient-to-r from-blue-900 to-blue-700 text-white p-8 text-center">
               <h2 className="text-3xl font-bold mb-2">ICCET-2026</h2>
-              <p className="text-blue-200">Mark your calendars for these important deadlines</p>
+              <p className="text-blue-200">{dates.page_intro}</p>
             </div>
             
             <div className="p-8">

@@ -1,4 +1,20 @@
-const cfp = {
+import { getPageContent } from '@/lib/content';
+
+interface ResourceLink {
+  text: string;
+  link: string;
+}
+
+interface AuthorsCallForPapersContent {
+  page_title: string;
+  conference_tracks: string[];
+  topics_covered: string[];
+  submission_guidelines: string[];
+  download_resources: ResourceLink[];
+  submission_portal: string;
+}
+
+const defaultContent: AuthorsCallForPapersContent = {
   page_title: "Call for Papers",
   conference_tracks: [
     "AI, ML & Computational Techniques",
@@ -43,7 +59,10 @@ const cfp = {
   submission_portal: "https://cmt3.research.microsoft.com/MVAI2026"
 };
 
-export default function CallForPapers() {
+export default async function CallForPapers() {
+  const cmsContent = await getPageContent<AuthorsCallForPapersContent>('authors-call-for-papers');
+  const cfp = cmsContent ?? defaultContent;
+
   return (
     <main className="py-16 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4">

@@ -1,6 +1,17 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
+import { getPageContent } from '@/lib/content';
 
-export default function Gallery2022() {
+interface GalleryPageContent {
+  page_title?: string;
+  page_intro?: string;
+  event_images?: string[];
+  news_images?: string[];
+}
+
+export default async function Gallery2022() {
+  const cmsContent = await getPageContent<GalleryPageContent>('gallery-2022');
+  const eventImages = cmsContent?.event_images?.length ? cmsContent.event_images : undefined;
+  const newsImages = cmsContent?.news_images?.length ? cmsContent.news_images : undefined;
   const galleryData = {
     title: "Gallery 2022",
     event_images: [
@@ -46,10 +57,10 @@ export default function Gallery2022() {
     <main className="py-16 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-4 text-gray-800">
-          Gallery 2022
+          {cmsContent?.page_title || galleryData.title}
         </h1>
         <p className="text-center text-gray-600 mb-12">
-          Highlights from MAI-2022 Conference
+          {cmsContent?.page_intro || 'Highlights from MAI-2022 Conference'}
         </p>
         
         <div className="max-w-6xl mx-auto">
@@ -60,7 +71,7 @@ export default function Gallery2022() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {galleryData.event_images.map((src, idx) => (
+            {(eventImages || galleryData.event_images).map((src, idx) => (
               <div key={idx} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
                 <div className="aspect-video bg-gray-100 flex items-center justify-center overflow-hidden">
                   <Image src={src} alt={`Event ${idx + 1}`} width={800} height={450} unoptimized className="w-full h-full object-cover" />
@@ -73,11 +84,11 @@ export default function Gallery2022() {
             ))}
           </div>
 
-          {galleryData.news_images && galleryData.news_images.length > 0 && (
+          {(newsImages || galleryData.news_images) && (newsImages || galleryData.news_images).length > 0 && (
             <div className="mt-8">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">News & Highlights</h2>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {galleryData.news_images.map((src, i) => (
+                {(newsImages || galleryData.news_images).map((src, i) => (
                   <div key={i} className="bg-white rounded overflow-hidden shadow-sm">
                     <div className="aspect-square">
                       <Image src={src} alt={`News ${i + 1}`} width={300} height={300} unoptimized className="w-full h-full object-cover" />
@@ -92,3 +103,4 @@ export default function Gallery2022() {
     </main>
   );
 }
+

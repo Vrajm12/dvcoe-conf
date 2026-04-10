@@ -26,104 +26,9 @@ export interface Keynote {
   slug?: string;
 }
 
-export interface PageContent {
-  // Home Page Fields
-  hero_title?: string;
-  hero_subtitle?: string;
-  hero_tagline?: string;
-  hero_event_type?: string;
-  hero_background?: string;
-  about_title?: string;
-  about_conference_title?: string;
-  about_conference_content?: string;
-  about_objectives_title?: string;
-  about_objectives_content?: string;
-  acknowledgement_title?: string;
-  acknowledgement_microsoft_title?: string;
-  acknowledgement_microsoft_content?: string;
-  acknowledgement_springer_title?: string;
-  acknowledgement_springer_content?: string;
-  publication_partner_title?: string;
-  publication_partner_subtitle?: string;
-  publication_partner_description?: string;
-  publication_indexing_title?: string;
-  publication_indexing_subtitle?: string;
-  publication_indexing_content?: string;
-  dates_title?: string;
-  dates_subtitle?: string;
-  date_submission_label?: string;
-  date_submission_title?: string;
-  date_submission_date?: string;
-  date_notification_label?: string;
-  date_notification_title?: string;
-  date_notification_date?: string;
-  date_camera_label?: string;
-  date_camera_title?: string;
-  date_camera_date?: string;
-  date_conference_label?: string;
-  date_conference_title?: string;
-  date_conference_date?: string;
-  cta_title?: string;
-  cta_subtitle?: string;
-  cta_expected_papers?: string;
-  cta_countries?: string;
-  cta_participants?: string;
-  join_title?: string;
-  join_subtitle?: string;
-  join_content?: string;
-  mai_title?: string;
-  mai_papers_count?: string;
-  mai_talks_count?: string;
+export type ContentData = Record<string, unknown>;
 
-  // Call for Papers Page
-  deadline?: string;
-  guidelines?: string;
-  topics?: string;
-
-  // Generic Page Fields
-  page_title?: string;
-  page_subtitle?: string;
-  page_intro?: string;
-
-  // Contact Page
-  contact_email?: string;
-  contact_phone?: string;
-  contact_address?: string;
-  form_title?: string;
-
-  // Dates Page
-  submission_deadline?: string;
-  notification_date?: string;
-  camera_ready_date?: string;
-  conference_date?: string;
-
-  // Events Page
-  featured_event?: string;
-
-  // Program Page
-  schedule_intro?: string;
-  keynotes_intro?: string;
-
-  // Authors Page
-  cfp_link_title?: string;
-  submission_link_title?: string;
-
-  // Committee Page
-  organizing_title?: string;
-  national_title?: string;
-  international_title?: string;
-
-  // Gallery Page
-  year_2023_title?: string;
-  year_2022_title?: string;
-  year_2021_title?: string;
-
-  // Registration Page
-  author_reg_title?: string;
-  delegate_reg_title?: string;
-}
-
-async function getContentFromFolder(folderName: string): Promise<any[]> {
+async function getContentFromFolder<T extends object = ContentData>(folderName: string): Promise<T[]> {
   try {
     // Try multiple possible root paths
     const possibleRoots = [
@@ -158,7 +63,7 @@ async function getContentFromFolder(folderName: string): Promise<any[]> {
         slug: file.replace('.md', ''),
         ...data,
         body,
-      };
+      } as T;
     });
 
     return content;
@@ -169,7 +74,7 @@ async function getContentFromFolder(folderName: string): Promise<any[]> {
 }
 
 export async function getEvents(): Promise<Event[]> {
-  return getContentFromFolder('events');
+  return getContentFromFolder<Event>('events');
 }
 
 export async function getEvent(slug: string): Promise<Event | null> {
@@ -178,15 +83,15 @@ export async function getEvent(slug: string): Promise<Event | null> {
 }
 
 export async function getAnnouncements(): Promise<Announcement[]> {
-  const announcements = await getContentFromFolder('announcements');
+  const announcements = await getContentFromFolder<Announcement>('announcements');
   return announcements.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export async function getKeynotes(): Promise<Keynote[]> {
-  return getContentFromFolder('keynotes');
+  return getContentFromFolder<Keynote>('keynotes');
 }
 
-export async function getPageContent(pageName: string): Promise<PageContent | null> {
+export async function getPageContent<T extends object = ContentData>(pageName: string): Promise<T | null> {
   try {
     // Try multiple possible root paths
     const possibleRoots = [
@@ -212,7 +117,7 @@ export async function getPageContent(pageName: string): Promise<PageContent | nu
     const fileContent = fs.readFileSync(filePath, 'utf-8');
     const { data } = matter(fileContent);
 
-    return data;
+    return data as T;
   } catch (error) {
     console.error(`Error reading page content for ${pageName}:`, error);
     return null;

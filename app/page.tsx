@@ -2,8 +2,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getPageContent } from '@/lib/content';
 
+interface HomePageContent {
+  [key: string]: string | undefined;
+  hero_background?: string;
+}
+
 export default async function Home() {
-  const pageData = await getPageContent('home');
+  const pageData = await getPageContent<HomePageContent>('home');
 
   if (!pageData) {
     return <div>Error loading page content</div>;

@@ -190,3 +190,198 @@ collections:
           - { name: "page_intro", label: "Page Intro Text", widget: "text" }
           - { name: "author_reg_title", label: "Author Registration Title", widget: "string" }
           - { name: "delegate_reg_title", label: "Delegate Registration Title", widget: "string" }
+
+      - file: "content/pages/authors-call-for-papers.md"
+        label: "Authors - Call for Papers"
+        name: "authors-call-for-papers"
+        format: "frontmatter"
+        fields:
+          - { name: "page_title", label: "Page Title", widget: "string" }
+          - { name: "conference_tracks", label: "Conference Tracks", widget: "list", field: { name: "item", label: "Track", widget: "string" } }
+          - { name: "topics_covered", label: "Topics Covered", widget: "list", field: { name: "item", label: "Topic", widget: "string" } }
+          - { name: "submission_guidelines", label: "Submission Guidelines", widget: "list", field: { name: "item", label: "Guideline", widget: "text" } }
+          - name: "download_resources"
+            label: "Download Resources"
+            widget: "list"
+            fields:
+              - { name: "text", label: "Text", widget: "string" }
+              - { name: "link", label: "Link", widget: "string" }
+          - { name: "submission_portal", label: "Submission Portal", widget: "string" }
+
+      - file: "content/pages/authors-submission.md"
+        label: "Authors - Submission"
+        name: "authors-submission"
+        format: "frontmatter"
+        fields:
+          - { name: "page_title", label: "Page Title", widget: "string" }
+          - { name: "submission_guidelines", label: "Submission Guidelines", widget: "list", field: { name: "item", label: "Guideline", widget: "text" } }
+          - name: "download_resources"
+            label: "Download Resources"
+            widget: "list"
+            fields:
+              - { name: "text", label: "Text", widget: "string" }
+              - { name: "link", label: "Link", widget: "string" }
+          - { name: "submission_portal", label: "Submission Portal", widget: "string" }
+          - { name: "important_notes", label: "Important Notes", widget: "list", field: { name: "item", label: "Note", widget: "text" } }
+
+      - file: "content/pages/registration-author.md"
+        label: "Registration - Author"
+        name: "registration-author"
+        format: "frontmatter"
+        fields:
+          - { name: "policy", label: "Policy Points", widget: "list", field: { name: "item", label: "Point", widget: "text" } }
+          - name: "fees"
+            label: "Fees"
+            widget: "list"
+            fields:
+              - { name: "category", label: "Category", widget: "string" }
+              - { name: "indian", label: "Indian Fee", widget: "string" }
+              - { name: "foreign", label: "Foreign Fee", widget: "string" }
+          - { name: "bank", label: "Bank Details", widget: "list", field: { name: "item", label: "Detail", widget: "string" } }
+          - { name: "process_steps", label: "Registration Steps", widget: "list", field: { name: "item", label: "Step", widget: "string" } }
+
+      - file: "content/pages/registration-delegate.md"
+        label: "Registration - Delegate"
+        name: "registration-delegate"
+        format: "frontmatter"
+        fields:
+          - { name: "delegate_info", label: "Delegate Info", widget: "text" }
+          - name: "delegate_fees"
+            label: "Delegate Fees"
+            widget: "list"
+            fields:
+              - { name: "category", label: "Category", widget: "string" }
+              - { name: "indian", label: "Indian Fee", widget: "string" }
+              - { name: "foreign", label: "Foreign Fee", widget: "string" }
+          - { name: "note", label: "Note", widget: "text" }
+          - { name: "benefits", label: "Benefits", widget: "list", field: { name: "item", label: "Benefit", widget: "string" } }
+          - { name: "button_text", label: "Button Text", widget: "string" }
+
+      - file: "content/pages/program-schedule.md"
+        label: "Program - Schedule"
+        name: "program-schedule"
+        format: "frontmatter"
+        fields:
+          - { name: "page_title", label: "Page Title", widget: "string" }
+          - { name: "notice", label: "Top Notice", widget: "text" }
+          - name: "days"
+            label: "Schedule Days"
+            widget: "list"
+            fields:
+              - { name: "title", label: "Day Title", widget: "string" }
+              - { name: "subtitle", label: "Day Subtitle", widget: "string" }
+              - name: "items"
+                label: "Schedule Items"
+                widget: "list"
+                fields:
+                  - { name: "time", label: "Time", widget: "string" }
+                  - { name: "title", label: "Title", widget: "string" }
+                  - { name: "subtitle", label: "Subtitle", widget: "string", required: false }
+          - { name: "note", label: "Bottom Note", widget: "text" }
+
+      - file: "content/pages/program-keynotes.md"
+        label: "Program - Keynotes"
+        name: "program-keynotes"
+        format: "frontmatter"
+        fields:
+          - { name: "page_title", label: "Page Title", widget: "string" }
+          - { name: "page_intro", label: "Page Intro", widget: "text" }
+          - name: "keynote_speakers"
+            label: "Keynote Speakers"
+            widget: "list"
+            fields:
+              - { name: "name", label: "Name", widget: "string" }
+              - { name: "institution", label: "Institution", widget: "string" }
+              - { name: "country", label: "Country", widget: "string" }
+              - { name: "talk_title", label: "Talk Title", widget: "string" }
+              - { name: "bio", label: "Bio", widget: "text" }
+              - { name: "abstract", label: "Abstract", widget: "text" }
+          - name: "invited_speakers"
+            label: "Invited Speakers"
+            widget: "list"
+            fields:
+              - { name: "name", label: "Name", widget: "string" }
+              - { name: "institution", label: "Institution", widget: "string" }
+              - { name: "country", label: "Country", widget: "string" }
+              - { name: "talk_title", label: "Talk Title", widget: "string" }
+              - { name: "bio", label: "Bio", widget: "text", required: false }
+              - { name: "abstract", label: "Abstract", widget: "text", required: false }
+
+      - file: "content/pages/committee-organizing.md"
+        label: "Committee - Organizing"
+        name: "committee-organizing"
+        format: "frontmatter"
+        fields:
+          - { name: "page_title", label: "Page Title", widget: "string" }
+          - name: "committees"
+            label: "Committee Groups"
+            widget: "list"
+            fields:
+              - { name: "committee_title", label: "Committee Title", widget: "string" }
+              - name: "members"
+                label: "Members"
+                widget: "list"
+                fields:
+                  - { name: "name", label: "Name", widget: "string" }
+                  - { name: "profile_link", label: "Profile Link", widget: "string" }
+                  - { name: "designation", label: "Designation", widget: "string" }
+                  - { name: "image", label: "Image", widget: "string" }
+
+      - file: "content/pages/committee-national.md"
+        label: "Committee - National"
+        name: "committee-national"
+        format: "frontmatter"
+        fields:
+          - { name: "page_title", label: "Page Title", widget: "string" }
+          - { name: "page_intro", label: "Page Intro", widget: "text" }
+          - name: "members"
+            label: "Members"
+            widget: "list"
+            fields:
+              - { name: "name", label: "Name", widget: "string" }
+              - { name: "designation", label: "Designation", widget: "string" }
+          - { name: "note", label: "Bottom Note", widget: "text" }
+
+      - file: "content/pages/committee-international.md"
+        label: "Committee - International"
+        name: "committee-international"
+        format: "frontmatter"
+        fields:
+          - { name: "page_title", label: "Page Title", widget: "string" }
+          - name: "members"
+            label: "Members"
+            widget: "list"
+            fields:
+              - { name: "name", label: "Name", widget: "string" }
+              - { name: "affiliation", label: "Affiliation", widget: "string" }
+              - { name: "location", label: "Location", widget: "string" }
+
+      - file: "content/pages/gallery-2021.md"
+        label: "Gallery - 2021"
+        name: "gallery-2021"
+        format: "frontmatter"
+        fields:
+          - { name: "page_title", label: "Page Title", widget: "string" }
+          - { name: "page_intro", label: "Page Intro", widget: "text" }
+          - { name: "event_images", label: "Event Images", widget: "list", field: { name: "item", label: "Image URL", widget: "string" } }
+          - { name: "hosting_campus_images", label: "Hosting Campus Images", widget: "list", required: false, field: { name: "item", label: "Image URL", widget: "string" } }
+
+      - file: "content/pages/gallery-2022.md"
+        label: "Gallery - 2022"
+        name: "gallery-2022"
+        format: "frontmatter"
+        fields:
+          - { name: "page_title", label: "Page Title", widget: "string" }
+          - { name: "page_intro", label: "Page Intro", widget: "text" }
+          - { name: "event_images", label: "Event Images", widget: "list", field: { name: "item", label: "Image URL", widget: "string" } }
+          - { name: "news_images", label: "News Images", widget: "list", required: false, field: { name: "item", label: "Image URL", widget: "string" } }
+
+      - file: "content/pages/gallery-2023.md"
+        label: "Gallery - 2023"
+        name: "gallery-2023"
+        format: "frontmatter"
+        fields:
+          - { name: "page_title", label: "Page Title", widget: "string" }
+          - { name: "page_intro", label: "Page Intro", widget: "text" }
+          - { name: "google_drive_link", label: "Google Drive Link", widget: "string", required: false }
+          - { name: "event_images", label: "Event Images", widget: "list", field: { name: "item", label: "Image URL", widget: "string" } }

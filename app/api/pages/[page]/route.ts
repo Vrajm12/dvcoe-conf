@@ -16,6 +16,18 @@ export async function generateStaticParams() {
     { page: 'committee' },
     { page: 'gallery' },
     { page: 'registration' },
+    { page: 'authors-call-for-papers' },
+    { page: 'authors-submission' },
+    { page: 'registration-author' },
+    { page: 'registration-delegate' },
+    { page: 'program-schedule' },
+    { page: 'program-keynotes' },
+    { page: 'committee-organizing' },
+    { page: 'committee-national' },
+    { page: 'committee-international' },
+    { page: 'gallery-2021' },
+    { page: 'gallery-2022' },
+    { page: 'gallery-2023' },
   ];
 }
 

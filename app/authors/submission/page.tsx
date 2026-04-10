@@ -1,24 +1,48 @@
-const submission = {
-  page_title: "Paper Submission",
+import { getPageContent } from '@/lib/content';
+
+interface ResourceLink {
+  text: string;
+  link: string;
+}
+
+interface AuthorsSubmissionContent {
+  page_title: string;
+  submission_guidelines: string[];
+  download_resources: ResourceLink[];
+  submission_portal: string;
+  important_notes: string[];
+}
+
+const defaultContent: AuthorsSubmissionContent = {
+  page_title: 'Paper Submission',
   submission_guidelines: [
-    "Authors are invited to submit the papers (in English) by 30th May 2026. The abstract should not be more than 400 words (including spaces) and can include a maximum of 6 relevant keywords. The templates and instructions for abstract and paper submission are available on the conference website. The technical program will include oral and poster presentations and the form of presentation for each paper will be decided by the committee upon receipt of the final version.",
-    "Kindly follow the Springer LNEE prescribed format before submission. Author Instructions: The authors are requested to submit full papers according to Springer LNEE format available on the Springer site. Authors are kindly invited to submit their formatted full papers including results, tables, figures and references.",
-    "All submissions are handled through: https://cmt3.research.microsoft.com/MVAI2026",
-    "Accepted papers are to be registered and presented; otherwise, the paper will be removed from the proceedings. Abstracts/extended abstracts and short papers (less than 4 pages) are not considered for publication."
+    'Authors are invited to submit the papers (in English) by 30th May 2026. The abstract should not be more than 400 words (including spaces) and can include a maximum of 6 relevant keywords. The templates and instructions for abstract and paper submission are available on the conference website. The technical program will include oral and poster presentations and the form of presentation for each paper will be decided by the committee upon receipt of the final version.',
+    'Kindly follow the Springer LNEE prescribed format before submission. Author Instructions: The authors are requested to submit full papers according to Springer LNEE format available on the Springer site. Authors are kindly invited to submit their formatted full papers including results, tables, figures and references.',
+    'All submissions are handled through: https://cmt3.research.microsoft.com/MVAI2026',
+    'Accepted papers are to be registered and presented; otherwise, the paper will be removed from the proceedings. Abstracts/extended abstracts and short papers (less than 4 pages) are not considered for publication.'
   ],
   download_resources: [
-    { text: "Call for Papers (PDF)", link: "pdf/cfp.pdf" },
-    { text: "Paper Submission Portal", link: "https://cmt3.research.microsoft.com/MVAI2026" },
-    { text: "Springer Template", link: "pdf/MAI-2026_Template.doc" },
-    { text: "Consent Form for Publication", link: "pdf/Consent form for publication.docx" },
-    { text: "LNEE Documentation", link: "https://link.springer.com/series/7818" },
-    { text: "Quick Start Guide", link: "pdf/Quick Start.pdf" },
-    { text: "SPLNPROC Technical Instructions (Word 2010-2016)", link: "pdf/SPLNPROC Word 2010-2016 Technical Instructions.pdf" }
+    { text: 'Call for Papers (PDF)', link: 'pdf/cfp.pdf' },
+    { text: 'Paper Submission Portal', link: 'https://cmt3.research.microsoft.com/MVAI2026' },
+    { text: 'Springer Template', link: 'pdf/MAI-2026_Template.doc' },
+    { text: 'Consent Form for Publication', link: 'pdf/Consent form for publication.docx' },
+    { text: 'LNEE Documentation', link: 'https://link.springer.com/series/7818' },
+    { text: 'Quick Start Guide', link: 'pdf/Quick Start.pdf' },
+    { text: 'SPLNPROC Technical Instructions (Word 2010-2016)', link: 'pdf/SPLNPROC Word 2010-2016 Technical Instructions.pdf' }
   ],
-  submission_portal: "https://cmt3.research.microsoft.com/MVAI2026"
+  submission_portal: 'https://cmt3.research.microsoft.com/MVAI2026',
+  important_notes: [
+    'Ensure your paper does not contain author information for blind review',
+    'Check for plagiarism before submission',
+    'Keep a copy of your submission ID for future reference',
+    'Monitor your email for review updates and decisions'
+  ]
 };
 
-export default function PaperSubmission() {
+export default async function PaperSubmission() {
+  const cmsContent = await getPageContent<AuthorsSubmissionContent>('authors-submission');
+  const submission = cmsContent ?? defaultContent;
+
   return (
     <main className="py-16 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4">
@@ -62,10 +86,9 @@ export default function PaperSubmission() {
           <div className="bg-blue-50 border-l-4 border-blue-600 p-6 mb-8">
             <h3 className="font-bold text-lg mb-2 text-blue-900">Important Notes</h3>
             <ul className="space-y-2 text-gray-700 text-sm">
-              <li>• Ensure your paper does not contain author information for blind review</li>
-              <li>• Check for plagiarism before submission</li>
-              <li>• Keep a copy of your submission ID for future reference</li>
-              <li>• Monitor your email for review updates and decisions</li>
+              {submission.important_notes.map((note, idx) => (
+                <li key={idx}>- {note}</li>
+              ))}
             </ul>
           </div>
 
@@ -83,7 +106,7 @@ export default function PaperSubmission() {
             </p>
           </div>
         </div>
-      </div> 
+      </div>
     </main>
   );
 }

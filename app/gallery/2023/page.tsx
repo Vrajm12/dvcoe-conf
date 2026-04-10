@@ -1,8 +1,18 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
+import { getPageContent } from '@/lib/content';
 
-export default function Gallery2023() {
+interface GalleryPageContent {
+  page_title?: string;
+  page_intro?: string;
+  google_drive_link?: string;
+  event_images?: string[];
+}
+
+export default async function Gallery2023() {
+  const cmsContent = await getPageContent<GalleryPageContent>('gallery-2023');
+  const eventImages = cmsContent?.event_images?.length ? cmsContent.event_images : undefined;
   const galleryData = {
-    title: "Gallery 2023Home>Gallery>2023",
+    title: "Gallery 2023",
     google_drive_link: "https://drive.google.com/drive/folders/1TOCZiRINsince3XzJ4rB5-yZZO76MWVL",
     event_images: [
       "https://mvai.in/2024/img/img23/1.jpg",
@@ -19,10 +29,10 @@ export default function Gallery2023() {
     <main className="py-16 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-4 text-gray-800">
-          Gallery 2023
+          {cmsContent?.page_title || galleryData.title}
         </h1>
         <p className="text-center text-gray-600 mb-12">
-          Highlights from MAI-2023 Conference
+          {cmsContent?.page_intro || 'Highlights from MAI-2023 Conference'}
         </p>
         
         <div className="max-w-6xl mx-auto">
@@ -33,7 +43,7 @@ export default function Gallery2023() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {galleryData.event_images.map((src, idx) => (
+            {(eventImages || galleryData.event_images).map((src, idx) => (
               <div key={idx} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
                 <div className="aspect-video bg-gray-100 flex items-center justify-center overflow-hidden">
                   <Image src={src} alt={`Event ${idx + 1}`} width={800} height={450} unoptimized className="w-full h-full object-cover" />
@@ -49,7 +59,7 @@ export default function Gallery2023() {
           {galleryData.google_drive_link && (
             <div className="mt-8 text-center">
               <a
-                href={galleryData.google_drive_link}
+                href={cmsContent?.google_drive_link || galleryData.google_drive_link}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
@@ -63,3 +73,4 @@ export default function Gallery2023() {
     </main>
   );
 }
+

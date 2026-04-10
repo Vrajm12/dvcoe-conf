@@ -1,7 +1,20 @@
-export default function Contact() {
+import { getPageContent } from '@/lib/content';
+
+interface ContactPageContent {
+  page_title?: string;
+  page_intro?: string;
+  contact_email?: string;
+  contact_phone?: string;
+  contact_address?: string;
+  form_title?: string;
+}
+
+export default async function Contact() {
+  const cmsContent = await getPageContent<ContactPageContent>('contact');
   const contactData = {
     page_title: "Contact Us",
     conference_dates: "June 27-28, 2026",
+    page_intro: "Get in touch with us for any queries or further information about ICCET-2026",
     contact_details: [] as string[],
     venue_title: "Dnyanvilas College of Engineering",
     venue_address:
@@ -13,8 +26,11 @@ export default function Contact() {
     <main className="py-16 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">
-          {contactData.page_title}
+          {cmsContent?.page_title || contactData.page_title}
         </h1>
+        <p className="text-center text-gray-600 mb-8">
+          {cmsContent?.page_intro || contactData.page_intro}
+        </p>
         
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
@@ -35,7 +51,7 @@ export default function Contact() {
                     <p className="text-gray-600">
                       <strong>{contactData.venue_title}</strong>
                       <br />
-                      {contactData.venue_address.split(',').map((line, idx) => (
+                      {(cmsContent?.contact_address || contactData.venue_address).split(',').map((line, idx) => (
                         <span key={idx}>
                           {line.trim()}
                           <br />
@@ -54,7 +70,21 @@ export default function Contact() {
                   <div>
                     <h3 className="font-bold text-gray-800 mb-1">Contact Details</h3>
                     <div className="text-gray-600">
-                      {contactData.contact_details.map((d, i) => {
+                      {[cmsContent?.contact_email, cmsContent?.contact_phone].filter(Boolean).length > 0
+                        ? [cmsContent?.contact_email, cmsContent?.contact_phone].filter(Boolean).map((d, i) => {
+                        const cleaned = String(d).replace(/[\[\]]/g, '').trim();
+                        if (cleaned.includes('@')) {
+                          return (
+                            <div key={i}>
+                              <a href={`mailto:${cleaned}`} className="text-blue-600 hover:underline">
+                                {cleaned}
+                              </a>
+                            </div>
+                          );
+                        }
+                        return <div key={i}>{cleaned}</div>;
+                      })
+                        : contactData.contact_details.map((d, i) => {
                         const cleaned = d.replace(/[\[\]]/g, '').trim();
                         if (cleaned.includes('@')) {
                           return (
@@ -121,7 +151,7 @@ export default function Contact() {
             
             {/* Contact Form */}
             <div className="bg-white rounded-lg shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-blue-900 mb-6">Send a Message</h2>
+              <h2 className="text-2xl font-bold text-blue-900 mb-6">{cmsContent?.form_title || "Send a Message"}</h2>
               
               <form className="space-y-4">
                 <div>

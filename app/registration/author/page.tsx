@@ -1,4 +1,19 @@
-const registrationData = {
+import { getPageContent } from '@/lib/content';
+
+interface RegistrationFee {
+  category: string;
+  indian: string;
+  foreign: string;
+}
+
+interface RegistrationContent {
+  policy: string[];
+  fees: RegistrationFee[];
+  bank: string[];
+  process_steps: string[];
+}
+
+const defaultContent: RegistrationContent = {
   policy: [
     "At least one author per paper has to register.",
     "Each registration entitles the author to present one paper only.",
@@ -34,10 +49,20 @@ const registrationData = {
     "IFSC Code: SBIN0003320",
     "MICR Code: 395002012",
     "Branch Contact No: 0261-2258618, 0261-2227125"
+  ],
+  process_steps: [
+    "Complete the online registration form",
+    "Pay the registration fee via bank transfer or the provided payment gateway",
+    "Upload proof of payment",
+    "Receive registration confirmation via email",
+    "Submit camera-ready manuscript"
   ]
 };
 
-export default function AuthorRegistration() {
+export default async function AuthorRegistration() {
+  const cmsContent = await getPageContent<RegistrationContent>('registration-author');
+  const registrationData = cmsContent ?? defaultContent;
+
   return (
     <main className="py-16 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4">
@@ -98,11 +123,9 @@ export default function AuthorRegistration() {
           <div className="bg-white rounded-lg shadow-lg p-8">
             <h2 className="text-2xl font-bold text-blue-900 mb-6">Registration Process</h2>
             <ol className="list-decimal list-inside space-y-4 text-gray-700">
-              <li>Complete the online registration form</li>
-              <li>Pay the registration fee via bank transfer or the provided payment gateway</li>
-              <li>Upload proof of payment</li>
-              <li>Receive registration confirmation via email</li>
-              <li>Submit camera-ready manuscript</li>
+              {registrationData.process_steps.map((step, idx) => (
+                <li key={idx}>{step}</li>
+              ))}
             </ol>
             
             <div className="mt-8 text-center">

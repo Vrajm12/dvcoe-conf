@@ -1,3 +1,17 @@
+import { getPageContent } from '@/lib/content';
+
+interface CommitteeMember {
+  name: string;
+  designation: string;
+}
+
+interface CommitteeNationalContent {
+  page_title?: string;
+  page_intro?: string;
+  note?: string;
+  members?: CommitteeMember[];
+}
+
 const committeemembers = [
   {
     name: "Prof. S N Singh",
@@ -89,21 +103,29 @@ const committeemembers = [
   }
 ].filter(member => member.name.trim() !== "");
 
-export default function NationalCommittee() {
+export default async function NationalCommittee() {
+  const cmsContent = await getPageContent<CommitteeNationalContent>('committee-national');
+  const pageTitle = cmsContent?.page_title || 'National Advisory Committee';
+  const pageIntro = cmsContent?.page_intro || 'Esteemed experts from leading national institutions';
+  const pageNote =
+    cmsContent?.note ||
+    'The National Advisory Committee comprises distinguished academicians and researchers from leading institutions across the country providing valuable guidance for the conference.';
+  const members = cmsContent?.members && cmsContent.members.length > 0 ? cmsContent.members : committeemembers;
+
   return (
     <main className="py-16 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">
-          National Advisory Committee
+          {pageTitle}
         </h1>
         
         <div className="max-w-5xl mx-auto bg-white rounded-lg shadow-lg p-8">
           <p className="text-gray-600 mb-8 text-center">
-            Esteemed experts from leading national institutions
+            {pageIntro}
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {committeemembers.map((member, index) => (
+            {members.map((member, index) => (
               <div key={index} className="border-l-4 border-blue-600 pl-4 py-2">
                 <h3 className="font-bold text-lg text-gray-800">{member.name}</h3>
                 <p className="text-gray-600">{member.designation}</p>
@@ -113,8 +135,7 @@ export default function NationalCommittee() {
           
           <div className="mt-8 p-6 bg-blue-50 rounded-lg">
             <p className="text-sm text-gray-600 italic">
-              The National Advisory Committee comprises distinguished academicians and researchers 
-              from leading institutions across the country providing valuable guidance for the conference.
+              {pageNote}
             </p>
           </div>
         </div>
