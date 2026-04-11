@@ -1,36 +1,40 @@
 ---
-page_title: "Organizing Committee"
+page_title: Organizing Committee
 committees:
-  - committee_title: "Chief Patron"
+  - committee_title: Chief Patron
     members:
-      - name: "Prof. Rajnish Kamat"
+      - name: Prof. Rajanish Kamat
         profile_link: "#"
-        designation: "Vice-Chancellor, Dr. Babasaheb Ambedkar Technological University, Lonere"
-        image: "/chief-patron.jpeg"
-  - committee_title: "General Chairs"
+        designation: Vice-Chancellor, Dr. Babasaheb Ambedkar Technological University,
+          Lonere
+        image: /chief-patron.jpeg
+  - committee_title: General Chairs
     members:
-      - name: "Dr. S. L. Nalbalwar"
+      - name: Dr. S. L. Nalbalwar
         profile_link: "#"
-        designation: "Dean (Academics), Dr. Babasaheb Ambedkar Technological University, Lonere-India"
-        image: "/General-Chairs Dr. S. L. Nalbalwar.jpeg"
-      - name: "Dr. Nagendra Prasad Pathak"
+        designation: Dean (Academics), Dr. Babasaheb Ambedkar Technological University,
+          Lonere-India
+        image: /General-Chairs Dr. S. L. Nalbalwar.jpeg
+      - name: Dr. Nagendra Prasad Pathak
         profile_link: "#"
-        designation: "Professor (HAG), Indian Institute of Technology, Roorkee-India"
-        image: "https://via.placeholder.com/300x300?text=Dr.+Nagendra+Prasad+Pathak"
-  - committee_title: "Technical Program Chair"
+        designation: Professor (HAG), Indian Institute of Technology, Roorkee-India
+        image: https://via.placeholder.com/300x300?text=Dr.+Nagendra+Prasad+Pathak
+  - committee_title: Technical Program Chair
     members:
-      - name: "Dr. Brijesh Iyer"
+      - name: Dr. Brijesh Iyer
         profile_link: "#"
-        designation: "Professor, Dr. Babasaheb Ambedkar Technological University, Lonere-India"
-        image: "/technical-program-chair.jpeg"
-  - committee_title: "Organizing Chair"
+        designation: Professor, Dr. Babasaheb Ambedkar Technological University,
+          Lonere-India
+        image: /technical-program-chair.jpeg
+  - committee_title: Organizing Chair
     members:
-      - name: "Dr. Aparna Pande"
+      - name: Dr. Aparna Pande
         profile_link: "#"
-        designation: "Principal, Dnyanvilas College of Engineering"
-        image: "https://via.placeholder.com/300x300?text=Dr.+Aparna+Pande"
-      - name: "Dr. Prachi Deshpande"
+        designation: Principal, Dnyanvilas College of Engineering
+        image: https://via.placeholder.com/300x300?text=Dr.+Aparna+Pande
+      - name: Dr. Prachi Deshpande
         profile_link: "#"
-        designation: "Associate Professor, Department of CSE, Maharashtra Institute of Technology, Ch. Sambhaji nagar"
-        image: "https://via.placeholder.com/300x300?text=Dr.+Prachi+Deshpande"
+        designation: Associate Professor, Department of CSE, Maharashtra Institute of
+          Technology, Ch. Sambhaji nagar
+        image: https://via.placeholder.com/300x300?text=Dr.+Prachi+Deshpande
 ---
