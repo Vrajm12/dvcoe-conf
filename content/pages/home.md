@@ -63,21 +63,21 @@ dates_title: Important Dates
 dates_subtitle: Mark your calendars
 date_submission_label: Submission
 date_submission_title: Paper Submission Deadline
-date_submission_date: 30 JUNE
+date_submission_date: 30 JUNE 2026
 date_notification_label: Notification
 date_notification_title: Notification of Acceptance
-date_notification_date: 15 JULY
+date_notification_date: 15 JULY 2026
 date_camera_label: Camera Ready
 date_camera_title: Camera-Ready Submission
-date_camera_date: 22 JULY
+date_camera_date: 22 JULY 2026
 date_conference_label: Conference
 date_conference_title: Conference Dates
-date_conference_date: 30-31 JULY
+date_conference_date: 30-31 JULY 2026
 cta_title: Join Us at ICCET-2026
 cta_subtitle: Submit your research, connect with leading experts, and be part of
   shaping the future of Computing and Technology
 cta_expected_papers: 100+
-cta_countries: 30+
+cta_countries: 20+
 cta_participants: 200+
 join_title: Join Us
 join_subtitle: Advancing Technology for Sustainable Development!
