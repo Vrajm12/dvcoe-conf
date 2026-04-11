@@ -19,18 +19,13 @@ const defaultContent: DelegateRegistrationContent = {
   delegate_fees: [
     {
       category: 'Students (UG/PG/Ph.D Scholars)',
-      indian: 'INR 6,000',
-      foreign: '$150'
+      indian: 'INR 1,500',
+      foreign: '$18'
     },
     {
       category: 'Academicians',
-      indian: 'INR 9,000',
-      foreign: '$300'
-    },
-    {
-      category: 'Industry Professionals',
-      indian: 'INR 10,000',
-      foreign: '$350'
+      indian: 'INR 2,500',
+      foreign: '$30'
     }
   ],
   note: 'Student delegates must provide valid student ID proof at the time of registration.',

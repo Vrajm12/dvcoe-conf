@@ -12,13 +12,13 @@ export default function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-3">
           <Link href="/" className="flex items-center space-x-2 flex-shrink-0">
-            <div className="relative w-20 h-9">
+            <div className="relative w-32 h-14 bg-transparent">
               <Image 
-                src="/mai-logo.jpg" 
-                alt="MAI 2026 Logo" 
+                src="/iccet-2026-logo.png" 
+                alt="ICCET 2026 Logo" 
                 fill
                 priority
-                className="object-contain"
+                className="object-contain bg-transparent"
               />
             </div>
             <div className="border-l-2 border-gray-300 h-10"></div>
@@ -101,19 +101,7 @@ export default function Navigation() {
 
             <Link href="/dates" className="px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition font-medium text-sm">Dates</Link>
             
-            <div className="relative group">
-              <button className="px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition font-medium text-sm inline-flex items-center">
-                Prev. Conf.
-                <svg className="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"></path>
-                </svg>
-              </button>
-              <div className="absolute left-0 mt-2 w-40 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100">
-                <Link href="/gallery/2021" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition first:rounded-t-lg">2021</Link>
-                <Link href="/gallery/2022" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">2022</Link>
-                <Link href="/gallery/2023" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition last:rounded-b-lg">2023</Link>
-              </div>
-            </div>
+            <Link href="/gallery" className="px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition font-medium text-sm">Prev. Conf.</Link>
 
             <Link href="/contact" className="px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition font-medium text-sm">Contact</Link>
           </div>
@@ -145,12 +133,7 @@ export default function Navigation() {
               <Link href="/program/schedule" className="block pl-4 py-1 text-sm text-gray-600 hover:text-blue-600">Conference Schedule</Link>
             </div>
             <Link href="/dates" className="block py-2 text-gray-700 hover:text-blue-600 font-medium">Dates</Link>
-            <div className="py-2">
-              <p className="font-semibold text-gray-900">Previous Conferences</p>
-              <Link href="/gallery/2021" className="block pl-4 py-1 text-sm text-gray-600 hover:text-blue-600">2021</Link>
-              <Link href="/gallery/2022" className="block pl-4 py-1 text-sm text-gray-600 hover:text-blue-600">2022</Link>
-              <Link href="/gallery/2023" className="block pl-4 py-1 text-sm text-gray-600 hover:text-blue-600">2023</Link>
-            </div>
+            <Link href="/gallery" className="block py-2 text-gray-700 hover:text-blue-600 font-medium">Previous Conferences</Link>
             <Link href="/contact" className="block py-2 text-gray-700 hover:text-blue-600 font-medium">Contact</Link>
           </div>
         )}

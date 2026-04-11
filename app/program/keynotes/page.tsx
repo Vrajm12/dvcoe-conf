@@ -64,49 +64,42 @@ export default async function Keynotes() {
   return (
     <main className="py-16 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">{data.page_title}</h1>
+        <h1 className="text-5xl font-bold text-center mb-8 text-gray-800">{data.page_title}</h1>
+        <p className="text-center text-gray-600 mb-16 text-lg">{data.page_intro}</p>
 
-        <div className="max-w-5xl mx-auto">
-          <p className="text-center text-gray-600 mb-12 text-lg">{data.page_intro}</p>
-
-          {data.keynote_speakers.map((speaker, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg p-8 mb-8">
-              <div className="flex flex-col md:flex-row gap-6">
-                <div className="md:w-1/3">
-                  <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg aspect-square flex items-center justify-center">
-                    <span className="text-6xl text-blue-600">K</span>
-                  </div>
-                </div>
-                <div className="md:w-2/3">
-                  <h2 className="text-2xl font-bold text-gray-800 mb-2">{speaker.name}</h2>
-                  <p className="text-blue-600 font-semibold mb-2">{speaker.institution}</p>
-                  <p className="text-gray-600 mb-4">{speaker.country}</p>
-                  <h3 className="font-bold text-lg text-gray-800 mb-2">
-                    Talk Title: <span className="font-normal text-gray-700">&quot;{speaker.talk_title}&quot;</span>
-                  </h3>
-                  <p className="text-gray-700 leading-relaxed mb-4">{speaker.bio}</p>
-                  <div className="bg-blue-50 p-4 rounded">
-                    <p className="text-sm text-gray-700">
-                      <strong>Abstract:</strong> {speaker.abstract}
-                    </p>
-                  </div>
-                </div>
+        <div className="max-w-4xl mx-auto">
+          {/* TBA Section */}
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-2xl p-16 text-center border-2 border-blue-200">
+            <div className="mb-6">
+              <div className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full p-8">
+                <svg className="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
               </div>
             </div>
-          ))}
-
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Invited Speakers</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {data.invited_speakers.map((speaker, index) => (
-                <div key={index} className="border-l-4 border-blue-600 pl-4 py-3">
-                  <h3 className="font-bold text-lg text-gray-800">{speaker.name}</h3>
-                  <p className="text-gray-600">{speaker.institution}</p>
-                  <p className="text-sm text-gray-500 mt-1">{speaker.country}</p>
-                  <p className="text-sm text-blue-600 mt-2 italic">&quot;{speaker.talk_title}&quot;</p>
-                </div>
-              ))}
+            
+            <h2 className="text-5xl font-bold text-blue-900 mb-4">TBA</h2>
+            <p className="text-2xl text-blue-800 font-semibold mb-6">To Be Announced</p>
+            
+            <p className="text-gray-700 text-lg leading-relaxed mb-8">
+              The keynote speakers and invited talks for ICCET-2026 will be announced soon. 
+              We are currently finalizing the lineup of distinguished speakers from leading institutions worldwide.
+            </p>
+            
+            <div className="bg-white rounded-lg p-6 border-l-4 border-blue-600">
+              <p className="text-gray-600">
+                Please check back soon or subscribe to our newsletter to receive updates about the keynote speakers and their presentations.
+              </p>
             </div>
+          </div>
+
+          {/* Info Box */}
+          <div className="mt-12 bg-blue-100 border-l-4 border-blue-600 p-8 rounded-lg">
+            <h3 className="text-lg font-bold text-blue-900 mb-3">📢 Stay Updated</h3>
+            <p className="text-gray-700">
+              Keynote speakers from renowned universities and research institutions will deliver cutting-edge talks covering 
+              AI, Machine Learning, Cybersecurity, IoT, and related technologies.
+            </p>
           </div>
         </div>
       </div>

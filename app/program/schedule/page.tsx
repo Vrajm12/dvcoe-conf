@@ -1,4 +1,5 @@
 import { getPageContent } from '@/lib/content';
+import { FaCalendar, FaMapPin } from 'react-icons/fa';
 
 interface ScheduleItem {
   time: string;
@@ -63,37 +64,53 @@ export default async function ConferenceSchedule() {
   return (
     <main className="py-16 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">{data.page_title}</h1>
+        <h1 className="text-5xl font-bold text-center mb-8 text-gray-800">{data.page_title}</h1>
 
-        <div className="max-w-5xl mx-auto">
-          <div className="bg-blue-100 border-l-4 border-blue-600 p-6 mb-8">
-            <p className="text-gray-800 font-semibold">{data.notice}</p>
-          </div>
-
-          {data.days.map((day, dayIndex) => (
-            <div key={dayIndex} className="bg-white rounded-lg shadow-lg mb-8 overflow-hidden">
-              <div className="bg-gradient-to-r from-blue-900 to-blue-700 text-white p-6">
-                <h2 className="text-2xl font-bold">{day.title}</h2>
-                <p className="text-blue-200">{day.subtitle}</p>
-              </div>
-
-              <div className="p-6">
-                <div className="space-y-4">
-                  {day.items.map((item, itemIndex) => (
-                    <div key={itemIndex} className="flex border-l-4 border-blue-600 pl-4">
-                      <div className="w-32 flex-shrink-0 font-bold text-blue-900">{item.time}</div>
-                      <div>
-                        <h3 className="font-bold text-gray-800">{item.title}</h3>
-                        {item.subtitle ? <p className="text-gray-600 text-sm">{item.subtitle}</p> : null}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+        <div className="max-w-4xl mx-auto">
+          {/* TBA Section */}
+          <div className="bg-gradient-to-br from-emerald-50 to-green-50 rounded-2xl shadow-2xl p-16 text-center border-2 border-emerald-200">
+            <div className="mb-6">
+              <div className="inline-block bg-gradient-to-r from-emerald-600 to-green-600 rounded-full p-8">
+                <svg className="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
               </div>
             </div>
-          ))}
+            
+            <h2 className="text-5xl font-bold text-emerald-900 mb-4">TBA</h2>
+            <p className="text-2xl text-emerald-800 font-semibold mb-6">To Be Announced</p>
+            
+            <p className="text-gray-700 text-lg leading-relaxed mb-8">
+              The detailed conference schedule including keynote sessions, technical tracks, workshops, 
+              and networking events will be announced soon.
+            </p>
+            
+            <div className="bg-white rounded-lg p-6 border-l-4 border-emerald-600">
+              <p className="text-gray-600">
+                The final schedule will be released closer to the conference date. 
+                Please check back regularly for updates on the ICCET-2026 program.
+              </p>
+            </div>
+          </div>
 
-          <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6">
+          {/* Info Boxes */}
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-blue-100 border-l-4 border-blue-600 p-8 rounded-lg">
+              <h3 className="text-lg font-bold text-blue-900 mb-3 flex items-center gap-2"><FaCalendar /> Conference Dates</h3>
+              <p className="text-gray-700">
+                30-31 July 2026
+              </p>
+            </div>
+            
+            <div className="bg-purple-100 border-l-4 border-purple-600 p-8 rounded-lg">
+              <h3 className="text-lg font-bold text-purple-900 mb-3 flex items-center gap-2"><FaMapPin /> Venue</h3>
+              <p className="text-gray-700">
+                Dnyanvilas College of Engineering, Pune
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 bg-yellow-50 border-l-4 border-yellow-500 p-8 rounded-lg">
             <p className="text-gray-800">
               <strong>Note:</strong> {data.note}
             </p>

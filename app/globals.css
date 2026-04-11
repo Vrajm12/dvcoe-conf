@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 /* Base Typography for Academic Conference Site */
 body {
-  font-family: var(--font-inter), var(--font-sans);
+  font-family: var(--font-outfit), var(--font-sans);
   font-size: 16px;
   line-height: 1.6;
   color: #1a1a1a;
@@ -56,6 +56,27 @@ a {
 
 a:hover {
   color: #1d4ed8;
+}
+
+/* Marquee Animation */
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.marquee-content {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 30s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 /* Smooth scrolling */

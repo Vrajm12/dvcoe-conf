@@ -1,14 +1,14 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Outfit } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 
-const inter = Inter({ 
+const outfit = Outfit({ 
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-outfit",
   preload: true,
   fallback: ['system-ui', 'arial']
 });
@@ -40,11 +40,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable} suppressHydrationWarning>
+    <html lang="en" className={outfit.variable} suppressHydrationWarning>
       <head>
         <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </head>
-      <body className={inter.className}>
+      <body className={outfit.className}>
         <Navigation />
         {children}
         <Footer />

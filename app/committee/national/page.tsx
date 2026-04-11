@@ -2,7 +2,9 @@ import { getPageContent } from '@/lib/content';
 
 interface CommitteeMember {
   name: string;
-  designation: string;
+  affiliation?: string;
+  location?: string;
+  designation?: string;
 }
 
 interface CommitteeNationalContent {
@@ -14,92 +16,74 @@ interface CommitteeNationalContent {
 
 const committeemembers = [
   {
-    name: "Prof. S N Singh",
-    designation: "IIITM Gwalior"
+    name: "Dr. Ramkrishna Mishra",
+    affiliation: "Professor, School of Information Technology, Deakin University",
+    location: "Australia"
   },
   {
-    name: "Prof. Sudhan Majhi",
-    designation: "Indian Institute of Science, Bangalore"
+    name: "Dr. P.S. Tamizharasan",
+    affiliation: "Professor, Department of CSE, BITS Pilani-Dubai Campus",
+    location: "Dubai, UAE"
   },
   {
-    name: "Debasish Ghose",
-    designation: "Indian Institute of Science, Bangalore"
+    name: "Dr. Debashis Ghosh",
+    affiliation: "Professor, Department of E & CE Engineering, IIT Roorkee",
+    location: "Roorkee, India"
   },
   {
-    name: "Prof. B.K Panigrahi",
-    designation: "IIT Delhi"
+    name: "Dr. Rajeev Arya",
+    affiliation: "Associate Professor, National Institute of Technology, Surat",
+    location: "Surat, India"
   },
   {
-    name: "Prof. Nagendra Prasad Pathak",
-    designation: "IIT Roorkee"
+    name: "Dr. Ranjay Hajara",
+    affiliation: "Associate Professor, National Institute of Technology, Silchar",
+    location: "Silchar, Assam, India"
   },
   {
-    name: "Prof. Preetam Kumar",
-    designation: "IIT Patna"
+    name: "Dr. Ajay Kunteta",
+    affiliation: "Professor, Rajasthan Technological University",
+    location: "Kota, India"
   },
   {
-    name: "Prof. Tapan Kumar Gandhi",
-    designation: "IIT Delhi"
+    name: "Dr. Pravin Prajapati",
+    affiliation: "Head, Department of E & TC Engineering, AD Patel Institute of Technology",
+    location: "Anand, Gujarat, India"
   },
   {
-    name: "Prof. Manav R. Bhatnagar",
-    designation: "IIT Delhi"
+    name: "Manoranjan Bharti",
+    affiliation: "Professor, National Institute of Technology, Hamirpur",
+    location: "Hamirpur, India"
   },
   {
-    name: "Prof. Dharmendra Singh",
-    designation: "IIT Roorkee"
+    name: "Dr. Ribhu Chopra",
+    affiliation: "Associate Professor, Indian Institute of Technology, Guwahati",
+    location: "Guwahati, India"
   },
   {
-    name: "Prof. N K Pathak",
-    designation: "IIT Roorkee"
+    name: "Dr. Arjun Kumar",
+    affiliation: "Associate Professor, School of CHIPS, Xi'an Jiaotong-Liverpool University",
+    location: "Suzhou, China"
   },
   {
-    name: "Prof. YN Singh",
-    designation: "IIT Kanpur"
+    name: "Dr. Amit Joshi",
+    affiliation: "Associate Professor, COEP Technological University",
+    location: "Pune, India"
   },
   {
-    name: "Prof. Manoj Thakiur",
-    designation: "IIT Mandi"
+    name: "Dr. Aparna Pande",
+    affiliation: "Principal, DV College of Engineering",
+    location: "Pune, India"
   },
   {
-    name: "Gaurav Trivedi",
-    designation: "IIT Guwahati"
+    name: "Dr. Prachi Deshpande",
+    affiliation: "Associate Professor, CSE, Marathwada Institute of Technology",
+    location: "Chhatrapati Sambhajinagar, India"
   },
   {
-    name: "Prof. Millie Pant",
-    designation: "IIT Roorkee"
-  },
-  {
-    name: "Prof. Sanjay Singh",
-    designation: "IIT BHU"
-  },
-  {
-    name: "Prof. Rajalakshmi P",
-    designation: "IIT Hyderabad"
-  },
-  {
-    name: "Prof. Ram Bilas Pachori",
-    designation: "IIT Indore"
-  },
-  {
-    name: "Prof. S. C. Sharma",
-    designation: "IIT Roorkee"
-  },
-  {
-    name: "Prof. Aditya Trivedi",
-    designation: "IIITM Gwalior"
-  },
-  {
-    name: "Prof. Ritu Tiwari",
-    designation: "IIITM Gwalior"
-  },
-  {
-    name: "Prof. Sateesh Kumar Peddoju",
-    designation: "IIT Roorkee"
-  },
-  {
-    name: "Prof. Sayandeep Saha",
-    designation: "IIT Bombay"
+    name: "Dr. Mukund Kharade",
+    affiliation: "Associate Professor, DV COE",
+    location: "Pune, India"
   }
 ].filter(member => member.name.trim() !== "");
 
@@ -115,26 +99,30 @@ export default async function NationalCommittee() {
   return (
     <main className="py-16 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-4" style={{color: '#C2185B'}}>
           {pageTitle}
         </h1>
+        <p className="text-gray-600 mb-12 text-center text-lg">
+          {pageIntro}
+        </p>
         
-        <div className="max-w-5xl mx-auto bg-white rounded-lg shadow-lg p-8">
-          <p className="text-gray-600 mb-8 text-center">
-            {pageIntro}
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
             {members.map((member, index) => (
-              <div key={index} className="border-l-4 border-blue-600 pl-4 py-2">
-                <h3 className="font-bold text-lg text-gray-800">{member.name}</h3>
-                <p className="text-gray-600">{member.designation}</p>
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-blue-600 hover:shadow-xl transition-shadow">
+                <h3 className="font-bold text-lg text-gray-900 mb-2">{member.name}</h3>
+                {member.affiliation && (
+                  <p className="text-gray-700 text-sm mb-1">{member.affiliation}</p>
+                )}
+                {member.location && (
+                  <p className="text-gray-600 text-sm">{member.location}</p>
+                )}
               </div>
             ))}
           </div>
           
-          <div className="mt-8 p-6 bg-blue-50 rounded-lg">
-            <p className="text-sm text-gray-600 italic">
+          <div className="mt-12 p-6 bg-blue-50 rounded-lg">
+            <p className="text-sm text-gray-700 italic text-center">
               {pageNote}
             </p>
           </div>

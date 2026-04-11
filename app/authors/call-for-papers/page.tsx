@@ -51,7 +51,7 @@ const defaultContent: AuthorsCallForPapersContent = {
   download_resources: [
     { text: "Call for Papers (PDF)", link: "pdf/cfp.pdf" },
     { text: "Paper Submission Portal", link: "https://cmt3.research.microsoft.com/MVAI2026" },
-    { text: "Springer Template", link: "pdf/MAI-2026_Template.doc" },
+    { text: "IET / IEEE CONFERENCE TEMPLATE", link: "/IET-IEEE-Conference-Template.docx" },
     { text: "Consent Form for Publication", link: "pdf/Consent form for publication.docx" },
     { text: "LNEE Documentation", link: "https://link.springer.com/series/7818" },
     { text: "Quick Start Guide", link: "pdf/Quick Start.pdf" }

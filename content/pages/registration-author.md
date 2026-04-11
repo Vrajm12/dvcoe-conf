@@ -6,14 +6,11 @@ policy:
   - "Registration fee DOES NOT include accommodation."
 fees:
   - category: "Students (UG/PG/Research Scholar)"
-    indian: "INR 6,000"
-    foreign: "$150"
+    indian: "INR 4,000"
+    foreign: "$48"
   - category: "Academicians"
-    indian: "INR 9,000"
-    foreign: "$300"
-  - category: "Industry Persons"
-    indian: "INR 10,000"
-    foreign: "$350"
+    indian: "INR 6,000"
+    foreign: "$72"
 bank:
   - "Account Holder Name: Dynavilas College of Engineering"
   - "Branch Address: DUDUGAN MOSGH"

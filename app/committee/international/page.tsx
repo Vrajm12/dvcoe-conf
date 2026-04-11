@@ -50,17 +50,17 @@ export default async function InternationalCommittee() {
   const members = cmsContent?.members && cmsContent.members.length > 0 ? cmsContent.members : defaultMembers;
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-gray-50">
       {/* Header Section */}
-      <section className="bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 text-white py-16">
+      <section className="bg-blue-900 py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-4">
+          <h1 className="text-5xl md:text-6xl font-bold text-center mb-4" style={{color: '#FFFFFF'}}>
             {pageTitle}
           </h1>
-          <div className="flex items-center justify-center text-sm space-x-2">
-            <Link href="/" className="hover:text-blue-300 transition">Home</Link>
-            <span>|</span>
-            <span>{pageTitle}</span>
+          <div className="flex items-center justify-center text-sm space-x-2" style={{color: '#FFFFFF'}}>
+            <Link href="/" className="hover:text-yellow-300 transition" style={{color: '#FFFFFF'}}>Home</Link>
+            <span style={{color: '#FFFFFF'}}>|</span>
+            <span style={{color: '#FFFFFF'}}>{pageTitle}</span>
           </div>
         </div>
       </section>
@@ -79,14 +79,13 @@ export default async function InternationalCommittee() {
               {members.map((member, index) => (
                 <div 
                   key={index} 
-                  className="bg-gray-600 text-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow relative overflow-hidden"
+                  className="bg-white rounded-lg p-6 shadow-md hover:shadow-2xl transition-all border-t-4 border-blue-600"
                 >
                   <div className="relative z-10">
-                    <h3 className="font-bold text-lg mb-2">{member.name}</h3>
-                    <p className="text-sm text-gray-200 mb-1">{member.affiliation}</p>
-                    <p className="text-sm text-gray-300">{member.location}</p>
+                    <h3 className="font-bold text-lg mb-3" style={{color: '#1F2937'}}>{member.name}</h3>
+                    <p className="text-sm mb-2" style={{color: '#374151'}}>{member.affiliation}</p>
+                    <p className="text-sm font-semibold" style={{color: '#2563EB'}}>{member.location}</p>
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-blue-400"></div>
                 </div>
               ))}
             </div>

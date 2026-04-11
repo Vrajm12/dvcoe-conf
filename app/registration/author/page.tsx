@@ -25,18 +25,13 @@ const defaultContent: RegistrationContent = {
   fees: [
     {
       category: "Students (UG/PG/Research Scholar)",
-      indian: "₹6,000",
-      foreign: "$150"
+      indian: "₹4,000",
+      foreign: "$48"
     },
     {
       category: "Academicians",
-      indian: "₹9,000",
-      foreign: "$300"
-    },
-    {
-      category: "Industry Persons",
-      indian: "₹10,000",
-      foreign: "$350"
+      indian: "₹6,000",
+      foreign: "$72"
     }
   ],
   bank: [

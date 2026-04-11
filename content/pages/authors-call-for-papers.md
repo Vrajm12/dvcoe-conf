@@ -27,7 +27,7 @@ download_resources:
     link: "pdf/cfp.pdf"
   - text: "Paper Submission Portal"
     link: "https://cmt3.research.microsoft.com/MVAI2026"
-  - text: "Springer Template"
-    link: "pdf/MAI-2026_Template.doc"
+  - text: "IET / IEEE CONFERENCE TEMPLATE"
+    link: "/IET-IEEE-Conference-Template.docx"
 submission_portal: "https://cmt3.research.microsoft.com/MVAI2026"
 ---
