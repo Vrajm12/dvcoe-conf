@@ -215,57 +215,6 @@ export default async function Contact() {
               </form>
             </div>
           </div>
-          
-          {/* Conference Organizers */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-blue-900 mb-6 text-center">Conference Organizers</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="border-l-4 border-blue-600 pl-4">
-                <h3 className="font-bold text-lg text-gray-800">General Chair</h3>
-                <p className="text-gray-700">Prof. [Name]</p>
-                <p className="text-gray-600 text-sm">[Department]</p>
-                <p className="text-blue-600 text-sm mt-1">
-                  <a href="mailto:chair@mai2026.in" className="hover:underline">
-                    chair@mai2026.in
-                  </a>
-                </p>
-              </div>
-              
-              <div className="border-l-4 border-purple-600 pl-4">
-                <h3 className="font-bold text-lg text-gray-800">Program Chair</h3>
-                <p className="text-gray-700">Dr. [Name]</p>
-                <p className="text-gray-600 text-sm">[Department]</p>
-                <p className="text-purple-600 text-sm mt-1">
-                  <a href="mailto:program@mai2026.in" className="hover:underline">
-                    program@mai2026.in
-                  </a>
-                </p>
-              </div>
-              
-              <div className="border-l-4 border-green-600 pl-4">
-                <h3 className="font-bold text-lg text-gray-800">Registration Chair</h3>
-                <p className="text-gray-700">Dr. [Name]</p>
-                <p className="text-gray-600 text-sm">[Department]</p>
-                <p className="text-green-600 text-sm mt-1">
-                  <a href="mailto:registration@mai2026.in" className="hover:underline">
-                    registration@mai2026.in
-                  </a>
-                </p>
-              </div>
-              
-              <div className="border-l-4 border-orange-600 pl-4">
-                <h3 className="font-bold text-lg text-gray-800">Publication Chair</h3>
-                <p className="text-gray-700">Dr. [Name]</p>
-                <p className="text-gray-600 text-sm">[Department]</p>
-                <p className="text-orange-600 text-sm mt-1">
-                  <a href="mailto:publication@mai2026.in" className="hover:underline">
-                    publication@mai2026.in
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </main>

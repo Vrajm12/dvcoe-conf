@@ -6,19 +6,21 @@ hero_event_type: Hybrid mode
 hero_background: /images/240_F_353280884_oyeOLzk0EyvfC4pvixbvcfA4s745SaX6.jpg
 about_title: About the Conference
 about_conference_title: About Conference
-about_conference_content: The International Conference on Computing and
-  Technology (ICCET) conference series began in 2018 with its first edition.
-  Since then, ICCET has been successfully organized across various leading
-  institutions. The 9th edition, ICCET-2026, will be organized by Shri Gajanan
-  Maharaj Shikshan Prasarak Mandal's Dnyanvilas College of Engineering, Pune
-  (DVCOE), Maharashtra.
+about_conference_content: |
+  The International Conference on Computing in Engineering and Technology (ICCET) is the flagship conference series of Dr. Babasaheb Ambedkar Technological University, Lonere—a State Technological University established by the Government of Maharashtra.
+  
+  The ICCET (earlier ICCASP) journey commenced in 2015 with its inaugural edition, with a vision to create a dynamic platform for researchers, academicians, industry experts, and students to share knowledge, present innovations, and discuss emerging trends in computing and engineering domains. Over the years, the conference has grown in stature and impact, being successfully hosted by reputed institutions across Maharashtra and other parts of India, thereby fostering academic collaboration and research excellence.
+  
+  Continuing this legacy, the 9th edition, ICCET-2026, will be hosted by Shri Gajanan Maharaj Shikshan Prasarak Mandal's Dnyanvilas College of Engineering (DVCOE), Pune—an affiliating institute to DBATU. The upcoming edition aims to further strengthen the conference's reputation as a premier forum for disseminating cutting-edge research, encouraging interdisciplinary dialogue, and building strong academia–industry partnerships at both national and international levels.
 about_objectives_title: Objectives
-about_objectives_content: ICCET-2026 provides a collaborative platform to
-  discuss emerging research trends in Computing, Technology, Artificial
-  Intelligence, Machine Learning, Digital Signal Processing, Cybersecurity, IoT,
-  and Cyber-Physical Systems. It fosters knowledge exchange among academicians,
-  industry professionals, and students, while promoting "Aatma Nirbhar Bharat"
-  through technological self-reliance.
+about_objectives_content: |
+  The 9th International Conference on Computing in Engineering and Technology (ICCET-2026) aims to provide a premier platform for researchers, academicians, industry professionals, and students to present and exchange innovative ideas and high quality research in the domains of computing and engineering. The conference is focused on promoting cutting edge advancements in areas such as artificial intelligence, machine vision, signal processing, and next generation communication technologies.
+  
+  It seeks to foster interdisciplinary collaboration and bridge the gap between theoretical research and real-world applications by encouraging meaningful interactions between academia and industry. ICCET-2026 also aims to highlight emerging trends and technological developments while addressing contemporary societal and industrial challenges through sustainable and scalable solutions.
+  
+  A key objective of the conference is to support and motivate young researchers, scholars, and students by providing them with opportunities to showcase their work, receive expert feedback, and build professional networks. The conference emphasizes maintaining high standards of originality, ethical research practices, and rigorous peer review.
+  
+  Overall, ICCET-2026 aspires to strengthen the research and innovation ecosystem by facilitating knowledge dissemination, encouraging collaboration, and establishing itself as a leading international forum for technological advancement and academic excellence.
 about_host_university_title: About Host University
 about_host_university_content: Dr. Babasaheb Ambedkar Technological University
   was established by the Government of Maharashtra vide Dr. Babasaheb Ambedkar
@@ -26,8 +28,8 @@ about_host_university_content: Dr. Babasaheb Ambedkar Technological University
   the Government of Maharashtra converted this University to the Affiliating
   Technological University since 2016 vide Dr. Babasaheb Ambedkar Technological
   University Act No. XXIX of 2014 with the jurisdiction of the University as the
-  entire state of Maharashtra. Presently 272 institutes are affiliated with the
-  University and the total student strength is 1,36,534. The sprawling 468 acres
+  entire state of Maharashtra. Presently 416 institutes are affiliated with the
+  University and the total student strength is 2.5 Lakh+. The sprawling 468 acres
   of the campus of this University provides as a sanctum seat of learning across
   the state. The University attracts meritorious students from the entire state
   and molds them into employable engineers and competent technocrats. This
@@ -46,11 +48,8 @@ about_host_university_content: Dr. Babasaheb Ambedkar Technological University
   Engineering, Pharmacy, Architecture, and Hotel Management & Catering
   Technology.
 acknowledgement_title: Acknowledgement
-acknowledgement_microsoft_title: Microsoft Support
-acknowledgement_microsoft_content: The Microsoft CMT service was used for
-  managing the peer-reviewing process for this conference. This service was
-  provided for free by Microsoft and they bore all expenses, including costs for
-  Azure cloud services as well as for software development and support.
+acknowledgement_microsoft_title: Easy Chair
+acknowledgement_microsoft_content: The Easy Chair online conference management system was used for managing paper submissions, peer review, and the overall conference workflow.
 acknowledgement_springer_title: IET/IEEE Publication
 acknowledgement_springer_content: Publishing accepted papers in IET/IEEE proceedings with professional peer review and recognition in the engineering community.
 publication_partner_title: Publication Partner

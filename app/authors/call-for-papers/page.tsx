@@ -1,60 +1,23 @@
 import { getPageContent } from '@/lib/content';
 
-interface ResourceLink {
-  text: string;
-  link: string;
-}
-
 interface AuthorsCallForPapersContent {
   page_title: string;
   conference_tracks: string[];
-  topics_covered: string[];
-  submission_guidelines: string[];
-  download_resources: ResourceLink[];
   submission_portal: string;
 }
 
 const defaultContent: AuthorsCallForPapersContent = {
   page_title: "Call for Papers",
   conference_tracks: [
-    "AI, ML & Computational Techniques",
-    "Signal & Image Processing",
-    "Cyber-Physical Systems",
-    "Multidisciplinary Applications based on AI/ML and Soft Computing",
-    "Communication, Networks & Cyber Security",
-    "Computer Vision and Augmented Reality & Virtual Reality"
-  ],
-  topics_covered: [
-    "Robotics & Artificial Intelligence",
-    "Human–Robot Interaction",
-    "Internet of Things (IoT)",
-    "Image Processing & Computer Vision",
-    "Augmented Intelligence: Theory & Applications",
-    "Soft Computing: Theory & Applications",
-    "Deep Learning: Theory & Applications",
-    "AR/VR in Industry, Education, and Healthcare",
-    "AI in Healthcare, Smart Cities, and Agriculture",
-    "Image Recognition & Disease Modeling",
-    "Epidemic Forecasting",
-    "Brain–Computer Interfaces & Human–Machine Interaction",
-    "Cyber Security & Social Network Analysis",
-    "Natural Language Processing (NLP)",
-    "Cryptography & Image Security",
-    "Cyber-Physical Systems"
-  ],
-  submission_guidelines: [
-    "Authors are invited to submit the papers (in English) by 30th May 2026. The abstract should not be more than 400 words (including spaces) and can include a maximum of 6 relevant keywords. The templates and instructions for abstract and paper submission are available on the conference website. The technical program will include oral and poster presentations and the form of presentation for each paper will be decided by the committee upon receipt of the final version.",
-    "Kindly follow the Springer LNEE prescribed format before submission. Author Instructions: The authors are requested to submit full papers according to Springer LNEE format available on the Springer site. Authors are kindly invited to submit their formatted full papers including results, tables, figures and references.",
-    "All submissions are handled through: https://cmt3.research.microsoft.com/MVAI2026",
-    "Accepted papers are to be registered and presented; otherwise, the paper will be removed from the proceedings. Abstracts/extended abstracts and short papers (less than 4 pages) are not considered for publication."
-  ],
-  download_resources: [
-    { text: "Call for Papers (PDF)", link: "pdf/cfp.pdf" },
-    { text: "Paper Submission Portal", link: "https://cmt3.research.microsoft.com/MVAI2026" },
-    { text: "IET / IEEE CONFERENCE TEMPLATE", link: "/IET-IEEE-Conference-Template.docx" },
-    { text: "Consent Form for Publication", link: "pdf/Consent form for publication.docx" },
-    { text: "LNEE Documentation", link: "https://link.springer.com/series/7818" },
-    { text: "Quick Start Guide", link: "pdf/Quick Start.pdf" }
+    "Track 1: Signal Processing",
+    "Track 2: Next-Generation Communication Networks",
+    "Track 3: Intelligent Computing",
+    "Track 4: Cognitive Robotics",
+    "Track 5: Advanced Analytics & AI Integration",
+    "Track 6: Smart Energy Technologies",
+    "Track 7: Instrumentation for Smart Systems",
+    "Track 8: RF Engineering",
+    "Track 9: Indian Knowledge Systems (IKS)"
   ],
   submission_portal: "https://cmt3.research.microsoft.com/MVAI2026"
 };
@@ -63,74 +26,54 @@ export default async function CallForPapers() {
   const cmsContent = await getPageContent<AuthorsCallForPapersContent>('authors-call-for-papers');
   const cfp = cmsContent ?? defaultContent;
 
+  const trackDetails: { [key: string]: string } = {
+    "Track 1: Signal Processing": "Speech & Audio Processing • Image & Video Processing • Remote Sensing • Multidimensional & Multirate Processing • Wavelets & Filter Banks • Nonlinear Signal Processing • Biomedical Signal Processing • Pattern Recognition • Computer Vision • Sensors & Sensing Technologies",
+    "Track 2: Next-Generation Communication Networks": "Antennas & Propagation • Cognitive Radio & Networking • MIMO & Space-Time Coding • Secure Communications & Cryptography • IoT & Sensor Networks • Mobile & Wireless Networks • Optical & Satellite Communications • Smart Grid Communication • Ad Hoc Networks • Network Security • Green Communications • Resource Management & Scheduling",
+    "Track 3: Intelligent Computing": "Data Mining & Databases • Distributed Systems • Search Optimization • Software Engineering & Project Management • High Performance & Parallel Computing • Big Data Analytics • Cloud & Data Center Architectures • GPU & Accelerator Computing • Scientific & Industrial Applications • Programming Environments",
+    "Track 4: Cognitive Robotics": "Autonomous & Intelligent Systems • Human–Robot Interaction • Industrial Automation • Drone & Surveillance Systems • Navigation & Control • Mechatronics • Network Robotics • Virtual & Augmented Reality • Telerobotics • Robotics Design & Applications",
+    "Track 5: Advanced Analytics & AI Integration": "Machine Learning & Deep Learning • Data Analytics & Big Data • NLP & Information Retrieval • Healthcare Analytics • Statistical Learning • Scalable AI Systems • Privacy & Security in Data • AI-Driven Digital Solutions",
+    "Track 6: Smart Energy Technologies": "Smart Cities & Infrastructure • Sustainable Energy Systems • Intelligent Transportation • Urban Planning & Mobility • Smart Buildings & Homes • Energy Efficiency • Smart Environment & Ecosystems • Emergency Management Systems",
+    "Track 7: Instrumentation for Smart Systems": "Control Systems & Automation • Aerospace & Flight Systems • Intelligent Instrumentation • Process Control • Optimization Techniques • Predictive & Nonlinear Control • Micro/Nano Instrumentation • Advanced Measurement Technologies",
+    "Track 8: RF Engineering": "Semiconductor Technologies (CMOS, GaN, SiGe) • RF Modeling & Simulation • Antennas & Passive Devices • RFIC Design (VCOs, PLLs, Mixers) • Power Amplifiers • mmWave & THz Circuits",
+    "Track 9: Indian Knowledge Systems (IKS)": "Astronomy and Engineering • Mathematics • Metallurgy & Chemistry • Architecture • IKS-Based Education & Scientific Traditions"
+  };
+
   return (
     <main className="py-16 bg-gray-50 min-h-screen">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">{cfp.page_title}</h1>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
             <h2 className="text-2xl font-bold text-blue-900 mb-6">About</h2>
             <p className="text-gray-700 mb-4 leading-relaxed">
-              The International Conference on Machine Vision and Augmented Intelligence (MAI-2026)
-              invites original research papers, review papers, and case studies in all areas of
-              machine vision, computer vision, artificial intelligence, and related fields.
+              The 9th International Conference on Computing in Engineering and Technology (ICCET-2026) cordially invites the submission of high-quality original research papers, comprehensive review articles, and insightful case studies in the broad domains of Engineering, Technology and allied interdisciplinary fields.
+            </p>
+            <p className="text-gray-700 mb-4 leading-relaxed">
+              The conference aims to provide a vibrant platform for researchers, academicians, industry professionals, and practitioners to present and exchange innovative ideas, emerging methodologies, and cutting edge applications that address real-world challenges. We particularly encourage contributions that demonstrate theoretical advancements, practical implementations, experimental validations, and cross-disciplinary approaches in these rapidly evolving and impactful areas.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              We welcome contributions that present novel ideas, methodologies, and applications
-              in these rapidly evolving domains.
+              Submissions highlighting novel algorithms, intelligent systems, data driven models, and transformative applications across domains such as healthcare, agriculture, smart cities, autonomous systems, and industrial automation are especially welcome. ICCET-2026 aspires to foster collaboration, promote knowledge sharing, and contribute to the advancement of next-generation technologies shaping the future.
             </p>
           </div>
 
           <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
             <h2 className="text-2xl font-bold text-blue-900 mb-6">Conference Tracks</h2>
-            <div className="flex flex-wrap gap-2">
-              {cfp.conference_tracks.map((t, i) => (
-                <span key={i} className="px-3 py-1 bg-blue-50 text-blue-800 rounded-full text-sm">{t}</span>
-              ))}
-            </div>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-bold text-blue-900 mb-6">Topics of Interest</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {cfp.topics_covered.map((topic, idx) => (
-                <div key={idx} className="flex items-start">
-                  <span className="text-blue-600 mr-3">•</span>
-                  <span className="text-gray-700">{topic}</span>
+            <div className="space-y-4">
+              {cfp.conference_tracks.map((track, idx) => (
+                <div key={idx} className="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-600">
+                  <h3 className="text-lg font-bold text-blue-900 mb-2">{track}</h3>
+                  <p className="text-gray-700 text-sm leading-relaxed">
+                    {trackDetails[track] || "Details coming soon"}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-bold text-blue-900 mb-6">Submission Guidelines</h2>
-            <ul className="space-y-4 text-gray-700">
-              {cfp.submission_guidelines.map((g, i) => (
-                <li key={i} className="flex items-start">
-                  <span className="font-semibold text-blue-900 mr-3 min-w-[30px]">{i + 1}.</span>
-                  <span>{g}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-bold text-blue-900 mb-6">Download Resources</h2>
-            <ul className="space-y-2">
-              {cfp.download_resources.map((r, i) => (
-                <li key={i}>
-                  <a href={r.link} className="text-blue-600 hover:underline" target={r.link.startsWith('http') ? '_blank' : '_self'} rel="noreferrer">
-                    {r.text}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           <div className="bg-gradient-to-r from-blue-900 to-blue-700 text-white rounded-lg shadow-lg p-8 text-center">
-            <h2 className="text-2xl font-bold mb-4">Ready to Submit?</h2>
-            <p className="mb-6">Submit your research paper through our submission portal</p>
+            <h2 className="text-2xl font-bold mb-4" style={{ color: '#ffffff' }}>Ready to Submit?</h2>
+            <p className="mb-6" style={{ color: '#ffffff' }}>Submit your research paper through our submission portal</p>
             <a href={cfp.submission_portal} target="_blank" rel="noreferrer" className="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition">
               Go to Submission Portal
             </a>

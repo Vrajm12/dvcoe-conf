@@ -16,16 +16,6 @@ interface CommitteeNationalContent {
 
 const committeemembers = [
   {
-    name: "Dr. Ramkrishna Mishra",
-    affiliation: "Professor, School of Information Technology, Deakin University",
-    location: "Australia"
-  },
-  {
-    name: "Dr. P.S. Tamizharasan",
-    affiliation: "Professor, Department of CSE, BITS Pilani-Dubai Campus",
-    location: "Dubai, UAE"
-  },
-  {
     name: "Dr. Debashis Ghosh",
     affiliation: "Professor, Department of E & CE Engineering, IIT Roorkee",
     location: "Roorkee, India"
@@ -51,7 +41,7 @@ const committeemembers = [
     location: "Anand, Gujarat, India"
   },
   {
-    name: "Manoranjan Bharti",
+    name: "Dr. Manoranjan Bharti",
     affiliation: "Professor, National Institute of Technology, Hamirpur",
     location: "Hamirpur, India"
   },
@@ -61,29 +51,39 @@ const committeemembers = [
     location: "Guwahati, India"
   },
   {
-    name: "Dr. Arjun Kumar",
-    affiliation: "Associate Professor, School of CHIPS, Xi'an Jiaotong-Liverpool University",
-    location: "Suzhou, China"
-  },
-  {
     name: "Dr. Amit Joshi",
     affiliation: "Associate Professor, COEP Technological University",
     location: "Pune, India"
   },
   {
-    name: "Dr. Aparna Pande",
-    affiliation: "Principal, DV College of Engineering",
-    location: "Pune, India"
-  },
-  {
-    name: "Dr. Prachi Deshpande",
-    affiliation: "Associate Professor, CSE, Marathwada Institute of Technology",
-    location: "Chhatrapati Sambhajinagar, India"
-  },
-  {
     name: "Dr. Mukund Kharade",
     affiliation: "Associate Professor, DV COE",
     location: "Pune, India"
+  },
+  {
+    name: "Dr. Ravindra Rathod",
+    affiliation: "Professor & Head, Department of Information Technology, Walchand COE",
+    location: "Sangli, India"
+  },
+  {
+    name: "Prof. Dr. R.N. Awale",
+    affiliation: "Deputy Director & Professor, Department of Electrical Engineering, VJTI",
+    location: "Mumbai, India"
+  },
+  {
+    name: "Dr. R. R. Manthalkar",
+    affiliation: "Professor, Department of E&TC Engineering, SGGSIE&T",
+    location: "Nanded, India"
+  },
+  {
+    name: "Dr. Suhas Gajare",
+    affiliation: "Principal, Government College of Engineering",
+    location: "Jalgaon, India"
+  },
+  {
+    name: "Dr. Vikul Pawar",
+    affiliation: "Head, Department of Computer Science & Engineering, Government College of Engineering",
+    location: "Chhatrapati Sambhajinagar, India"
   }
 ].filter(member => member.name.trim() !== "");
 

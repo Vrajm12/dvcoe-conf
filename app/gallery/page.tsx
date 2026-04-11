@@ -24,7 +24,7 @@ export default async function Gallery() {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-gray-900 mb-4">
-            {cmsContent?.page_title || 'Previous Conferences'}
+            {cmsContent?.page_title || 'Earlier Proceedings'}
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             {cmsContent?.page_intro || 'A comprehensive history of ICCET and ICCASP conference series'}

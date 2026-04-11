@@ -38,10 +38,10 @@ export default async function Home() {
                 {/* Headline - Large, Bold, High Contrast */}
                 <div>
                 <p className="text-sm md:text-lg font-semibold text-yellow-400 mb-3 md:mb-4 uppercase tracking-wider">
-                  9th International Conference on Computing and Technology
+                  9th International Conference
                 </p>
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight mb-4 md:mb-6" style={{color: '#ffffff'}}>
-                  Advancing the Future of Computing & Technology
+                  International Conference on Computing in Engineering & Technology
                 </h1>
                 <p className="text-base md:text-xl text-blue-100 font-medium leading-relaxed">
                   Join 1,000+ researchers, academics, and innovators from 50+ countries for the 9th International Conference on Computing & Technology.
@@ -108,8 +108,15 @@ export default async function Home() {
                   <div className="flex items-start gap-3 md:gap-4">
                     <FaBuilding className="text-yellow-400 text-lg md:text-xl mt-1 flex-shrink-0" />
                     <div>
+                      <div className="text-xs md:text-sm text-blue-300 font-semibold uppercase tracking-wide">Organized By</div>
+                      <div className="text-base md:text-lg text-white font-semibold">Dr. Babsaheb Ambedkar Technological University, Lonere</div>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 md:gap-4">
+                    <FaBuilding className="text-yellow-400 text-lg md:text-xl mt-1 flex-shrink-0" />
+                    <div>
                       <div className="text-xs md:text-sm text-blue-300 font-semibold uppercase tracking-wide">Hosted By</div>
-                      <div className="text-base md:text-lg text-white font-semibold">DBATU & Dnyanvilas College of Engineering</div>
+                      <div className="text-base md:text-lg text-white font-semibold">Dnyanvilas College of Engineering</div>
                     </div>
                   </div>
                 </div>
@@ -214,11 +221,11 @@ export default async function Home() {
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4 uppercase tracking-wide" style={{color: '#C2185B'}}>{pageData.acknowledgement_title}</h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
-              {/* Microsoft Support */}
+              {/* Easy Chair Support */}
               <div className="bg-white rounded-lg shadow-lg p-6 md:p-8 border-l-4 border-yellow-500">
                 <h3 className="text-xl md:text-2xl font-bold text-yellow-600 mb-4 md:mb-6">{pageData.acknowledgement_microsoft_title}</h3>
                 <div className="mb-4 md:mb-6 bg-blue-500 inline-block px-4 md:px-6 py-2 md:py-3 rounded">
-                  <span className="text-white font-bold text-2xl md:text-3xl">CMT</span>
+                  <span className="text-white font-bold text-2xl md:text-3xl">Easy Chair</span>
                 </div>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed text-justify">
                   {pageData.acknowledgement_microsoft_content}
@@ -330,49 +337,49 @@ export default async function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {[
                 {
-                  title: 'AI, ML & Computational Techniques',
-                  color: 'yellow-500',
-                  description: 'Advanced research and innovative solutions in this domain'
-                },
-                {
-                  title: 'Signal & Image Processing',
+                  title: 'Track 1: Signal Processing',
                   color: 'blue-500',
-                  description: 'Advanced research and innovative solutions in this domain'
+                  description: 'Speech & Audio Processing • Image & Video Processing • Remote Sensing • Multidimensional & Multirate Processing • Wavelets & Filter Banks • Nonlinear Signal Processing • Biomedical Signal Processing • Pattern Recognition • Computer Vision • Sensors & Sensing Technologies'
                 },
                 {
-                  title: 'Cyber-Physical Systems',
-                  color: 'purple-500',
-                  description: 'Advanced research and innovative solutions in this domain'
+                  title: 'Track 2: Next-Generation Communication Networks',
+                  color: 'blue-600',
+                  description: 'Antennas & Propagation • Cognitive Radio & Networking • MIMO & Space-Time Coding • Secure Communications & Cryptography • IoT & Sensor Networks • Mobile & Wireless Networks • Optical & Satellite Communications • Smart Grid Communication • Ad Hoc Networks • Network Security • Green Communications • Resource Management & Scheduling'
                 },
                 {
-                  title: 'Communication, Networks & Cyber Security',
-                  color: 'red-500',
-                  description: 'Advanced research and innovative solutions in this domain'
-                },
-                {
-                  title: 'Computer Vision and Augmented Reality & Virtual Reality',
-                  color: 'orange-500',
-                  description: 'Advanced research and innovative solutions in this domain'
-                },
-                {
-                  title: 'Multidisciplinary Applications based on AI/ML and Soft Computing',
-                  color: 'teal-500',
-                  description: 'Healthcare & Life Sciences, Manufacturing & Industry 4.0, Transportation & Logistics, Agriculture, Energy & Environment'
-                },
-                {
-                  title: 'Indian Knowledge Systems',
+                  title: 'Track 3: Intelligent Computing',
                   color: 'indigo-500',
-                  description: 'Advanced research and innovative solutions in this domain'
+                  description: 'Data Mining & Databases • Distributed Systems • Search Optimization • Software Engineering & Project Management • High Performance & Parallel Computing • Big Data Analytics • Cloud & Data Center Architectures • GPU & Accelerator Computing • Scientific & Industrial Applications • Programming Environments'
                 },
                 {
-                  title: 'RFID',
+                  title: 'Track 4: Cognitive Robotics',
+                  color: 'purple-500',
+                  description: 'Autonomous & Intelligent Systems • Human–Robot Interaction • Industrial Automation • Drone & Surveillance Systems • Navigation & Control • Mechatronics • Network Robotics • Virtual & Augmented Reality • Telerobotics • Robotics Design & Applications'
+                },
+                {
+                  title: 'Track 5: Advanced Analytics & AI Integration',
                   color: 'cyan-500',
-                  description: ''
+                  description: 'Machine Learning & Deep Learning • Data Analytics & Big Data • NLP & Information Retrieval • Healthcare Analytics • Statistical Learning • Scalable AI Systems • Privacy & Security in Data • AI-Driven Digital Solutions'
                 },
                 {
-                  title: '',
-                  color: 'gray-500',
-                  description: ''
+                  title: 'Track 6: Smart Energy Technologies',
+                  color: 'green-500',
+                  description: 'Smart Cities & Infrastructure • Sustainable Energy Systems • Intelligent Transportation • Urban Planning & Mobility • Smart Buildings & Homes • Energy Efficiency • Smart Environment & Ecosystems • Emergency Management Systems'
+                },
+                {
+                  title: 'Track 7: Instrumentation for Smart Systems',
+                  color: 'yellow-500',
+                  description: 'Control Systems & Automation • Aerospace & Flight Systems • Intelligent Instrumentation • Process Control • Optimization Techniques • Predictive & Nonlinear Control • Micro/Nano Instrumentation • Advanced Measurement Technologies'
+                },
+                {
+                  title: 'Track 8: RF Engineering',
+                  color: 'orange-500',
+                  description: 'Semiconductor Technologies (CMOS, GaN, SiGe) • RF Modeling & Simulation • Antennas & Passive Devices • RFIC Design (VCOs, PLLs, Mixers) • Power Amplifiers • mmWave & THz Circuits'
+                },
+                {
+                  title: 'Track 9: Indian Knowledge Systems (IKS)',
+                  color: 'red-500',
+                  description: 'Astronomy and Engineering • Mathematics • Metallurgy & Chemistry • Architecture • IKS-Based Education & Scientific Traditions'
                 }
               ].map((track, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-lg p-4 md:p-6 border-l-4 hover:shadow-xl transition-shadow" style={{borderLeftColor: `var(--tw-${track.color})`}}>
@@ -401,7 +408,7 @@ export default async function Home() {
                   <div className="flex-1">
                     <div className="text-blue-600 text-xs md:text-sm font-bold uppercase tracking-wide mb-2">{pageData.date_submission_label}</div>
                     <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-1 md:mb-2">{pageData.date_submission_title}</h3>
-                    <p className="text-gray-600 text-xs md:text-sm">Final date for paper submission</p>
+                    <p className="text-black text-xs md:text-sm">Final date for paper submission</p>
                   </div>
                   <div className="bg-blue-600 text-white rounded-lg px-3 md:px-4 py-2 font-bold text-base md:text-lg mt-3 md:mt-0 md:ml-4 text-center">
                     {pageData.date_submission_date}
@@ -640,7 +647,7 @@ export default async function Home() {
                   </h2>
                 </div>
                 <p className="text-gray-700 leading-relaxed text-justify">
-                  Dr. Babasaheb Ambedkar Technological University was established by the Government of Maharashtra vide Dr. Babasaheb Ambedkar Technological University Act. No. XXII of 1989 as a Unitary University. Later, the Government of Maharashtra converted this University to the Affiliating Technological University since 2016 vide Dr. Babasaheb Ambedkar Technological University Act No. XXIX of 2014 with the jurisdiction of the University as the entire state of Maharashtra. Presently 272 institutes are affiliated with the University and the total student strength is 1,36,534.
+                  Dr. Babasaheb Ambedkar Technological University was established by the Government of Maharashtra vide Dr. Babasaheb Ambedkar Technological University Act. No. XXII of 1989 as a Unitary University. Later, the Government of Maharashtra converted this University to the Affiliating Technological University since 2016 vide Dr. Babasaheb Ambedkar Technological University Act No. XXIX of 2014 with the jurisdiction of the University as the entire state of Maharashtra. Presently 416 institutes are affiliated with the University and the total student strength is 2.5 Lakh+.
                 </p>
                 <p className="text-gray-700 leading-relaxed text-justify">
                   The sprawling 468 acres of the campus of this University provides as a sanctum seat of learning across the state. The University attracts meritorious students from the entire state and molds them into employable engineers and competent technocrats. This University provides well-equipped laboratories with testing and analysis facilities that can be extended for the benefit of the industries. In addition, the University offers facilities like conference hall, auditorium, playground, workshop, and computing facilities. The University has spacious and good hostels with all basic amenities.
@@ -653,7 +660,8 @@ export default async function Home() {
                     href="https://dbatu.ac.in/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center bg-blue-900 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition shadow-lg"
+                    className="inline-flex items-center justify-center bg-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-blue-800 transition shadow-lg"
+                    style={{ color: '#ffffff' }}
                   >
                     Visit Official Website
                   </a>
@@ -674,19 +682,6 @@ export default async function Home() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            {/* Map header */}
-            <div className="mb-12 rounded-lg overflow-hidden shadow-lg">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.236842485476!2d73.88024342552494!3d18.67019877240876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c9e0e974a4f7%3A0x6fe8fd8f59c1dd83!2sDnyanvilas%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1710955200000" 
-                width="100%" 
-                height="300" 
-                style={{border: 0}} 
-                allowFullScreen 
-                loading="lazy"
-                title="Dnyanvilas College of Engineering Location Map"
-              ></iframe>
-            </div>
-            
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-wide" style={{color: '#C2185B'}}>About the Host Institute</h2>
             </div>
@@ -730,7 +725,8 @@ export default async function Home() {
                     href="https://dvcoe.com/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center bg-gray-800 text-white px-8 py-3 rounded-lg font-bold hover:bg-gray-900 transition shadow-lg"
+                    className="inline-flex items-center justify-center bg-blue-900 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-800 transition shadow-lg"
+                    style={{ color: '#ffffff' }}
                   >
                     Visit Official Website
                   </a>

@@ -1,4 +1,5 @@
 import { getPageContent } from '@/lib/content';
+import { FaUpload, FaClipboard, FaCheckCircle, FaFileAlt, FaCreditCard, FaCamera, FaBullseye, FaBook, FaBell, FaHeadset } from 'react-icons/fa';
 
 interface DatesPageContent {
   page_title?: string;
@@ -30,43 +31,43 @@ export default async function Dates() {
         event: "Paper Submission Opens", 
         date: cmsContent?.submission_opens ? formatDate(cmsContent.submission_opens) : "April 10, 2026",
         description: "Start submitting your research papers",
-        icon: "📤"
+        icon: FaUpload
       },
       { 
         event: "Paper Submission Deadline", 
         date: cmsContent?.submission_deadline ? formatDate(cmsContent.submission_deadline) : "June 30, 2026",
         description: "Last day to submit your papers",
-        icon: "📋"
+        icon: FaClipboard
       },
       { 
         event: "Acceptance Notification", 
         date: cmsContent?.acceptance_notification ? formatDate(cmsContent.acceptance_notification) : "July 15, 2026",
         description: "Authors notified of acceptance decisions",
-        icon: "✅"
+        icon: FaCheckCircle
       },
       { 
         event: "Final Submission", 
         date: cmsContent?.final_submission ? formatDate(cmsContent.final_submission) : "July 20, 2026",
         description: "Submit final version of your paper",
-        icon: "📝"
+        icon: FaFileAlt
       },
       { 
         event: "Registration of Accepted Papers", 
         date: cmsContent?.registration_accepted_papers ? formatDate(cmsContent.registration_accepted_papers) : "July 22, 2026",
         description: "Authors register for conference",
-        icon: "💳"
+        icon: FaCreditCard
       },
       { 
         event: "Camera-Ready Submission", 
         date: cmsContent?.camera_ready_date ? formatDate(cmsContent.camera_ready_date) : "July 22, 2026",
         description: "Submit camera-ready version",
-        icon: "📸"
+        icon: FaCamera
       },
       { 
         event: "Conference Dates", 
         date: cmsContent?.conference_date ? formatDate(cmsContent.conference_date) : "July 30-31, 2026",
         description: "Main conference event (Hybrid Mode)",
-        icon: "🎯",
+        icon: FaBullseye,
         highlight: true
       }
     ]
@@ -103,16 +104,16 @@ export default async function Dates() {
                     ? 'bg-gradient-to-r from-blue-600 to-blue-500 text-white shadow-xl p-8 rounded-xl text-center' 
                     : 'bg-blue-50 border-2 border-blue-200 p-6 rounded-xl hover:shadow-lg transition-shadow h-full'
                 }`}>
-                  <div className={`text-4xl mb-3 ${item.highlight ? '' : ''}`}>
-                    {item.icon}
+                  <div className={`text-4xl mb-3 ${item.highlight ? '' : 'text-blue-600'}`}>
+                    <item.icon />
                   </div>
-                  <h3 className={`font-bold text-lg mb-2 ${item.highlight ? 'text-white' : 'text-gray-900'}`}>
+                  <h3 className={`font-bold text-lg mb-2 ${item.highlight ? 'text-white text-3xl' : 'text-gray-900'}`}>
                     {item.event}
                   </h3>
-                  <p className={`font-semibold text-base mb-2 ${item.highlight ? 'text-blue-100' : 'text-blue-600'}`}>
+                  <p className={`font-semibold mb-2 ${item.highlight ? 'text-blue-100 text-2xl' : 'text-base text-blue-600'}`}>
                     {item.date}
                   </p>
-                  <p className={`text-sm ${item.highlight ? 'text-blue-100' : 'text-gray-600'}`}>
+                  <p className={`${item.highlight ? 'text-blue-100 text-lg' : 'text-sm text-gray-600'}`}>
                     {item.description}
                   </p>
                 </div>
@@ -123,19 +124,19 @@ export default async function Dates() {
           {/* Info Boxes */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
             <div className="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-600">
-              <h3 className="font-bold text-blue-900 mb-2">📋 Submission Guidelines</h3>
+              <h3 className="font-bold text-blue-900 mb-2 flex items-center gap-2"><FaBook /> Submission Guidelines</h3>
               <p className="text-sm text-gray-700">
                 Check our guidelines and template before submitting your research paper.
               </p>
             </div>
             <div className="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-600">
-              <h3 className="font-bold text-blue-900 mb-2">🔔 Stay Informed</h3>
+              <h3 className="font-bold text-blue-900 mb-2 flex items-center gap-2"><FaBell /> Stay Informed</h3>
               <p className="text-sm text-gray-700">
                 Dates are subject to change. Subscribe for email notifications.
               </p>
             </div>
             <div className="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-600">
-              <h3 className="font-bold text-blue-900 mb-2">🎯 Questions?</h3>
+              <h3 className="font-bold text-blue-900 mb-2 flex items-center gap-2"><FaHeadset /> Questions?</h3>
               <p className="text-sm text-gray-700">
                 Contact us for any questions about important dates or process.
               </p>
@@ -146,7 +147,8 @@ export default async function Dates() {
           <div className="text-center">
             <a 
               href="/authors/submission" 
-              className="inline-block bg-blue-600 text-white px-12 py-4 rounded-lg font-semibold hover:bg-blue-700 shadow-lg transition-all"
+              className="inline-block bg-blue-900 text-white px-12 py-4 rounded-lg font-semibold hover:bg-blue-800 shadow-lg transition-all"
+              style={{ backgroundColor: '#1e3a8a', color: '#ffffff' }}
             >
               Submit Your Paper
             </a>

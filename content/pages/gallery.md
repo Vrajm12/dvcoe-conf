@@ -1,5 +1,5 @@
 ---
-page_title: "Previous Conferences"
+page_title: "Earlier Proceedings"
 page_intro: "Highlights from previous editions of the ICCET and ICCASP series"
 conferences:
   - name: "1st International Conference on Communication and Signal Processing (ICCASP 2015)"

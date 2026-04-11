@@ -24,314 +24,55 @@ const organizingData = {
       committee_title: "Chief Patron",
       members: [
         {
-          name: "Prof. Bhim Singh",
-          profile_link: "https://www.svnit.ac.in/web/chairperson-BoG.php",
-          designation: "Chairperson, Board of Governors, SVNIT, Surat",
-          image: "https://2026.mvai.in/images/Prof.BhimSingh.jpg"
-        }
-      ]
-    },
-    {
-      committee_title: "Patron",
-      members: [
-        {
-          name: "Prof. Anupam Shukla",
-          profile_link: "https://www.svnit.ac.in/web/director.php",
-          designation: "Director, SVNIT, Surat",
-          image: "https://2026.mvai.in/images/anupamshukla.jpg"
-        }
-      ]
-    },
-    {
-      committee_title: "Executive Chairs",
-      members: [
-        {
-          name: "Prof. U.D. Dalal",
-          profile_link: "https://www.svnit.ac.in/facup/resume_udd.pdf",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/udd.jpg"
-        },
-        {
-          name: "Prof. J.N. Sarvaiya",
-          profile_link: "https://sites.google.com/eced.svnit.ac.in/jnsarvaiya/home",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/jns.jpg"
-        },
-        {
-          name: "Prof. A. D. Darji",
-          profile_link: "https://www.svnit.ac.in/facup/4023add.pdf",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/add.jpg"
-        },
-        {
-          name: "Prof. P.N. Patel",
-          profile_link: "https://www.svnit.ac.in/facup/Dr.%20Piyush%20Patel%20Profile_Biodata_30%20July_2024_PNP.pdf",
-          designation: "SVNIT, Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/pnp.png"
-        }
-      ]
-    },
-    {
-      committee_title: "Conference Convener/chairman",
-      members: [
-        {
-          name: "Dr. Rajeev Aarya",
-          profile_link: "https://sites.google.com/eced.svnit.ac.in/dr-rajeev-arya/about-me",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/ra.jpg"
-        },
-        {
-          name: "Dr. Abhilash Mandloi",
-          profile_link: "https://www.svnit.ac.in/facup/ASM_BIO_DATA%20UPDATED.pdf",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/asm.jpg"
-        },
-        {
-          name: "Dr. Shilpi Gupta",
-          profile_link: "https://www.svnit.ac.in/facup/6291SGupta.pdf",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/6291Sgupta.jpg"
-        }
-      ]
-    },
-    {
-      committee_title: "Organising Secretary",
-      members: [
-        {
-          name: "Dr. Deepak Joshi",
-          profile_link: "https://sites.google.com/view/djoshi/home",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/dj.jpg"
-        },
-        {
-          name: "Dr. Vivek Garg",
-          profile_link: "https://www.o2agroup.com/",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/vg.jpg"
-        },
-        {
-          name: "Dr. Khyati  Mistry (EED)",
-          profile_link: "https://www.svnit.ac.in/facup/Dr.Khyati%20D%20Mistry_EED.pdf",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/km.jpg"
-        }
-      ]
-    },
-    {
-      committee_title: "Program Chair",
-      members: [
-        {
-          name: "Prof. J.N. Sarvairya",
-          profile_link: "https://sites.google.com/eced.svnit.ac.in/jnsarvaiya/home",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/jns.jpg"
-        },
-        {
-          name: "Prof. P.N. Patel",
-          profile_link: "https://www.svnit.ac.in/facup/Dr.%20Piyush%20Patel%20Profile_Biodata_30%20July_2024_PNP.pdf",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/pnp.png"
-        },
-        {
-          name: "Dr. Pinal Engineer",
-          profile_link: "http://svnit.ac.in/Data/facup/pjengineer/",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/pje.png"
-        }
-      ]
-    },
-    {
-      committee_title: "Program Committee",
-      members: [
-        {
-          name: "Dr. S.N. Shah",
-          profile_link: "https://www.svnit.ac.in/facup/SNS/index.html",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/Sweta Shah.jpg"
-        },
-        {
-          name: "Dr. K. P. Upla",
-          profile_link: "https://sites.google.com/site/kpupla/home",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/7178KPUpla.jpg"
-        },
-        {
-          name: "Dr. Kamal Captain",
-          profile_link: "https://sites.google.com/site/kamalcaptain/",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/kc.jpg"
-        }
-      ]
-    },
-    {
-      committee_title: "Organising Committee",
-      members: [
-        {
-          name: "Dr. Jigisha Patel",
+          name: "Prof. Rajnish Kamat",
           profile_link: "#",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/547jnp.jpg"
-        },
-        {
-          name: "Dr. Kirti Inamdar",
-          profile_link: "https://www.svnit.ac.in/facup/KIRTI-INAMDAR_resume_SVNIT.pdf",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/kirti.png"
-        },
-        {
-          name: "Dr. Partha Das",
-          profile_link: "https://sites.google.com/eced.svnit.ac.in/partha-das/home/",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/pd.jpg"
+          designation: "Vice-Chancellor, Dr. Babasaheb Ambedkar Technological University, Lonere",
+          image: "/chief-patron.jpeg"
         }
       ]
     },
     {
-      committee_title: "Publication Chair",
+      committee_title: "General Chairs",
       members: [
         {
-          name: "Dr. Rajeev Aarya",
-          profile_link: "https://sites.google.com/eced.svnit.ac.in/dr-rajeev-arya/about-me",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/ra.jpg"
+          name: "Dr. S. L. Nalbalwar",
+          profile_link: "#",
+          designation: "Dean (Academics), Dr. Babasaheb Ambedkar Technological University, Lonere-India",
+          image: "/General-Chairs Dr. S. L. Nalbalwar.jpeg"
         },
         {
-          name: "Dr. Kaushalendra Kumar Singh",
+          name: "Dr. Nagendra Prasad Pathak",
           profile_link: "#",
-          designation: "NIT Jamshedpur, India",
-          image: "https://2026.mvai.in/images/resource/oc/kaushal.jpg"
+          designation: "Professor (HAG), Indian Institute of Technology, Roorkee-India",
+          image: "https://via.placeholder.com/300x300?text=Dr.+Nagendra+Prasad+Pathak"
         }
       ]
     },
     {
-      committee_title: "Finance Chair",
+      committee_title: "Technical Program Chair",
       members: [
         {
-          name: "Dr. Abhilash Mandloi",
-          profile_link: "https://www.svnit.ac.in/facup/ASM_BIO_DATA%20UPDATED.pdf",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/asm.jpg"
-        },
-        {
-          name: "Dr. Rajeev Arya",
-          profile_link: "https://sites.google.com/eced.svnit.ac.in/dr-rajeev-arya/about-me",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/ra.jpg"
-        },
-        {
-          name: "Dr. Vivek Garg",
-          profile_link: "https://www.o2agroup.com/",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/vg.jpg"
+          name: "Dr. Brijesh Iyer",
+          profile_link: "#",
+          designation: "Professor, Dr. Babasaheb Ambedkar Technological University, Lonere-India",
+          image: "/technical-program-chair.jpeg"
         }
       ]
     },
     {
-      committee_title: "Publicity/Media  Chair",
+      committee_title: "Organizing Chair",
       members: [
         {
-          name: "Prof. N.B. Kanirkar",
+          name: "Dr. Aparna Pande",
           profile_link: "#",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/29471064.jpg"
+          designation: "Principal, Dnyanvilas College of Engineering",
+          image: "https://via.placeholder.com/300x300?text=Dr.+Aparna+Pande"
         },
         {
-          name: "Dr. Sandeep Mishra",
-          profile_link: "https://www.svnit.ac.in/facup/sandeep%20mishra.pdf",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/sm.jpg"
-        },
-        {
-          name: "Dr. Anirban Bhattacharjee",
+          name: "Dr. Prachi Deshpande",
           profile_link: "#",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/ab.jpg"
-        },
-        {
-          name: "Dr. Angshuman Khan",
-          profile_link: "https://scholar.google.com/citations?user=ZyhUbWkAAAAJ&hl=en",
-          designation: "University of Engineering & Management, Jaipur, India",
-          image: "https://2026.mvai.in/images/resource/oc/ak.jpeg"
-        }
-      ]
-    },
-    {
-      committee_title: "Hospitality Chair",
-      members: [
-        {
-          name: "Dr. Suresh Dahiya",
-          profile_link: "https://sites.google.com/view/suresh-dahiya",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/suresh.jpg"
-        },
-        {
-          name: "Dr. Raghvendra Pal",
-          profile_link: "https://sites.google.com/view/drraghavendrapal",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/rp.jpg"
-        },
-        {
-          name: "Dr. Pankaj Sharma",
-          profile_link: "#",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/ps.jpg"
-        }
-      ]
-    },
-    {
-      committee_title: "Sponsorship Chair/Industrial collaboration",
-      members: [
-        {
-          name: "Prof.  A.D. Darji",
-          profile_link: "https://www.svnit.ac.in/facup/4023add.pdf",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/add.jpg"
-        },
-        {
-          name: "Dr.  Z.M. Patel",
-          profile_link: "https://www.svnit.ac.in/facup/Profile_ZMP.pdf",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/zmp.jpg"
-        }
-      ]
-    },
-    {
-      committee_title: "Registration Chair",
-      members: [
-        {
-          name: "Dr. P.K. Shah",
-          profile_link: "#",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/pks.png"
-        },
-        {
-          name: "Mr. Golak Santra",
-          profile_link: "https://www.svnit.ac.in/facup/gs.pdf",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/Golak Santra.jpg"
-        }
-      ]
-    },
-    {
-      committee_title: "Website Committee",
-      members: [
-        {
-          name: "Dr. M. C. Patel",
-          profile_link: "#",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/mcp.jpg"
-        },
-        {
-          name: "Dr. Suman Deb",
-          profile_link: "https://sites.google.com/view/sumandeb/home",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/sd.png"
-        },
-        {
-          name: "Mr. Ghanshyam Katva",
-          profile_link: "#",
-          designation: "SVNIT Surat, India",
-          image: "https://2026.mvai.in/images/resource/oc/gbk.jpg"
+          designation: "Associate Professor, Department of CSE, Maharashtra Institute of Technology, Ch. Sambhaji nagar",
+          image: "https://via.placeholder.com/300x300?text=Dr.+Prachi+Deshpande"
         }
       ]
     }
