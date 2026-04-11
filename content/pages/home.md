@@ -63,7 +63,7 @@ dates_title: Important Dates
 dates_subtitle: Mark your calendars
 date_submission_label: Submission
 date_submission_title: Paper Submission Deadline
-date_submission_date: 30 JUNE
+date_submission_date: 15 JUNE
 date_notification_label: Notification
 date_notification_title: Notification of Acceptance
 date_notification_date: 15 JULY
