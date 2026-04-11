@@ -55,8 +55,9 @@ publication_partner_description: IET/IEEE - Professional Engineering Publication
 publication_indexing_title: Publication & Indexing
 publication_indexing_subtitle: Publication Benefits
 publication_indexing_content: All presented papers will receive a presentation
-  certificate. Accepted papers will be published through IET/IEEE, recognized by
-  the professional engineering community and indexed in major databases.
+  certificate. Accepted papers will be published through IET proceedings,
+  published on IEEE Xplore, recognized by the professional engineering
+  community, and indexed in major databases.
 dates_title: Important Dates
 dates_subtitle: Mark your calendars
 date_submission_label: Submission
