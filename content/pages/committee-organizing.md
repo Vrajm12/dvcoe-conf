@@ -18,7 +18,7 @@ committees:
       - name: Dr. Nagendra Prasad Pathak
         profile_link: "#"
         designation: Professor (HAG), Indian Institute of Technology, Roorkee-India
-        image: https://via.placeholder.com/300x300?text=Dr.+Nagendra+Prasad+Pathak
+        image: /n-p-pathak.jpeg
   - committee_title: Technical Program Chair
     members:
       - name: Dr. Brijesh Iyer
@@ -31,7 +31,7 @@ committees:
       - name: Dr. Aparna Pande
         profile_link: "#"
         designation: Principal, Dnyanvilas College of Engineering
-        image: https://via.placeholder.com/300x300?text=Dr.+Aparna+Pande
+        image: /dr-aparna-pande.jpeg
       - name: Dr. Prachi Deshpande
         profile_link: "#"
         designation: Associate Professor, Department of CSE, Maharashtra Institute of

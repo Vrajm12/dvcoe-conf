@@ -10,7 +10,7 @@ download_resources:
   - text: "Conference Brochure (PDF)"
     link: "pdf/cfp.pdf"
   - text: "IET / IEEE CONFERENCE TEMPLATE"
-    link: "/IET-IEEE-Conference-Template.docx"
+    link: "/IET-IEEE-Conference-Template.doc"
   - text: "Copyright Form"
     link: "pdf/copyright-form.pdf"
 submission_portal: "https://cmt3.research.microsoft.com/MVAI2026"
