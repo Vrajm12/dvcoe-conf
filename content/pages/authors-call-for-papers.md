@@ -10,5 +10,18 @@ conference_tracks:
   - "Track 7: Instrumentation for Smart Systems"
   - "Track 8: RF Engineering"
   - "Track 9: Indian Knowledge Systems (IKS)"
+topics_covered:
+  - "Artificial Intelligence and Machine Learning"
+  - "Signal and Image Processing"
+  - "Next-Generation Networks and Communication"
+  - "Robotics and Autonomous Systems"
+  - "Smart Energy and IoT Applications"
+  - "Data Science and Analytics"
+submission_guidelines:
+  - "Original, unpublished work only"
+  - "Follow IET/IEEE conference format template"
+  - "Maximum 6 pages recommended"
+  - "Include all author details and affiliations"
+  - "Submit through CMT portal only"
 submission_portal: "https://cmt3.research.microsoft.com/MVAI2026"
 ---

@@ -34,6 +34,6 @@ footer_links:
         url: "mailto:info@iccet2026.in"
       - text: "Venue Details"
         url: "/contact"
-copyright_text: "© 2026 ICCET. All rights reserved. Organized by Dnyanvilas College of Engineering, Pune."
+copyright_text: "© 2026 ICCET Conference. All rights reserved."
 disclaimer: "For queries and support, please contact us at info@iccet2026.in"
 ---

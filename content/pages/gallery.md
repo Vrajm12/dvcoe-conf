@@ -1,5 +1,9 @@
 ---
-page_title: "Earlier Proceedings"
+page_title: "Gallery"
+page_intro: "Highlights from previous editions of the ICCET and ICCASP series"
+year_2023_title: "ICCET 2023 Gallery"
+year_2022_title: "ICCET 2022 Gallery"
+year_2021_title: "ICCASP 2021 Gallery"
 page_intro: "Highlights from previous editions of the ICCET and ICCASP series"
 conferences:
   - name: "1st International Conference on Communication and Signal Processing (ICCASP 2015)"

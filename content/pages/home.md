@@ -86,4 +86,7 @@ join_subtitle: Advancing Technology for Sustainable Development!
 join_content: Leveraging AI, Computing Technologies, and Data Science to achieve
   SDG 7 (Affordable and Clean Energy) and SDG 9 (Industry, Innovation and
   Infrastructure)
+mai_title: "MAI/ICCET Series Legacy"
+mai_papers_count: "500+ papers published"
+mai_talks_count: "100+ keynote speakers"
 ---
