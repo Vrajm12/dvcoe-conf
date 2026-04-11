@@ -48,8 +48,8 @@ about_host_university_content: Dr. Babasaheb Ambedkar Technological University
   Engineering, Pharmacy, Architecture, and Hotel Management & Catering
   Technology.
 acknowledgement_title: Acknowledgement
-acknowledgement_microsoft_title: Easy Chair
-acknowledgement_microsoft_content: The Easy Chair online conference management system was used for managing paper submissions, peer review, and the overall conference workflow.
+acknowledgement_microsoft_title: MICROSOFT CMT
+acknowledgement_microsoft_content: Microsoft CMT (Conference Management Toolkit) was used for managing paper submissions, peer review, and the overall conference workflow.
 acknowledgement_springer_title: IET/IEEE Publication
 acknowledgement_springer_content: Publishing accepted papers in IET/IEEE proceedings with professional peer review and recognition in the engineering community.
 publication_partner_title: Publication Partner

@@ -221,11 +221,11 @@ export default async function Home() {
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4 uppercase tracking-wide" style={{color: '#C2185B'}}>{pageData.acknowledgement_title}</h2>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
-              {/* Easy Chair Support */}
+              {/* Microsoft CMT Support */}
               <div className="bg-white rounded-lg shadow-lg p-6 md:p-8 border-l-4 border-yellow-500">
-                <h3 className="text-xl md:text-2xl font-bold text-yellow-600 mb-4 md:mb-6">{pageData.acknowledgement_microsoft_title}</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-black mb-4 md:mb-6">{pageData.acknowledgement_microsoft_title}</h3>
                 <div className="mb-4 md:mb-6 bg-blue-500 inline-block px-4 md:px-6 py-2 md:py-3 rounded">
-                  <span className="text-white font-bold text-2xl md:text-3xl">Easy Chair</span>
+                  <span className="text-white font-bold text-2xl md:text-3xl">CMT</span>
                 </div>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed text-justify">
                   {pageData.acknowledgement_microsoft_content}

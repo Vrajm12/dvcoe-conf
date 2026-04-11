@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-white">
-          <p>&copy; 2026 MAI Conference. All rights reserved.</p>
+          <p>&copy; 2026 ICCET Conference. All rights reserved.</p>
           <p className="mt-2 text-white">
             Hosted by Dnyanvilas College of Engineering, Pune
           </p>

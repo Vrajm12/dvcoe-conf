@@ -24,8 +24,8 @@ export default function Navigation() {
             </div>
             <div className="border-l-2 border-blue-600 h-10"></div>
             <div className="flex-shrink-0">
-              <div className="text-2xl font-bold text-white" style={{ color: '#ffffff' }}>ICCET 2026</div>
-              <div className="text-xs text-blue-200 -mt-1">Computing in Engineering & Technology</div>
+              <span style={{ display: 'block', fontSize: '1.5rem', fontWeight: 'bold', color: '#ffffff', letterSpacing: '-0.025em' }}>ICCET 2026</span>
+              <span style={{ display: 'block', fontSize: '0.75rem', color: '#bfdbfe', marginTop: '-0.25rem' }}>Computing in Engineering & Technology</span>
             </div>
           </Link>
           
