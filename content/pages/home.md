@@ -57,7 +57,8 @@ publication_indexing_subtitle: Publication Benefits
 publication_indexing_content: All presented papers will receive a presentation
   certificate. Accepted papers will be published through IET proceedings,
   published on IEEE Xplore, recognized by the professional engineering
-  community, and indexed in major databases.
+  community, and indexed in major databases such as ISI, Scopus, EI Compendex,
+  Google Scholar etc.
 dates_title: Important Dates
 dates_subtitle: Mark your calendars
 date_submission_label: Submission
