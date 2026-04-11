@@ -46,9 +46,9 @@ acknowledgement_microsoft_content: "The Microsoft CMT service was used for
 
   \ "
 acknowledgement_springer_title: IET/IEEE Publication
-acknowledgement_springer_content: Publishing accepted papers in IET/IEEE
-  proceedings with professional peer review and recognition in the engineering
-  community.
+acknowledgement_springer_content: Publishing accepted papers in IET proceedings,
+  published on IEEE Xplore,  with professional peer review and recognition in
+  the engineering community.
 publication_partner_title: Publication Partner
 publication_partner_subtitle: Official Publication Partner
 publication_partner_description: IET/IEEE - Professional Engineering Publication Partners
