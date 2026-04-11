@@ -13,11 +13,11 @@ fees:
     indian: INR 6,000
     foreign: $72
 bank:
-  - "Account Holder Name: Dynavilas College of Engineering"
-  - "Branch Address: DUDUGAN MOSGH"
+  - "Account Holder Name: Dnyanvilas College of Engineering"
+  - "Account No: 925010032876775"
   - "Bank Name: AXIS BANK"
-  - "IFSC Code: UTB0004751/UTB0061309"
-  - "Account No: 9250003767575"
+  - "IFSC Code: UTIB0004875 / UTIB0006109"
+  - "Branch Address: DUDULGAON, MOSHI"
 process_steps:
   - Complete the online registration form
   - Pay the registration fee via bank transfer or the provided payment gateway

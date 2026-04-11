@@ -35,15 +35,11 @@ const defaultContent: RegistrationContent = {
     }
   ],
   bank: [
-    "Name of the Beneficiary (In favour of): Director, SVNIT-CCE",
-    "Bank Account No: 37030749143",
-    "Nature of Bank Account: Current Account",
-    "Name of The Bank: STATE BANK OF INDIA (SBI)",
-    "Name & Address of The Bank Branch: STATE BANK OF INDIA (SBI) SVRCET Branch, SVNIT Campus, Ichchanath, Surat 395007, Gujarat, India",
-    "Bank Branch Code: 03320",
-    "IFSC Code: SBIN0003320",
-    "MICR Code: 395002012",
-    "Branch Contact No: 0261-2258618, 0261-2227125"
+    "Account Holder Name: Dnyanvilas College of Engineering",
+    "Account No: 925010032876775",
+    "Bank Name: AXIS BANK",
+    "IFSC Code: UTIB0004875 / UTIB0006109",
+    "Branch Address: DUDULGAON, MOSHI"
   ],
   process_steps: [
     "Complete the online registration form",
