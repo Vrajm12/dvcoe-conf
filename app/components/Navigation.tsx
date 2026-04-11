@@ -12,18 +12,19 @@ export default function Navigation() {
       <div className="w-full px-4">
         <div className="flex justify-between items-center py-3">
           <Link href="/" className="flex items-center space-x-3 flex-shrink-0">
-            <div className="relative w-40 h-16 bg-transparent">
+            <div className="relative w-40 h-16 bg-transparent flex-shrink-0">
               <Image 
                 src="/iccet-2026-logo.png" 
                 alt="ICCET 2026 Logo" 
                 fill
                 priority
-                className="object-contain bg-transparent"
+                style={{ objectFit: 'contain' }}
+                className="bg-transparent"
               />
             </div>
             <div className="border-l-2 border-blue-600 h-10"></div>
             <div className="flex-shrink-0">
-              <div className="text-2xl font-bold text-white">ICCET 2026</div>
+              <div className="text-2xl font-bold text-white" style={{ color: '#ffffff' }}>ICCET 2026</div>
               <div className="text-xs text-blue-200 -mt-1">Computing in Engineering & Technology</div>
             </div>
           </Link>
