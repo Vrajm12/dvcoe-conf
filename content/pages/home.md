@@ -5,6 +5,7 @@ hero_subtitle: 9th International Conference on Computing and Technology
 hero_tagline: International Conference
 hero_event_type: Hybrid mode
 hero_background: /images/240_F_353280884_oyeOLzk0EyvfC4pvixbvcfA4s745SaX6.jpg
+hero_hosted_by: Dnyanvilas College of Engineering (DVCOE), Pune
 about_title: About the Conference
 about_conference_title: About Conference
 about_conference_content: >

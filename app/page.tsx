@@ -10,6 +10,7 @@ interface HomePageContent {
   hero_tagline?: string;
   hero_event_type?: string;
   hero_background?: string;
+  hero_hosted_by?: string;
 }
 
 export default async function Home() {
@@ -116,7 +117,7 @@ export default async function Home() {
                     <FaBuilding className="text-yellow-400 text-lg md:text-xl mt-1 flex-shrink-0" />
                     <div>
                       <div className="text-xs md:text-sm text-blue-300 font-semibold uppercase tracking-wide">Hosted By</div>
-                      <div className="text-base md:text-lg text-white font-semibold">Dnyanvilas College of Engineering</div>
+                      <div className="text-base md:text-lg text-white font-semibold">{pageData.hero_hosted_by || 'Dnyanvilas College of Engineering (DVCOE), Pune'}</div>
                     </div>
                   </div>
                 </div>
