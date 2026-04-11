@@ -15,4 +15,5 @@ benefits:
   - "Certificate of participation"
   - "Conference kit and refreshments"
 button_text: "Register as Delegate"
+registration_url: "https://forms.gle/Bbkbe7ixaqF8eP7h7"
 ---

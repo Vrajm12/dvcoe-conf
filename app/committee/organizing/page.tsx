@@ -32,6 +32,23 @@ const organizingData = {
       ]
     },
     {
+      committee_title: "Patron",
+      members: [
+        {
+          name: "Hon. Shri. Vishal Vilasrao Tambe",
+          profile_link: "#",
+          designation: "President, SGMSPM; Ex. Chairman, Standing Committee, PMC; Corporator, Pune Municipal Corporation",
+          image: "/vilas-tambe.jpg"
+        },
+        {
+          name: "Hon. Shri. Vaibhav Vilasrao Tambe",
+          profile_link: "#",
+          designation: "Secretary, Shri Gajanan Maharaj Shikshan Prasarak Mandal",
+          image: "/vaibhav-tambe.jpg"
+        }
+      ]
+    },
+    {
       committee_title: "General Chairs",
       members: [
         {
@@ -44,7 +61,7 @@ const organizingData = {
           name: "Dr. Nagendra Prasad Pathak",
           profile_link: "#",
           designation: "Professor (HAG), Indian Institute of Technology, Roorkee-India",
-          image: "https://via.placeholder.com/300x300?text=Dr.+Nagendra+Prasad+Pathak"
+          image: "/n-p-pathak.jpeg"
         }
       ]
     },
@@ -66,13 +83,13 @@ const organizingData = {
           name: "Dr. Aparna Pande",
           profile_link: "#",
           designation: "Principal, Dnyanvilas College of Engineering",
-          image: "https://via.placeholder.com/300x300?text=Dr.+Aparna+Pande"
+          image: "/dr-aparna-pande.jpeg"
         },
         {
           name: "Dr. Prachi Deshpande",
           profile_link: "#",
           designation: "Associate Professor, Department of CSE, Maharashtra Institute of Technology, Ch. Sambhaji nagar",
-          image: "https://via.placeholder.com/300x300?text=Dr.+Prachi+Deshpande"
+          image: "/prachi-deshpande.jpeg"
         }
       ]
     }
@@ -98,7 +115,7 @@ export default async function OrganizingCommittee() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {committee.members.map((m, idx) => (
                   <div key={idx} className="flex items-start space-x-4">
-                    <Image src={m.image} alt={m.name} width={80} height={80} unoptimized className="w-20 h-20 rounded-full object-cover" />
+                    <Image src={m.image} alt={m.name} width={120} height={120} unoptimized className="w-32 h-32 rounded-full object-cover" />
                     <div>
                       <a href={m.profile_link || '#'} target="_blank" rel="noreferrer" className="font-bold text-lg text-gray-800 hover:text-blue-600">{m.name}</a>
                       <p className="text-gray-600">{m.designation}</p>

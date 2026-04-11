@@ -8,6 +8,17 @@ committees:
         designation: Vice-Chancellor, Dr. Babasaheb Ambedkar Technological University,
           Lonere
         image: /chief-patron.jpeg
+  - committee_title: Patron
+    members:
+      - name: Hon. Shri. Vishal Vilasrao Tambe
+        profile_link: "#"
+        designation: President, SGMSPM; Ex. Chairman, Standing Committee, PMC; Corporator,
+          Pune Municipal Corporation
+        image: /vilas-tambe.jpg
+      - name: Hon. Shri. Vaibhav Vilasrao Tambe
+        profile_link: "#"
+        designation: Secretary, Shri Gajanan Maharaj Shikshan Prasarak Mandal
+        image: /vaibhav-tambe.jpg
   - committee_title: General Chairs
     members:
       - name: Dr. S. L. Nalbalwar
@@ -36,5 +47,5 @@ committees:
         profile_link: "#"
         designation: Associate Professor, Department of CSE, Maharashtra Institute of
           Technology, Ch. Sambhaji nagar
-        image: https://via.placeholder.com/300x300?text=Dr.+Prachi+Deshpande
+        image: /prachi-deshpande.jpeg
 ---

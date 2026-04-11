@@ -4,7 +4,7 @@ policy:
   - Each registration entitles the author to present one paper only.
   - Registration fee includes conference proceedings, conference kit, and
     refreshments.
-  - Registration fee DOES NOT include accommodation.
+  - Registration fee DOES NOT include accommodation; however, assistance will be provided to get accommodation in nearby places.
 fees:
   - category: Students (UG/PG/Research Scholar)
     indian: INR 4,000

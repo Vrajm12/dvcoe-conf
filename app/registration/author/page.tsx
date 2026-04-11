@@ -18,7 +18,7 @@ const defaultContent: RegistrationContent = {
     "At least one author per paper has to register.",
     "Each registration entitles the author to present one paper only.",
     "Registration fee includes conference proceedings, conference kit, and refreshments.",
-    "Registration fee DOES NOT include accommodation.",
+    "Registration fee DOES NOT include accommodation; however, assistance will be provided to get accommodation in nearby places.",
     "For accepted papers, at least one author must register to have the paper included in the proceedings.",
     "One registration fee only covers a single paper."
   ],

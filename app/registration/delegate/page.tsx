@@ -12,6 +12,7 @@ interface DelegateRegistrationContent {
   note: string;
   benefits: string[];
   button_text: string;
+  registration_url: string;
 }
 
 const defaultContent: DelegateRegistrationContent = {
@@ -36,7 +37,8 @@ const defaultContent: DelegateRegistrationContent = {
     'Certificate of participation',
     'Conference kit and refreshments'
   ],
-  button_text: 'Register as Delegate'
+  button_text: 'Register as Delegate',
+  registration_url: 'https://forms.gle/Bbkbe7ixaqF8eP7h7'
 };
 
 export default async function DelegateFee() {
@@ -99,9 +101,14 @@ export default async function DelegateFee() {
             </ul>
 
             <div className="mt-8 text-center">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+              <a
+                href={data.registration_url}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-block bg-blue-900 !text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-800 transition"
+              >
                 {data.button_text}
-              </button>
+              </a>
             </div>
           </div>
         </div>

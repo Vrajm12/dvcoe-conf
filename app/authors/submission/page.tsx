@@ -40,7 +40,7 @@ export default async function SubmissionGuidelines() {
     },
     {
       title: 'Submission Portal',
-      content: 'All manuscripts must be submitted through the Microsoft CMT portal:\n\nSubmissions via email or any other mode will not be considered.'
+      content: 'All manuscripts must be submitted through the Microsoft CMT portal:\n\nSubmissions via email or any other mode will not be considered.\n\nFor pre-submission inquiries, please use this form: https://forms.gle/MkxJSv28YfREfvSY8'
     },
     {
       title: 'Presentation Requirement',
@@ -102,7 +102,31 @@ export default async function SubmissionGuidelines() {
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-blue-900 mb-3">{guideline.title}</h3>
-                      <p className="text-gray-700 whitespace-pre-line leading-relaxed">{guideline.content}</p>
+                      <div className="text-gray-700 whitespace-pre-line leading-relaxed">
+                        {guideline.content.split('\n').map((line, lineIdx) => {
+                          const urlRegex = /(https?:\/\/[^\s]+)/g;
+                          const parts = line.split(urlRegex);
+                          return (
+                            <div key={lineIdx}>
+                              {parts.map((part, partIdx) =>
+                                urlRegex.test(part) ? (
+                                  <a
+                                    key={partIdx}
+                                    href={part}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 font-semibold underline"
+                                  >
+                                    {part}
+                                  </a>
+                                ) : (
+                                  <span key={partIdx}>{part}</span>
+                                )
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
                     </div>
                   </div>
                 </div>

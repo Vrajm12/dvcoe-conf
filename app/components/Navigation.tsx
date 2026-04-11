@@ -83,7 +83,7 @@ export default function Navigation() {
               </button>
               <div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-200">
                 <Link href="/registration/author" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition first:rounded-t-lg">Author Registration</Link>
-                <Link href="/registration/delegate" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition last:rounded-b-lg">Delegate Fee</Link>
+                <Link href="/registration/delegate" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition last:rounded-b-lg">Delegate Registration</Link>
               </div>
             </div>
 
@@ -126,7 +126,7 @@ export default function Navigation() {
             <div className="py-2">
               <p className="font-semibold text-blue-100">Registration</p>
               <Link href="/registration/author" className="block pl-4 py-1 text-sm text-blue-200 hover:text-white">Author Registration</Link>
-              <Link href="/registration/delegate" className="block pl-4 py-1 text-sm text-blue-200 hover:text-white">Delegate Fee</Link>
+              <Link href="/registration/delegate" className="block pl-4 py-1 text-sm text-blue-200 hover:text-white">Delegate Registration</Link>
             </div>
             <div className="py-2">
               <p className="font-semibold text-blue-100">Program</p>
