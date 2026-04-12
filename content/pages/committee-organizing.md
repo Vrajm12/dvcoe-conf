@@ -47,5 +47,5 @@ committees:
         profile_link: "#"
         designation: Associate Professor, Department of CSE, Maharashtra Institute of
           Technology, Ch. Sambhaji nagar
-        image: /prachi-deshpande.jpeg
+        image: /dr-prachi.jpeg
 ---

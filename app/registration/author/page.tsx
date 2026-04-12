@@ -120,9 +120,15 @@ export default async function AuthorRegistration() {
             </ol>
             
             <div className="mt-8 text-center">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+              <a 
+                href="https://forms.gle/MkxJSv28YfREfvSY8" 
+                target="_blank" 
+                rel="noreferrer"
+                style={{ backgroundColor: '#003366', color: '#ffffff' }}
+                className="inline-block px-8 py-3 rounded-lg font-semibold transition hover:opacity-90"
+              >
                 Register Now
-              </button>
+              </a>
             </div>
           </div>
         </div>

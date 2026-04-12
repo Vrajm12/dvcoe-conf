@@ -128,8 +128,8 @@ export default async function Gallery() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {conferences.map((conf, idx) => (
                 <div key={idx} className="bg-white rounded-lg p-4 shadow-md border-l-4 border-blue-600">
-                  <div className="flex items-center mb-2">
-                    <span className="inline-block bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">
+                  <div className="flex items-start mb-3">
+                    <span className="flex-shrink-0 flex items-center justify-center bg-blue-600 text-white rounded-full w-8 h-8 text-sm font-bold">
                       {idx + 1}
                     </span>
                   </div>

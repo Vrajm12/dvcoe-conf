@@ -40,7 +40,7 @@ export default async function SubmissionGuidelines() {
     },
     {
       title: 'Submission Portal',
-      content: 'All manuscripts must be submitted through the Microsoft CMT portal:\n\nSubmissions via email or any other mode will not be considered.\n\nFor pre-submission inquiries, please use this form: https://forms.gle/MkxJSv28YfREfvSY8'
+      content: 'All manuscripts must be submitted through the Microsoft CMT portal:\n\nSubmissions via email or any other mode will not be considered.'
     },
     {
       title: 'Presentation Requirement',
