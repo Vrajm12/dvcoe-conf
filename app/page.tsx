@@ -120,6 +120,13 @@ export default async function Home() {
                       <div className="text-base md:text-lg text-white font-semibold">{pageData.hero_hosted_by || 'Dnyanvilas College of Engineering (DVCOE), Pune'}</div>
                     </div>
                   </div>
+                  <div className="flex items-start gap-3 md:gap-4">
+                    <FaGlobe className="text-yellow-400 text-lg md:text-xl mt-1 flex-shrink-0" />
+                    <div>
+                      <div className="text-xs md:text-sm text-blue-300 font-semibold uppercase tracking-wide">Conference Mode</div>
+                      <div className="text-base md:text-lg text-white font-semibold">HYBRID</div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -640,9 +647,6 @@ export default async function Home() {
               {/* Content */}
               <div className="lg:col-span-2 space-y-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-700 mb-2">
-                    Government of Maharashtra
-                  </h3>
                   <h2 className="text-4xl font-bold text-gray-900">
                     Dr. Babasaheb Ambedkar Technological University, Lonere-Raigad
                   </h2>
@@ -684,7 +688,7 @@ export default async function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-wide" style={{color: '#C2185B'}}>About the Host Institute</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 uppercase tracking-wide" style={{color: '#C2185B'}}>About the Conference</h2>
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

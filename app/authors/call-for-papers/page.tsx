@@ -45,7 +45,7 @@ export default async function CallForPapers() {
 
         <div className="max-w-5xl mx-auto">
           <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-bold text-blue-900 mb-6">About</h2>
+            <h2 className="text-2xl font-bold text-blue-900 mb-6">About the Conference</h2>
             <p className="text-gray-700 mb-4 leading-relaxed">
               The 9th International Conference on Computing in Engineering and Technology (ICCET-2026) cordially invites the submission of high-quality original research papers, comprehensive review articles, and insightful case studies in the broad domains of Engineering, Technology and allied interdisciplinary fields.
             </p>
@@ -54,6 +54,9 @@ export default async function CallForPapers() {
             </p>
             <p className="text-gray-700 leading-relaxed">
               Submissions highlighting novel algorithms, intelligent systems, data driven models, and transformative applications across domains such as healthcare, agriculture, smart cities, autonomous systems, and industrial automation are especially welcome. ICCET-2026 aspires to foster collaboration, promote knowledge sharing, and contribute to the advancement of next-generation technologies shaping the future.
+            </p>
+            <p className="mt-6 font-bold" style={{ color: '#DC2626' }}>
+              The conference is planned as a Hybrid event, enabling both online and in-person participation
             </p>
           </div>
 
