@@ -13,7 +13,7 @@ download_resources:
     link: "/IET-IEEE-Conference-Template.doc"
   - text: "Copyright Form"
     link: "pdf/copyright-form.pdf"
-submission_portal: "https://cmt3.research.microsoft.com/MVAI2026"
+submission_portal: "https://cmt3.research.microsoft.com/ICCET2026"
 important_notes:
   - "All manuscripts must be submitted through CMT"
   - "Submissions via email will not be considered"

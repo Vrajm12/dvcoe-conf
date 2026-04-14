@@ -18,7 +18,7 @@ const defaultContent: AuthorsSubmissionContent = {
     { text: 'IET / IEEE CONFERENCE TEMPLATE', link: '/IET-IEEE-Conference-Template.doc' },
     { text: 'Copyright Form', link: 'pdf/copyright-form.pdf' },
   ],
-  submission_portal: 'https://cmt3.research.microsoft.com/MVAI2026'
+  submission_portal: 'https://cmt3.research.microsoft.com/ICCET2026'
 };
 
 export default async function SubmissionGuidelines() {
