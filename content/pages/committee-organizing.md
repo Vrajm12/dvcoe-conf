@@ -12,8 +12,8 @@ committees:
     members:
       - name: Hon. Shri. Vishal Vilasrao Tambe
         profile_link: "#"
-        designation: President, SGMSPM; Ex. Chairman, Standing Committee, PMC; Corporator,
-          Pune Municipal Corporation
+        designation: President, SGMSPM; Ex. Chairman, Standing Committee, PMC;
+          Corporator, Pune Municipal Corporation
         image: /vilas-tambe.jpg
       - name: Hon. Shri. Vaibhav Vilasrao Tambe
         profile_link: "#"
@@ -34,8 +34,7 @@ committees:
     members:
       - name: Dr. Brijesh Iyer
         profile_link: "#"
-        designation: Professor, Dr. Babasaheb Ambedkar Technological University,
-          Lonere-India
+        designation: Dr. Babasaheb Ambedkar Technological University, Lonere-India
         image: /technical-program-chair.jpeg
   - committee_title: Organizing Chair
     members:
