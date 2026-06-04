@@ -16,6 +16,7 @@ const defaultContent: AuthorsSubmissionContent = {
   download_resources: [
     { text: 'Conference Brochure (PDF)', link: 'pdf/cfp.pdf' },
     { text: 'IET / IEEE CONFERENCE TEMPLATE', link: '/IET-IEEE-Conference-Template.doc' },
+    { text: 'Reviewers Response Sheet', link: '/Reviewers Response Sheet.docx' },
     { text: 'Copyright Form', link: 'pdf/copyright-form.pdf' },
   ],
   submission_portal: 'https://cmt3.research.microsoft.com/ICCET2026'
