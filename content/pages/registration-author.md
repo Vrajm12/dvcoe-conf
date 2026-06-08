@@ -16,7 +16,7 @@ bank:
   - "Account Holder Name: Dnyanvilas College of Engineering"
   - "Account No: 925010032876775"
   - "Bank Name: AXIS BANK"
-  - "IFSC Code: UTIB0004875 / UTIB0006109"
+  - "IFSC Code: UTIB0004875"
   - "Branch Address: DUDULGAON, MOSHI"
 process_steps:
   - Complete the online registration form

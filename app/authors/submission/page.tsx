@@ -33,7 +33,7 @@ export default async function SubmissionGuidelines() {
     },
     {
       title: 'Submission Deadline',
-      content: 'Authors are invited to submit their full-length papers (in English) on or before 30th May 2026. Early submissions are encouraged to facilitate a smooth review process.'
+      content: 'Authors are invited to submit their full-length papers (in English) on or before 30th June 2026. Early submissions are encouraged to facilitate a smooth review process.'
     },
     {
       title: 'Manuscript Format',
