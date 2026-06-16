@@ -249,6 +249,7 @@ collections:
               - { name: "talk_title", label: "Talk Title", widget: "string" }
               - { name: "bio", label: "Bio", widget: "text" }
               - { name: "abstract", label: "Abstract", widget: "text" }
+              - { name: "image", label: "Image", widget: "image" }
           - name: "invited_speakers"
             label: "Invited Speakers"
             widget: "list"
@@ -259,6 +260,7 @@ collections:
               - { name: "talk_title", label: "Talk Title", widget: "string" }
               - { name: "bio", label: "Bio", widget: "text", required: false }
               - { name: "abstract", label: "Abstract", widget: "text", required: false }
+              - { name: "image", label: "Image", widget: "image", required: false }
 
       # ============================================
       # ðŸ‘¥ SECTION 4: COMMITTEE

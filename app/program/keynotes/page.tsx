@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { getPageContent } from '@/lib/content';
 
 interface Speaker {
@@ -7,6 +8,7 @@ interface Speaker {
   talk_title: string;
   bio: string;
   abstract: string;
+  image?: string;
 }
 
 interface ProgramKeynotesContent {
@@ -18,87 +20,138 @@ interface ProgramKeynotesContent {
 
 const defaultContent: ProgramKeynotesContent = {
   page_title: 'Keynote Speakers & Invited Talks',
-  page_intro: 'Distinguished speakers from leading institutions worldwide',
+  page_intro: 'Distinguished speakers from leading technical universities and research institutions',
   keynote_speakers: [
     {
-      name: 'Prof. [Keynote Speaker Name]',
-      institution: '[University/Institution]',
-      country: '[Country]',
-      talk_title: '[Talk Title]',
-      bio: '[Brief bio and research interests of the speaker. Include notable achievements, research areas, and contributions to the field.]',
-      abstract: '[Brief description of the keynote talk topic and what attendees can expect to learn.]'
+      name: 'Prof. (Dr.) Rajanish Kamalakar Kamat',
+      institution: 'Dr. Babasaheb Ambedkar Technological University (DBATU), Lonere, Maharashtra',
+      country: 'India',
+      talk_title: 'To be announced',
+      bio: "Hon'ble Vice-Chancellor, Dr. Babasaheb Ambedkar Technological University, Lonere.",
+      abstract: 'Keynote details will be announced soon.',
+      image: '/chief-patron.jpeg'
     },
     {
-      name: 'Dr. [Keynote Speaker Name]',
-      institution: '[University/Institution]',
-      country: '[Country]',
-      talk_title: '[Talk Title]',
-      bio: '[Brief bio and research interests of the speaker. Include notable achievements, research areas, and contributions to the field.]',
-      abstract: '[Brief description of the keynote talk topic and what attendees can expect to learn.]'
+      name: 'Prof. (Dr.) Sunil G. Bhirud',
+      institution: 'COEP Technological University, Pune',
+      country: 'India',
+      talk_title: 'To be announced',
+      bio: "Hon'ble Vice-Chancellor, COEP Technological University, Pune.",
+      abstract: 'Keynote details will be announced soon.',
+      image: '/bhirud-sir.jpg'
+    },
+    {
+      name: 'Dr. R. (Venki) Venkateswaran',
+      institution: 'Gokhale Institute of Politics and Economics (GIPE), Pune',
+      country: 'India',
+      talk_title: 'To be announced',
+      bio: 'Professor of Practice; Former Senior Vice President of Engineering, Persistent Systems.',
+      abstract: 'Keynote details will be announced soon.',
+      image: '/venkateswaran-sir.jpg'
     }
   ],
-  invited_speakers: [
-    {
-      name: 'Prof. [Name]',
-      institution: '[University/Institution]',
-      country: '[Country]',
-      talk_title: '[Talk Title]',
-      bio: '',
-      abstract: ''
-    },
-    {
-      name: 'Dr. [Name]',
-      institution: '[University/Institution]',
-      country: '[Country]',
-      talk_title: '[Talk Title]',
-      bio: '',
-      abstract: ''
-    }
-  ]
+  invited_speakers: []
 };
+
+function SpeakerCard({ speaker }: { speaker: Speaker }) {
+  const imageSrc = speaker.image || '/file.svg';
+
+  return (
+    <article className="overflow-hidden rounded-3xl border border-blue-100 bg-white shadow-[0_24px_60px_rgba(15,23,42,0.08)]">
+      <div className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 p-6">
+        <div className="flex flex-col items-center gap-5 text-center sm:flex-row sm:items-start sm:text-left">
+          <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-2xl border-4 border-white bg-slate-100 shadow-lg">
+            <Image
+              src={imageSrc}
+              alt={speaker.name}
+              fill
+              unoptimized
+              className="object-cover"
+            />
+          </div>
+
+          <div className="min-w-0 flex-1">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-blue-600">
+              Keynote Speaker
+            </p>
+            <h3 className="mt-2 text-2xl font-bold text-slate-900">{speaker.name}</h3>
+            <p className="mt-2 text-base font-medium text-slate-700">{speaker.institution}</p>
+            <p className="mt-1 text-sm text-slate-500">{speaker.country}</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="space-y-5 p-6">
+        <div className="rounded-2xl bg-slate-50 p-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">Talk Title</p>
+          <p className="mt-2 text-lg font-semibold text-blue-900">{speaker.talk_title}</p>
+        </div>
+
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">Profile</p>
+          <p className="mt-2 leading-7 text-slate-700">{speaker.bio}</p>
+        </div>
+
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">Abstract</p>
+          <p className="mt-2 leading-7 text-slate-700">{speaker.abstract}</p>
+        </div>
+      </div>
+    </article>
+  );
+}
 
 export default async function Keynotes() {
   const cmsContent = await getPageContent<ProgramKeynotesContent>('program-keynotes');
   const data = cmsContent ?? defaultContent;
+  const invitedSpeakers = data.invited_speakers ?? [];
 
   return (
-    <main className="py-16 bg-gray-50 min-h-screen">
+    <main className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.12),_transparent_38%),linear-gradient(180deg,#f8fbff_0%,#f3f7ff_100%)] py-16">
       <div className="container mx-auto px-4">
-        <h1 className="text-5xl font-bold text-center mb-8 text-gray-800">{data.page_title}</h1>
-        <p className="text-center text-gray-600 mb-16 text-lg">{data.page_intro}</p>
+        <div className="mx-auto max-w-5xl text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-blue-600">Program</p>
+          <h1 className="mt-3 text-4xl font-black tracking-tight text-slate-900 sm:text-5xl">
+            {data.page_title}
+          </h1>
+          <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-600">{data.page_intro}</p>
+        </div>
 
-        <div className="max-w-4xl mx-auto">
-          {/* TBA Section */}
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-2xl p-16 text-center border-2 border-blue-200">
+        <div className="mx-auto mt-14 max-w-6xl space-y-12">
+          <section>
             <div className="mb-6">
-              <div className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full p-8">
-                <svg className="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
+              <h2 className="text-2xl font-bold text-slate-900">Keynote Speakers</h2>
+              <p className="mt-2 text-slate-600">Confirmed speakers for ICCET-2026.</p>
             </div>
-            
-            <h2 className="text-5xl font-bold text-blue-900 mb-4">TBA</h2>
-            <p className="text-2xl text-blue-800 font-semibold mb-6">To Be Announced</p>
-            
-            <p className="text-gray-700 text-lg leading-relaxed mb-8">
-              The keynote speakers and invited talks for ICCET-2026 will be announced soon. 
-              We are currently finalizing the lineup of distinguished speakers from leading institutions worldwide.
-            </p>
-            
-            <div className="bg-white rounded-lg p-6 border-l-4 border-blue-600">
-              <p className="text-gray-600">
-                Please check back soon or subscribe to our newsletter to receive updates about the keynote speakers and their presentations.
-              </p>
-            </div>
-          </div>
 
-          {/* Info Box */}
-          <div className="mt-12 bg-blue-100 border-l-4 border-blue-600 p-8 rounded-lg">
-            <h3 className="text-lg font-bold text-blue-900 mb-3">📢 Stay Updated</h3>
-            <p className="text-gray-700">
-              Keynote speakers from renowned universities and research institutions will deliver cutting-edge talks covering 
-              AI, Machine Learning, Cybersecurity, IoT, and related technologies.
+            <div className="grid gap-8 lg:grid-cols-2">
+              {data.keynote_speakers.map((speaker) => (
+                <SpeakerCard key={speaker.name} speaker={speaker} />
+              ))}
+            </div>
+          </section>
+
+          {invitedSpeakers.length > 0 && (
+            <section>
+              <div className="mb-6">
+                <h2 className="text-2xl font-bold text-slate-900">Invited Talks</h2>
+                <p className="mt-2 text-slate-600">
+                  Additional speakers and sessions will appear here as they are confirmed.
+                </p>
+              </div>
+
+              <div className="grid gap-8 lg:grid-cols-2">
+                {invitedSpeakers.map((speaker) => (
+                  <SpeakerCard key={speaker.name} speaker={speaker} />
+                ))}
+              </div>
+            </section>
+          )}
+
+          <div className="rounded-3xl border border-blue-100 bg-white/80 p-8 shadow-[0_24px_60px_rgba(15,23,42,0.08)] backdrop-blur">
+            <h3 className="text-lg font-bold text-blue-900">Stay Updated</h3>
+            <p className="mt-3 max-w-4xl leading-7 text-slate-700">
+              We will continue updating this page as the keynote and invited speaker lineup is finalized.
             </p>
           </div>
         </div>
