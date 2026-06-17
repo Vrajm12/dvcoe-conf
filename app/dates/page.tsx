@@ -35,32 +35,32 @@ export default async function Dates() {
       },
       { 
         event: "Paper Submission Deadline", 
-        date: cmsContent?.submission_deadline ? formatDate(cmsContent.submission_deadline) : "June 30, 2026",
+        date: cmsContent?.submission_deadline ? formatDate(cmsContent.submission_deadline) : "20 June 2026",
         description: "Last day to submit your papers",
         icon: FaClipboard
       },
       { 
         event: "Acceptance Notification", 
-        date: cmsContent?.acceptance_notification ? formatDate(cmsContent.acceptance_notification) : "July 15, 2026",
+        date: cmsContent?.acceptance_notification ? formatDate(cmsContent.acceptance_notification) : "21 June 2026 onwards",
         description: "Authors notified of acceptance decisions",
         icon: FaCheckCircle
       },
       { 
         event: "Final Submission", 
-        date: cmsContent?.final_submission ? formatDate(cmsContent.final_submission) : "July 20, 2026",
-        description: "Submit final version of your paper",
+        date: cmsContent?.final_submission ? formatDate(cmsContent.final_submission) : "23 June 2026 onwards",
+        description: "Submit final version progressively after acceptance",
         icon: FaFileAlt
       },
       { 
         event: "Registration of Accepted Papers", 
-        date: cmsContent?.registration_accepted_papers ? formatDate(cmsContent.registration_accepted_papers) : "July 22, 2026",
-        description: "Authors register for conference",
+        date: cmsContent?.registration_accepted_papers ? formatDate(cmsContent.registration_accepted_papers) : "23 June 2026 onwards",
+        description: "Accepted-paper registration opens progressively",
         icon: FaCreditCard
       },
       { 
         event: "Camera-Ready Submission", 
-        date: cmsContent?.camera_ready_date ? formatDate(cmsContent.camera_ready_date) : "July 22, 2026",
-        description: "Submit camera-ready version",
+        date: cmsContent?.camera_ready_date ? formatDate(cmsContent.camera_ready_date) : "23 June 2026 onwards",
+        description: "Submit camera-ready version progressively",
         icon: FaCamera
       },
       { 

@@ -95,7 +95,7 @@ export default function Navigation() {
                 </svg>
               </button>
               <div className="absolute left-0 mt-2 w-48 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-200">
-                <Link href="/program/keynotes" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition first:rounded-t-lg">Keynotes/Invited</Link>
+                <Link href="/program/keynotes" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition first:rounded-t-lg">Invited Speakers</Link>
                 <Link href="/program/schedule" className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition last:rounded-b-lg">Conference Schedule</Link>
               </div>
             </div>
@@ -130,7 +130,7 @@ export default function Navigation() {
             </div>
             <div className="py-2">
               <p className="font-semibold text-blue-100">Program</p>
-              <Link href="/program/keynotes" className="block pl-4 py-1 text-sm text-blue-200 hover:text-white">Keynotes/Invited</Link>
+              <Link href="/program/keynotes" className="block pl-4 py-1 text-sm text-blue-200 hover:text-white">Invited Speakers</Link>
               <Link href="/program/schedule" className="block pl-4 py-1 text-sm text-blue-200 hover:text-white">Conference Schedule</Link>
             </div>
             <Link href="/dates" className="block py-2 text-white hover:text-blue-200 font-medium">Important Dates</Link>

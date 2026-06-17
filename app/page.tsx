@@ -172,7 +172,7 @@ export default async function Home() {
                 <div className="text-4xl md:text-5xl mb-4 md:mb-6 text-purple-600"><FaMicrophone /></div>
                 <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2 md:mb-3">Expert Speakers</h3>
                 <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-                  Learn from keynote speakers and invited experts leading innovation in computing and technology fields.
+                  Learn from invited speakers and experts leading innovation in computing and technology fields.
                 </p>
               </div>
 

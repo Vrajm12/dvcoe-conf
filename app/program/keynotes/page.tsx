@@ -19,8 +19,8 @@ interface ProgramKeynotesContent {
 }
 
 const defaultContent: ProgramKeynotesContent = {
-  page_title: 'Keynote Speakers & Invited Talks',
-  page_intro: 'Distinguished speakers from leading technical universities and research institutions',
+  page_title: 'Invited Speakers',
+  page_intro: 'Invited speakers from leading technical universities and research institutions',
   keynote_speakers: [
     {
       name: 'Prof. (Dr.) Rajanish Kamalakar Kamat',
@@ -42,7 +42,7 @@ const defaultContent: ProgramKeynotesContent = {
     },
     {
       name: 'Dr. R. (Venki) Venkateswaran',
-      institution: 'Gokhale Institute of Politics and Economics (GIPE), Pune',
+      institution: 'PhD in Computer Science from Washington State University',
       country: 'India',
       talk_title: 'To be announced',
       bio: 'Professor of Practice; Former Senior Vice President of Engineering, Persistent Systems.',
@@ -72,7 +72,7 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
 
           <div className="min-w-0 flex-1">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-blue-600">
-              Keynote Speaker
+              Invited Speaker
             </p>
             <h3 className="mt-2 text-2xl font-bold text-slate-900">{speaker.name}</h3>
             <p className="mt-2 text-base font-medium text-slate-700">{speaker.institution}</p>
@@ -120,8 +120,10 @@ export default async function Keynotes() {
         <div className="mx-auto mt-14 max-w-6xl space-y-12">
           <section>
             <div className="mb-6">
-              <h2 className="text-2xl font-bold text-slate-900">Keynote Speakers</h2>
-              <p className="mt-2 text-slate-600">Confirmed speakers for ICCET-2026.</p>
+              <h2 className="text-2xl font-bold text-slate-900">Invited Speakers</h2>
+              <p className="mt-2 text-slate-600">
+                Invited speakers for ICCET-2026. Confirmation is pending.
+              </p>
             </div>
 
             <div className="grid gap-8 lg:grid-cols-2">
@@ -151,7 +153,7 @@ export default async function Keynotes() {
           <div className="rounded-3xl border border-blue-100 bg-white/80 p-8 shadow-[0_24px_60px_rgba(15,23,42,0.08)] backdrop-blur">
             <h3 className="text-lg font-bold text-blue-900">Stay Updated</h3>
             <p className="mt-3 max-w-4xl leading-7 text-slate-700">
-              We will continue updating this page as the keynote and invited speaker lineup is finalized.
+              We will continue updating this page as the invited speaker lineup is finalized.
             </p>
           </div>
         </div>

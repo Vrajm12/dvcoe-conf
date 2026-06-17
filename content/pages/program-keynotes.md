@@ -1,6 +1,6 @@
 ---
-page_title: "Keynote Speakers & Invited Talks"
-page_intro: "Distinguished speakers from leading technical universities and research institutions"
+page_title: "Invited Speakers"
+page_intro: "Invited speakers from leading technical universities and research institutions"
 keynote_speakers:
   - name: "Prof. (Dr.) Rajanish Kamalakar Kamat"
     institution: "Dr. Babasaheb Ambedkar Technological University (DBATU), Lonere, Maharashtra"
@@ -17,7 +17,7 @@ keynote_speakers:
     abstract: "Keynote details will be announced soon."
     image: "/bhirud-sir.jpg"
   - name: "Dr. R. (Venki) Venkateswaran"
-    institution: "Gokhale Institute of Politics and Economics (GIPE), Pune"
+    institution: "PhD in Computer Science from Washington State University"
     country: "India"
     talk_title: "To be announced"
     bio: "Professor of Practice; Former Senior Vice President of Engineering, Persistent Systems."

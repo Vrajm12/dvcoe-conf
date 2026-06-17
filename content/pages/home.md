@@ -64,13 +64,13 @@ dates_title: Important Dates
 dates_subtitle: Mark your calendars
 date_submission_label: Submission
 date_submission_title: Paper Submission Deadline
-date_submission_date: 30 JUNE 2026
+date_submission_date: 20 JUNE 2026
 date_notification_label: Notification
 date_notification_title: Notification of Acceptance
-date_notification_date: 15 JULY 2026
+date_notification_date: 21 JUNE 2026 ONWARDS
 date_camera_label: Camera Ready
 date_camera_title: Camera-Ready Submission
-date_camera_date: 22 JULY 2026
+date_camera_date: 23 JUNE 2026 ONWARDS
 date_conference_label: Conference
 date_conference_title: Conference Dates
 date_conference_date: 30-31 JULY 2026
@@ -88,7 +88,7 @@ join_content: Leveraging AI, Computing Technologies, and Data Science to achieve
 mai_papers_count: 500+ papers published
 date_submission_opens_date: 10 APRIL
 about_host_university_title: About Host University
-mai_talks_count: 100+ keynote speakers
+mai_talks_count: 100+ invited speakers
 about_host_university_content: Dr. Babasaheb Ambedkar Technological University
   was established by the Government of Maharashtra vide Dr. Babasaheb Ambedkar
   Technological University Act. No. XXII of 1989 as a Unitary University. Later,

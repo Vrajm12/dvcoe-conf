@@ -31,7 +31,7 @@ collections:
       - { name: "date", label: "Date", widget: "datetime" }
 
   - name: "keynotes"
-    label: "ðŸŽ¤ Keynote Speakers (Create New)"
+    label: "Invited Speakers (Create New)"
     folder: "content/keynotes"
     create: true
     slug: "{{slug}}"
@@ -233,14 +233,14 @@ collections:
           - { name: "note", label: "Bottom Note", widget: "text" }
 
       - file: "content/pages/program-keynotes.md"
-        label: "ðŸ“… PROGRAM - Keynotes & Speakers"
+        label: "PROGRAM - Invited Speakers"
         name: "program-keynotes"
         format: "frontmatter"
         fields:
           - { name: "page_title", label: "Page Title", widget: "string" }
           - { name: "page_intro", label: "Page Intro", widget: "text" }
           - name: "keynote_speakers"
-            label: "Keynote Speakers"
+            label: "Invited Speakers"
             widget: "list"
             fields:
               - { name: "name", label: "Name", widget: "string" }
