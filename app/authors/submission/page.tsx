@@ -17,7 +17,9 @@ const defaultContent: AuthorsSubmissionContent = {
     { text: 'Conference Brochure (PDF)', link: 'pdf/cfp.pdf' },
     { text: 'IET / IEEE CONFERENCE TEMPLATE', link: '/IET-IEEE-Conference-Template.doc' },
     { text: 'Reviewers Response Sheet', link: '/Reviewers Response Sheet.docx' },
-    { text: 'Copyright Form', link: 'pdf/copyright-form.pdf' },
+    { text: 'ICCET 2026 Copyright Form', link: '/ICCET 2026 Copyright form Paper ID x........docx' },
+    { text: 'Certificate of Originality', link: '/Paper ID x... Certificate of Originality.docx' },
+    { text: 'Sample Template for PPT', link: '/Sample Template for PPT.pptx' },
   ],
   submission_portal: 'https://cmt3.research.microsoft.com/ICCET2026'
 };
@@ -138,19 +140,24 @@ export default async function SubmissionGuidelines() {
           {/* Download Resources */}
           <div className="bg-white rounded-lg shadow-lg p-8 md:p-10 mb-10">
             <h2 className="text-3xl font-bold text-blue-900 mb-8">Download Resources</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {submission.download_resources.map((resource, i) => (
-                <a
-                  key={i}
-                  href={resource.link}
-                  target={resource.link.startsWith('http') ? '_blank' : '_self'}
-                  rel="noreferrer"
-                  className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 border-2 border-blue-200 hover:border-blue-600 hover:shadow-lg transition-all text-center"
-                >
-                  <div className="text-3xl mb-3">📄</div>
-                  <h3 className="text-lg font-bold text-blue-900 hover:text-blue-600">{resource.text}</h3>
-                </a>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {submission.download_resources.map((resource, i) => {
+                const isPPT = resource.link.endsWith('.pptx') || resource.link.endsWith('.ppt');
+                const isDoc = resource.link.endsWith('.doc') || resource.link.endsWith('.docx');
+                const icon = isPPT ? '📊' : isDoc ? '📝' : '📄';
+                return (
+                  <a
+                    key={i}
+                    href={resource.link}
+                    download
+                    className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 border-2 border-blue-200 hover:border-blue-600 hover:shadow-lg transition-all text-center"
+                  >
+                    <div className="text-3xl mb-3">{icon}</div>
+                    <h3 className="text-lg font-bold text-blue-900 hover:text-blue-600">{resource.text}</h3>
+                    <p className="text-sm text-gray-500 mt-2">Click to download</p>
+                  </a>
+                );
+              })}
             </div>
           </div>
 
