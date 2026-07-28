@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Navigation from "./components/Navigation";
+import AlertTicker from "./components/AlertTicker";
 import Footer from "./components/Footer";
 
 const outfit = Outfit({ 
@@ -46,6 +47,7 @@ export default function RootLayout({
       </head>
       <body className={outfit.className}>
         <Navigation />
+        <AlertTicker />
         {children}
         <Footer />
         <Script id="netlify-identity-init" strategy="afterInteractive">{`

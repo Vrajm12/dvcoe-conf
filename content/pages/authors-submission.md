@@ -19,6 +19,8 @@ download_resources:
     link: "/Paper ID x... Certificate of Originality.docx"
   - text: "Sample Template for PPT"
     link: "/Sample Template for PPT.pptx"
+  - text: "Track Schedule"
+    link: "/ICCET 2026 Track Schedule.pdf"
 submission_portal: "https://cmt3.research.microsoft.com/ICCET2026"
 important_notes:
   - "All manuscripts must be submitted through CMT"
